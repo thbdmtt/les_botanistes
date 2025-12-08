@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode */
+  --background: #FAFAFA;
+  --foreground: #0B0B0C;
+  --muted: #D6D3CE;
+  --muted-foreground: #6B6B6B;
+  --gold: #C5A572;
+}
+
+.dark {
+  /* Dark mode */
+  --background: #0B0B0C;
+  --foreground: #FAFAFA;
+  --muted: #1A1A1B;
+  --muted-foreground: #A1A1A1;
+  --gold: #C5A572;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Selection style */
+  ::selection {
+    @apply bg-gold/30 text-foreground;
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  /* Bouton premium */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3
+           bg-gold text-noir font-medium tracking-wide
+           transition-all duration-300 ease-out
+           hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20
+           focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3
+           border border-gold text-gold font-medium tracking-wide
+           transition-all duration-300 ease-out
+           hover:bg-gold hover:text-noir
+           focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+
+  /* Texte doré premium */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold-dark via-gold to-gold-light
+           bg-clip-text text-transparent;
+  }
+
+  /* Overlay doré subtil */
+  .overlay-gold {
+    @apply absolute inset-0 bg-gradient-to-b from-noir/60 via-noir/40 to-noir/80;
+  }
+
+  /* Container luxe */
+  .container-luxe {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Animation delays */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* Hide scrollbar */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
