@@ -1,4 +1,5 @@
 import './globals.css'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 const siteConfig = {
   name: 'Les Botanistes',
@@ -65,11 +66,12 @@ export const viewport = {
 }
 
 // Script pour éviter le flash de thème au chargement
+// S'exécute avant React pour appliquer immédiatement le thème
 const themeScript = `
   (function() {
     function getTheme() {
       const stored = localStorage.getItem('theme');
-      if (stored) return stored;
+      if (stored && stored !== 'system') return stored;
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
     document.documentElement.classList.add(getTheme());
@@ -83,7 +85,9 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="font-sans min-h-screen bg-background text-foreground antialiased">
-        {children}
+        <ThemeProvider defaultTheme="system">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
