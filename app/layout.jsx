@@ -1,6 +1,6 @@
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
-import { Header } from '@/components/layout'
+import { Header, Footer } from '@/components/layout'
 
 const siteConfig = {
   name: 'Les Botanistes',
@@ -85,12 +85,13 @@ export default function RootLayout({ children }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="font-sans min-h-screen bg-background text-foreground antialiased">
+      <body className="font-sans min-h-screen flex flex-col bg-background text-foreground antialiased">
         <ThemeProvider defaultTheme="system">
           <Header />
-          <main>
+          <main className="flex-1">
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
