@@ -1,2 +1,3 @@
-// UI Components exports
-// Will be populated as components are created
+export { default as Button } from './Button'
+export { default as Container } from './Container'
+export { default as Separator } from './Separator'

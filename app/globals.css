@@ -9,6 +9,11 @@
   --muted: #D6D3CE;
   --muted-foreground: #6B6B6B;
   --gold: #C5A572;
+  --gold-light: #D4BC91;
+  --gold-dark: #A68B5B;
+  --border: #E5E2DD;
+  --card: #FFFFFF;
+  --card-foreground: #0B0B0C;
 }
 
 .dark {
@@ -18,6 +23,11 @@
   --muted: #1A1A1B;
   --muted-foreground: #A1A1A1;
   --gold: #C5A572;
+  --gold-light: #D4BC91;
+  --gold-dark: #A68B5B;
+  --border: #2A2A2B;
+  --card: #141415;
+  --card-foreground: #FAFAFA;
 }
 
 @layer base {
@@ -39,67 +49,228 @@
   *:focus-visible {
     @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-background;
   }
+
+  /* Typography luxe */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl sm:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Links */
+  a {
+    @apply transition-colors duration-300;
+  }
 }
 
 @layer components {
-  /* Bouton premium */
+  /* ===== BOUTONS ===== */
+
+  /* Bouton primaire - fond doré */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3
-           bg-gold text-noir font-medium tracking-wide
+    @apply inline-flex items-center justify-center gap-2
+           px-8 py-3.5
+           bg-gold text-noir
+           font-sans font-medium text-sm uppercase tracking-widest
            transition-all duration-300 ease-out
-           hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20
-           focus:ring-2 focus:ring-gold focus:ring-offset-2;
+           hover:bg-gold-light hover:shadow-xl hover:shadow-gold/20
+           hover:-translate-y-0.5
+           active:translate-y-0
+           focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2;
   }
 
+  /* Bouton secondaire - contour doré */
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-3
-           border border-gold text-gold font-medium tracking-wide
+    @apply inline-flex items-center justify-center gap-2
+           px-8 py-3.5
+           bg-transparent
+           border border-gold text-gold
+           font-sans font-medium text-sm uppercase tracking-widest
            transition-all duration-300 ease-out
            hover:bg-gold hover:text-noir
-           focus:ring-2 focus:ring-gold focus:ring-offset-2;
+           hover:-translate-y-0.5
+           active:translate-y-0
+           focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2;
   }
 
-  /* Texte doré premium */
+  /* Bouton ghost - discret */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           px-6 py-2.5
+           bg-transparent text-foreground
+           font-sans font-medium text-sm tracking-wide
+           transition-all duration-300 ease-out
+           hover:text-gold
+           focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2;
+  }
+
+  /* Bouton link - style lien */
+  .btn-link {
+    @apply inline-flex items-center gap-1
+           text-gold font-medium
+           transition-all duration-300 ease-out
+           hover:text-gold-light
+           border-b border-transparent hover:border-gold-light;
+  }
+
+  /* ===== TEXTES SPECIAUX ===== */
+
+  /* Texte doré dégradé */
   .text-gradient-gold {
     @apply bg-gradient-to-r from-gold-dark via-gold to-gold-light
            bg-clip-text text-transparent;
   }
 
-  /* Overlay doré subtil */
-  .overlay-gold {
+  /* Sous-titre élégant */
+  .subtitle {
+    @apply text-sm sm:text-base uppercase tracking-[0.3em] text-gold font-sans font-medium;
+  }
+
+  /* Texte body luxe */
+  .body-luxe {
+    @apply text-base sm:text-lg text-muted-foreground leading-relaxed font-light;
+  }
+
+  /* ===== OVERLAYS ===== */
+
+  /* Overlay sombre dégradé */
+  .overlay-dark {
     @apply absolute inset-0 bg-gradient-to-b from-noir/60 via-noir/40 to-noir/80;
   }
 
-  /* Container luxe */
+  /* Overlay doré subtil */
+  .overlay-gold {
+    @apply absolute inset-0 bg-gradient-to-b from-noir/70 via-noir/50 to-noir/90
+           mix-blend-multiply;
+  }
+
+  /* Overlay pour texte lisible */
+  .overlay-text {
+    @apply absolute inset-0 bg-gradient-to-t from-noir via-noir/60 to-transparent;
+  }
+
+  /* ===== CONTAINERS ===== */
+
+  /* Container standard */
   .container-luxe {
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Container étroit pour texte */
+  .container-narrow {
+    @apply mx-auto w-full max-w-3xl px-4 sm:px-6;
+  }
+
+  /* Container large */
+  .container-wide {
+    @apply mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ===== CARTES ===== */
+
+  /* Carte premium */
+  .card-luxe {
+    @apply bg-[var(--card)] text-[var(--card-foreground)]
+           border border-[var(--border)]
+           p-6 sm:p-8
+           transition-all duration-300
+           hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5;
+  }
+
+  /* ===== SEPARATEURS ===== */
+
+  /* Ligne dorée */
+  .separator-gold {
+    @apply h-px w-16 bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  /* Ligne dorée large */
+  .separator-gold-wide {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-gold/50 to-transparent;
+  }
+
+  /* ===== SECTIONS ===== */
+
+  /* Section plein écran */
+  .section-fullscreen {
+    @apply relative min-h-screen flex items-center justify-center;
+  }
+
+  /* Section standard avec padding */
+  .section-padding {
+    @apply py-16 sm:py-20 md:py-24 lg:py-32;
+  }
+
+  /* Section avec fond sombre */
+  .section-dark {
+    @apply bg-noir text-blanc;
+  }
+
+  /* Section avec fond clair */
+  .section-light {
+    @apply bg-blanc text-noir;
   }
 }
 
 @layer utilities {
-  /* Animation delays */
-  .animation-delay-100 {
-    animation-delay: 100ms;
-  }
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
+  /* ===== ANIMATION DELAYS ===== */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
 
-  /* Hide scrollbar */
+  /* ===== SCROLLBAR ===== */
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  /* ===== ASPECT RATIOS ===== */
+  .aspect-hero {
+    aspect-ratio: 16 / 9;
+  }
+  .aspect-portrait {
+    aspect-ratio: 3 / 4;
+  }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* ===== GLASS EFFECT ===== */
+  .glass {
+    @apply backdrop-blur-md bg-background/80;
+  }
+  .glass-dark {
+    @apply backdrop-blur-md bg-noir/80;
+  }
+
+  /* ===== TEXT BALANCE ===== */
+  .text-balance {
+    text-wrap: balance;
   }
 }
