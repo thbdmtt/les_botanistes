@@ -1,2 +1,1 @@
-// Layout Components exports
-// Will be populated as components are created
+export { default as Header } from './Header'

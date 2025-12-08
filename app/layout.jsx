@@ -1,5 +1,6 @@
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import { Header } from '@/components/layout'
 
 const siteConfig = {
   name: 'Les Botanistes',
@@ -86,7 +87,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-sans min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider defaultTheme="system">
-          {children}
+          <Header />
+          <main>
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
