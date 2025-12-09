@@ -4,10 +4,10 @@ import { MenuJsonLd } from '@/lib/jsonld'
 
 export const metadata = {
   title: 'La Carte',
-  description: 'Découvrez notre carte gastronomique : entrées raffinées, plats signature et desserts d\'exception. Une cuisine française sublimée par les meilleurs produits de saison.',
+  description: 'Découvrez notre carte bistronomique : cuisine française de saison, plats élégants et produits du marché. Restaurant Paris 7, près du Bon Marché.',
   openGraph: {
     title: 'La Carte | Les Botanistes',
-    description: 'Menu gastronomique : entrées raffinées, plats signature, desserts d\'exception. Menus dégustation à partir de 95€.',
+    description: 'Carte bistronomique de saison : entrées, plats et desserts élaborés avec les meilleurs produits du marché.',
     type: 'website',
   },
   alternates: {
@@ -145,8 +145,8 @@ export default function CartePage() {
       <MenuJsonLd menuData={menuData} />
       <PageHeader
         subtitle="Notre Carte"
-        title="Une cuisine d'exception"
-        description="Découvrez une carte élaborée au fil des saisons, où chaque plat raconte une histoire de passion et de terroir."
+        title="Cuisine de saison"
+        description="Une carte bistronomique élaborée au fil des saisons, où chaque plat célèbre les meilleurs produits du marché."
       />
 
       {/* Note du chef */}
