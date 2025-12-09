@@ -93,7 +93,7 @@ export async function sendContactEmail(prevState, formData) {
 
   try {
     const { error } = await resend.emails.send({
-      from: 'Les Botanistes <restaurant.lesbotanistes@orange.fr>',
+      from: 'from: `${firstName} ${lastName} (${subject}) <restaurant.lesbotanistes@orange.fr>`',
       to: 'restaurant.lesbotanistes@orange.fr',
       replyTo: email,
       subject: emailSubject,
