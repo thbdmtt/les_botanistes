@@ -5,6 +5,14 @@ import { siteConfig } from '@/lib/config'
 export const metadata = {
   title: 'Réservation',
   description: 'Réservez votre table aux Botanistes. Privatisation disponible pour vos événements. Une expérience gastronomique inoubliable vous attend.',
+  openGraph: {
+    title: 'Réserver une table | Les Botanistes',
+    description: 'Réservez votre table au restaurant gastronomique Les Botanistes. Privatisation pour événements disponible.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/reservation',
+  },
 }
 
 export default function ReservationPage() {

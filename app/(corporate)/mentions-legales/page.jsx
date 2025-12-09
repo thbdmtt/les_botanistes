@@ -4,6 +4,10 @@ import { siteConfig } from '@/lib/config'
 export const metadata = {
   title: 'Mentions légales',
   description: 'Mentions légales du restaurant Les Botanistes. Informations sur l\'éditeur, l\'hébergeur et les conditions d\'utilisation du site.',
+  robots: { index: false, follow: true },
+  alternates: {
+    canonical: '/mentions-legales',
+  },
 }
 
 function Section({ title, children }) {

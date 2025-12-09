@@ -1,6 +1,7 @@
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { Header, Footer } from '@/components/layout'
+import { RestaurantJsonLd, WebSiteJsonLd } from '@/lib/jsonld'
 
 const siteConfig = {
   name: 'Les Botanistes',
@@ -84,6 +85,8 @@ export default function RootLayout({ children }) {
     <html lang="fr" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <RestaurantJsonLd />
+        <WebSiteJsonLd />
       </head>
       <body className="font-sans min-h-screen flex flex-col bg-background text-foreground antialiased">
         <ThemeProvider defaultTheme="system">

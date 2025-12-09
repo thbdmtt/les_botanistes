@@ -4,6 +4,14 @@ import { MenuItem, Separator } from '@/components/ui'
 export const metadata = {
   title: 'La Carte',
   description: 'Découvrez notre carte gastronomique : entrées raffinées, plats signature et desserts d\'exception. Une cuisine française sublimée par les meilleurs produits de saison.',
+  openGraph: {
+    title: 'La Carte | Les Botanistes',
+    description: 'Menu gastronomique : entrées raffinées, plats signature, desserts d\'exception. Menus dégustation à partir de 95€.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/carte',
+  },
 }
 
 // Données du menu

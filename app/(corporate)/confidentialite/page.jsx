@@ -4,6 +4,10 @@ import { siteConfig } from '@/lib/config'
 export const metadata = {
   title: 'Politique de confidentialité',
   description: 'Politique de confidentialité du restaurant Les Botanistes. Informations sur la collecte et le traitement de vos données personnelles.',
+  robots: { index: false, follow: true },
+  alternates: {
+    canonical: '/confidentialite',
+  },
 }
 
 function Section({ title, children }) {

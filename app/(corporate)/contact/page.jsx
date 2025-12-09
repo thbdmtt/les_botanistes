@@ -4,6 +4,14 @@ import { siteConfig } from '@/lib/config'
 export const metadata = {
   title: 'Contact',
   description: 'Contactez le restaurant Les Botanistes. Adresse, horaires d\'ouverture et formulaire de contact. Nous sommes à votre écoute.',
+  openGraph: {
+    title: 'Contact | Les Botanistes',
+    description: 'Contactez-nous : adresse, téléphone, email et horaires. Restaurant gastronomique au cœur de Paris.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/contact',
+  },
 }
 
 // Icônes
