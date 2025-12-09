@@ -20,15 +20,15 @@ export function RestaurantJsonLd() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 48.8606,
-      longitude: 2.3376,
+      latitude: '48.8520793',
+      longitude: '2.325686',
     },
     image: [
       `${siteConfig.url}/images/restaurant-1.jpg`,
       `${siteConfig.url}/images/restaurant-2.jpg`,
     ],
-    priceRange: '€€€€',
-    servesCuisine: ['French', 'Gastronomic', 'Fine Dining'],
+    priceRange: '€€€',
+    servesCuisine: ['Française', 'Gastronomique'],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -105,7 +105,12 @@ export function LocalBusinessJsonLd() {
       postalCode: siteConfig.restaurant.address.postalCode,
       addressCountry: 'FR',
     },
-    priceRange: '€€€€',
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '48.8520793',
+      longitude: '2.325686',
+    },
+    priceRange: '€€€',
   }
 
   return (
