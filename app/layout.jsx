@@ -56,6 +56,13 @@ export const metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
+  manifest: '/manifest.json',
+  formatDetection: {
+    telephone: true,
+    date: false,
+    address: true,
+    email: true,
+  },
 }
 
 export const viewport = {
