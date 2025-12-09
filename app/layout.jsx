@@ -5,7 +5,7 @@ import { RestaurantJsonLd, WebSiteJsonLd } from '@/lib/jsonld'
 
 const siteConfig = {
   name: 'Les Botanistes',
-  description: 'Découvrez Les Botanistes, une expérience gastronomique unique où la nature rencontre la haute cuisine. Restaurant étoilé au cœur de Paris.',
+  description: 'Restaurant bistronomique à Paris 7, rue Chomel, près du Bon Marché. Cuisine française de saison, élégante et raffinée.',
   url: 'https://les-botanistes.fr',
   locale: 'fr_FR',
 }
@@ -13,18 +13,19 @@ const siteConfig = {
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Restaurant Gastronomique Paris`,
+    default: `${siteConfig.name} | Restaurant Bistronomique Paris 7`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
-    'restaurant gastronomique',
-    'Paris',
+    'restaurant bistronomique',
+    'Paris 7',
     'cuisine française',
-    'restaurant étoilé',
+    'cuisine de saison',
     'Les Botanistes',
-    'fine dining',
-    'haute cuisine',
+    'Bon Marché',
+    'Sèvres-Babylone',
+    'rue Chomel',
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
