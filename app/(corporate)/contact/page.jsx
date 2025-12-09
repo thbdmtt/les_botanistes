@@ -10,7 +10,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: '/contact',
+    canonical: 'https://les-botanistes.fr/contact',
   },
 }
 

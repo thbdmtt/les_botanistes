@@ -10,7 +10,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: '/carte',
+    canonical: 'https://les-botanistes.fr/carte',
   },
 }
 

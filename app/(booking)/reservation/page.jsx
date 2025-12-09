@@ -11,7 +11,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: '/reservation',
+    canonical: 'https://les-botanistes.fr/reservation',
   },
 }
 

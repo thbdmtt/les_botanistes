@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Mentions légales du restaurant Les Botanistes. Informations sur l\'éditeur, l\'hébergeur et les conditions d\'utilisation du site.',
   robots: { index: false, follow: true },
   alternates: {
-    canonical: '/mentions-legales',
+    canonical: 'https://les-botanistes.fr/mentions-legales',
   },
 }
 

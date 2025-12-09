@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Politique de confidentialité du restaurant Les Botanistes. Informations sur la collecte et le traitement de vos données personnelles.',
   robots: { index: false, follow: true },
   alternates: {
-    canonical: '/confidentialite',
+    canonical: 'https://les-botanistes.fr/confidentialite',
   },
 }
 
