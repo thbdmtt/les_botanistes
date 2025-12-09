@@ -1,4 +1,7 @@
+'use client'
+
 import { cn } from '@/lib/utils'
+import { FadeIn } from '@/components/animations'
 
 export default function PageHeader({
   subtitle,
@@ -17,24 +20,32 @@ export default function PageHeader({
     >
       <div className={centered ? 'container-narrow' : 'container-luxe'}>
         {subtitle && (
-          <p className="subtitle mb-4">{subtitle}</p>
+          <FadeIn>
+            <p className="subtitle mb-4">{subtitle}</p>
+          </FadeIn>
         )}
 
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl mb-6">
-          {title}
-        </h1>
+        <FadeIn delay={100}>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl mb-6">
+            {title}
+          </h1>
+        </FadeIn>
 
         {/* Séparateur décoratif */}
-        <div className={cn('flex items-center gap-4 mb-6', centered && 'justify-center')}>
-          <span className="h-px w-12 bg-gradient-to-r from-transparent to-gold" />
-          <span className="w-1.5 h-1.5 rotate-45 bg-gold" />
-          <span className="h-px w-12 bg-gradient-to-l from-transparent to-gold" />
-        </div>
+        <FadeIn delay={200}>
+          <div className={cn('flex items-center gap-4 mb-6', centered && 'justify-center')}>
+            <span className="h-px w-12 bg-gradient-to-r from-transparent to-gold" />
+            <span className="w-1.5 h-1.5 rotate-45 bg-gold" />
+            <span className="h-px w-12 bg-gradient-to-l from-transparent to-gold" />
+          </div>
+        </FadeIn>
 
         {description && (
-          <p className="body-luxe max-w-2xl mx-auto">
-            {description}
-          </p>
+          <FadeIn delay={300}>
+            <p className="body-luxe max-w-2xl mx-auto">
+              {description}
+            </p>
+          </FadeIn>
         )}
       </div>
     </header>
