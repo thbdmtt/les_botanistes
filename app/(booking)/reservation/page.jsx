@@ -1,6 +1,7 @@
 import { PageHeader } from '@/components/sections'
 import { Separator } from '@/components/ui'
 import { siteConfig } from '@/lib/config'
+import { ReservationJsonLd } from '@/lib/jsonld'
 
 export const metadata = {
   title: 'Réservation',
@@ -18,6 +19,7 @@ export const metadata = {
 export default function ReservationPage() {
   return (
     <>
+      <ReservationJsonLd />
       <PageHeader
         subtitle="Réservation"
         title="Réservez votre table"

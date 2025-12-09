@@ -166,3 +166,25 @@ export function BreadcrumbJsonLd({ items }) {
     />
   )
 }
+
+// Schema.org JSON-LD pour la page Réservation
+export function ReservationJsonLd() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ReserveAction',
+    name: 'Réserver une table',
+    target: `${siteConfig.url}/reservation`,
+    object: {
+      '@type': 'Restaurant',
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  )
+}
