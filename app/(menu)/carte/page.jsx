@@ -1,5 +1,6 @@
 import { PageHeader } from '@/components/sections'
 import { MenuItem, Separator } from '@/components/ui'
+import { MenuJsonLd } from '@/lib/jsonld'
 
 export const metadata = {
   title: 'La Carte',
@@ -130,6 +131,7 @@ function MenuSection({ title, subtitle, items }) {
 export default function CartePage() {
   return (
     <>
+      <MenuJsonLd menuData={menuData} />
       <PageHeader
         subtitle="Notre Carte"
         title="Une cuisine d'exception"

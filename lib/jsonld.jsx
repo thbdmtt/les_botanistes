@@ -188,3 +188,64 @@ export function ReservationJsonLd() {
     />
   )
 }
+
+// Schema.org JSON-LD pour la page Menu/Carte
+export function MenuJsonLd({ menuData }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Menu',
+    name: 'Menu gastronomique - Les Botanistes',
+    url: `${siteConfig.url}/carte`,
+    hasMenuSection: [
+      {
+        '@type': 'MenuSection',
+        name: 'Entrées',
+        hasMenuItem: menuData.entrees.map((item) => ({
+          '@type': 'MenuItem',
+          name: item.name,
+          description: item.description,
+          offers: {
+            '@type': 'Offer',
+            price: item.price,
+            priceCurrency: 'EUR',
+          },
+        })),
+      },
+      {
+        '@type': 'MenuSection',
+        name: 'Plats',
+        hasMenuItem: menuData.plats.map((item) => ({
+          '@type': 'MenuItem',
+          name: item.name,
+          description: item.description,
+          offers: {
+            '@type': 'Offer',
+            price: item.price,
+            priceCurrency: 'EUR',
+          },
+        })),
+      },
+      {
+        '@type': 'MenuSection',
+        name: 'Desserts',
+        hasMenuItem: menuData.desserts.map((item) => ({
+          '@type': 'MenuItem',
+          name: item.name,
+          description: item.description,
+          offers: {
+            '@type': 'Offer',
+            price: item.price,
+            priceCurrency: 'EUR',
+          },
+        })),
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  )
+}
