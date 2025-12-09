@@ -1,5 +1,6 @@
 import { PageHeader } from '@/components/sections'
 import { siteConfig } from '@/lib/config'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata = {
   title: 'Contact',
@@ -151,107 +152,7 @@ export default function ContactPage() {
 
             {/* Colonne droite : Formulaire */}
             <div>
-              <div className="card-luxe">
-                <h2 className="font-serif text-2xl mb-2">Envoyez-nous un message</h2>
-                <p className="text-sm text-muted-foreground mb-8">
-                  Tous les champs marqués d&apos;un * sont obligatoires.
-                </p>
-
-                <form className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm text-muted-foreground mb-2">
-                        Prénom *
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-sm
-                                 focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-                        placeholder="Votre prénom"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm text-muted-foreground mb-2">
-                        Nom *
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-sm
-                                 focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-                        placeholder="Votre nom"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm text-muted-foreground mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-sm
-                               focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-                      placeholder="votre@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm text-muted-foreground mb-2">
-                      Téléphone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      className="w-full px-4 py-3 bg-background border border-border rounded-sm
-                               focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-                      placeholder="+33 6 00 00 00 00"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sm text-muted-foreground mb-2">
-                      Sujet *
-                    </label>
-                    <select
-                      id="subject"
-                      required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-sm
-                               focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-                    >
-                      <option value="">Sélectionner un sujet</option>
-                      <option value="reservation">Réservation</option>
-                      <option value="privatisation">Privatisation</option>
-                      <option value="information">Demande d&apos;information</option>
-                      <option value="feedback">Retour d&apos;expérience</option>
-                      <option value="other">Autre</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm text-muted-foreground mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-sm
-                               focus:border-gold focus:ring-1 focus:ring-gold transition-colors resize-none"
-                      placeholder="Votre message..."
-                    />
-                  </div>
-
-                  <button type="submit" className="btn-primary w-full justify-center">
-                    Envoyer le message
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
