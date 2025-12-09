@@ -28,7 +28,7 @@ export function RestaurantJsonLd() {
       `${siteConfig.url}/images/restaurant-2.jpg`,
     ],
     priceRange: '€€€',
-    servesCuisine: ['Française', 'Gastronomique'],
+    servesCuisine: ['Française', 'Bistronomique'],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -48,7 +48,7 @@ export function RestaurantJsonLd() {
     hasMenu: {
       '@type': 'Menu',
       name: 'Menu Dégustation',
-      description: 'Notre menu gastronomique',
+      description: 'Notre carte bistronomique de saison',
       hasMenuSection: [
         {
           '@type': 'MenuSection',
@@ -111,6 +111,7 @@ export function LocalBusinessJsonLd() {
       longitude: '2.325686',
     },
     priceRange: '€€€',
+    servesCuisine: ['Française', 'Bistronomique'],
   }
 
   return (
@@ -194,7 +195,7 @@ export function MenuJsonLd({ menuData }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Menu',
-    name: 'Menu gastronomique - Les Botanistes',
+    name: 'Carte bistronomique - Les Botanistes',
     url: `${siteConfig.url}/carte`,
     hasMenuSection: [
       {
