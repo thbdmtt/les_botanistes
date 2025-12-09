@@ -155,22 +155,72 @@ export default function ReservationPage() {
                 <form className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
+                      <label htmlFor="firstName" className="block text-sm text-muted-foreground mb-2">
+                        Prénom *
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        required
+                        className="w-full px-4 py-3 bg-background border border-border rounded-sm
+                                 focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+                        placeholder="Votre prénom"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm text-muted-foreground mb-2">
+                        Nom *
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        required
+                        className="w-full px-4 py-3 bg-background border border-border rounded-sm
+                                 focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+                        placeholder="Votre nom"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm text-muted-foreground mb-2">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 bg-background border border-border rounded-sm
+                               focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+                      placeholder="votre@email.com"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
                       <label htmlFor="date" className="block text-sm text-muted-foreground mb-2">
-                        Date souhaitée
+                        Date souhaitée *
                       </label>
                       <input
                         type="date"
                         id="date"
+                        name="date"
+                        required
                         className="w-full px-4 py-3 bg-background border border-border rounded-sm
                                  focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
                       />
                     </div>
                     <div>
                       <label htmlFor="time" className="block text-sm text-muted-foreground mb-2">
-                        Créneau
+                        Créneau *
                       </label>
                       <select
                         id="time"
+                        name="time"
+                        required
                         className="w-full px-4 py-3 bg-background border border-border rounded-sm
                                  focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
                       >
@@ -194,10 +244,12 @@ export default function ReservationPage() {
 
                   <div>
                     <label htmlFor="guests" className="block text-sm text-muted-foreground mb-2">
-                      Nombre de convives
+                      Nombre de convives *
                     </label>
                     <select
                       id="guests"
+                      name="guests"
+                      required
                       className="w-full px-4 py-3 bg-background border border-border rounded-sm
                                focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
                     >
