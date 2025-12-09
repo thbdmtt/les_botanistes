@@ -78,7 +78,7 @@ export default function ContactPage() {
                     {siteConfig.restaurant.address.country}
                   </address>
                   <a
-                    href="https://maps.google.com"
+                    href="https://www.google.com/maps/place/Les+Botanistes/@48.8520828,2.3231111,16z/data=!3m1!4b1!4m6!3m5!1s0x47e671d4722c7127:0x8141796c1a3a77db!8m2!3d48.8520793!4d2.325686!16s%2Fg%2F1tfb1992?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-3 text-sm text-gold hover:text-gold-light transition-colors"
@@ -173,7 +173,7 @@ export default function ContactPage() {
               {siteConfig.restaurant.address.postalCode} {siteConfig.restaurant.address.city}
             </p>
             <a
-              href="https://maps.google.com"
+              href="https://www.google.com/maps/place/Les+Botanistes/@48.8520828,2.3231111,16z/data=!3m1!4b1!4m6!3m5!1s0x47e671d4722c7127:0x8141796c1a3a77db!8m2!3d48.8520793!4d2.325686!16s%2Fg%2F1tfb1992?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-4 btn-secondary text-sm py-2 px-6"
