@@ -5,10 +5,10 @@ import { ReservationJsonLd } from '@/lib/jsonld'
 
 export const metadata = {
   title: 'Réservation',
-  description: 'Réservez votre table aux Botanistes. Privatisation disponible pour vos événements. Une expérience gastronomique inoubliable vous attend.',
+  description: 'Réservez votre table au restaurant bistronomique Les Botanistes, Paris 7, près du Bon Marché. Privatisation disponible.',
   openGraph: {
     title: 'Réserver une table | Les Botanistes',
-    description: 'Réservez votre table au restaurant gastronomique Les Botanistes. Privatisation pour événements disponible.',
+    description: 'Réservez votre table au restaurant bistronomique Les Botanistes, Paris 7. Privatisation pour événements disponible.',
     type: 'website',
   },
   alternates: {
@@ -128,7 +128,7 @@ export default function ReservationPage() {
 
                 <p className="text-center text-muted-foreground mb-8">
                   Choisissez votre date et votre créneau horaire pour vivre
-                  une expérience gastronomique unique.
+                  une expérience bistronomique unique.
                 </p>
 
                 {/* Bouton de réservation principal */}
@@ -240,7 +240,7 @@ export default function ReservationPage() {
               <p className="text-gris-chaud leading-relaxed mb-6">
                 Pour vos événements d&apos;exception — anniversaires, mariages,
                 séminaires d&apos;entreprise ou célébrations privées — offrez à vos
-                invités une expérience gastronomique dans un cadre exclusif.
+                invités une expérience bistronomique dans un cadre exclusif.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3 text-gris-chaud">
