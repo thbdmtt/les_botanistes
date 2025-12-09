@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Contactez le restaurant Les Botanistes. Adresse, horaires d\'ouverture et formulaire de contact. Nous sommes à votre écoute.',
   openGraph: {
     title: 'Contact | Les Botanistes',
-    description: 'Contactez-nous : adresse, téléphone, email et horaires. Restaurant gastronomique au cœur de Paris.',
+    description: 'Contactez-nous : adresse, téléphone, email et horaires. Restaurant bistronomique Paris 7, près du Bon Marché.',
     type: 'website',
   },
   alternates: {

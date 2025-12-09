@@ -30,7 +30,7 @@ export default function Hero() {
           className="subtitle text-blanc/90 mb-6 opacity-0 animate-fade-in-up"
           style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
         >
-          Restaurant Gastronomique
+          Restaurant Bistronomique
         </p>
 
         {/* Titre principal */}

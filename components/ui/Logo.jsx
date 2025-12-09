@@ -19,7 +19,7 @@ export default function Logo({ className, showTagline = false }) {
       {/* Tagline optionnelle */}
       {showTagline && (
         <span className="mt-0.5 text-[10px] uppercase tracking-[0.4em] text-muted-foreground font-sans">
-          Restaurant Gastronomique
+          Restaurant Bistronomique
         </span>
       )}
     </Link>
