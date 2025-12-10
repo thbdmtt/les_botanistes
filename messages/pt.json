@@ -1,0 +1,207 @@
+{
+  "common": {
+    "siteName": "Les Botanistes",
+    "tagline": "Restaurante Bistronômico",
+    "callToAction": "Reservar mesa",
+    "learnMore": "Saiba mais",
+    "viewMenu": "Ver cardápio",
+    "backToHome": "Voltar ao início",
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "success": "Sucesso"
+  },
+  "navigation": {
+    "home": "Início",
+    "menu": "Cardápio",
+    "about": "Nossa História",
+    "contact": "Contato",
+    "reservation": "Reservar",
+    "privatisation": "Eventos Privados"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Bem-vindos",
+      "title": "Cozinha autoral no coração de Paris",
+      "description": "Descubra uma experiência gastronômica única onde tradição francesa e criatividade contemporânea se encontram."
+    },
+    "philosophy": {
+      "subtitle": "Nossa filosofia",
+      "title": "A arte da bistronomia",
+      "description": "Celebramos produtos excepcionais e o saber fazer artesanal para criar pratos que contam uma história."
+    }
+  },
+  "menu": {
+    "pageTitle": "Cardápio",
+    "pageDescription": "Descubra nosso cardápio bistronômico, um convite à viagem culinária.",
+    "categories": {
+      "starters": "Entradas",
+      "mains": "Pratos principais",
+      "desserts": "Sobremesas",
+      "wines": "Vinhos"
+    },
+    "dietary": {
+      "vegetarian": "Vegetariano",
+      "vegan": "Vegano",
+      "glutenFree": "Sem glúten"
+    }
+  },
+  "about": {
+    "pageTitle": "Nossa História",
+    "pageDescription": "Descubra a história do Les Botanistes, um restaurante nascido da paixão pela gastronomia francesa.",
+    "story": {
+      "subtitle": "Nossa história",
+      "title": "Uma paixão transmitida"
+    },
+    "team": {
+      "subtitle": "A equipe",
+      "title": "Os artesãos do sabor"
+    },
+    "values": {
+      "subtitle": "Nossos valores",
+      "title": "Excelência todos os dias"
+    }
+  },
+  "contact": {
+    "pageTitle": "Contato",
+    "pageDescription": "Entre em contato com o restaurante Les Botanistes. Endereço, horários e formulário de contato.",
+    "header": {
+      "subtitle": "Contato",
+      "title": "Entre em contato",
+      "description": "Uma pergunta ou comentário? Nossa equipe está à sua disposição para responder o mais rápido possível."
+    },
+    "info": {
+      "address": "Endereço",
+      "phone": "Telefone",
+      "email": "Email",
+      "hours": "Horário de funcionamento",
+      "viewOnMap": "Ver no Google Maps",
+      "openInMaps": "Abrir no Google Maps",
+      "responseTime": "Resposta em 24-48h",
+      "phoneHours": "Terça a sábado, 10h-22h"
+    },
+    "form": {
+      "title": "Envie-nos uma mensagem",
+      "required": "Todos os campos marcados com * são obrigatórios.",
+      "firstName": "Nome",
+      "lastName": "Sobrenome",
+      "email": "Email",
+      "phone": "Telefone",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "submit": "Enviar mensagem",
+      "submitting": "Enviando...",
+      "success": "Sua mensagem foi enviada com sucesso. Responderemos o mais rápido possível.",
+      "error": "Ocorreu um erro. Por favor, tente novamente mais tarde.",
+      "subjects": {
+        "select": "Selecione um assunto",
+        "reservation": "Reserva",
+        "privatisation": "Evento privado",
+        "information": "Pedido de informação",
+        "feedback": "Feedback",
+        "other": "Outro"
+      },
+      "placeholders": {
+        "firstName": "Seu nome",
+        "lastName": "Seu sobrenome",
+        "email": "seu@email.com",
+        "phone": "+33 6 00 00 00 00",
+        "message": "Sua mensagem..."
+      }
+    },
+    "access": {
+      "subtitle": "Como chegar",
+      "title": "Acesso",
+      "metro": "Metrô",
+      "bus": "Ônibus",
+      "parking": "Estacionamento"
+    },
+    "hours": {
+      "lunch": "Almoço",
+      "dinner": "Jantar",
+      "closed": "Fechado"
+    }
+  },
+  "reservation": {
+    "pageTitle": "Reservar",
+    "pageDescription": "Reserve sua mesa no restaurante Les Botanistes. Experiência bistronômica única em Paris.",
+    "header": {
+      "subtitle": "Reserva",
+      "title": "Reserve sua mesa",
+      "description": "Viva uma experiência gastronômica inesquecível em nosso refúgio parisiense."
+    },
+    "form": {
+      "title": "Reservar online",
+      "description": "Escolha sua data e horário para viver uma experiência bistronômica única.",
+      "callToBook": "Ligar para reservar",
+      "or": "ou",
+      "firstName": "Nome",
+      "lastName": "Sobrenome",
+      "email": "Email",
+      "date": "Data desejada",
+      "time": "Horário",
+      "guests": "Número de pessoas",
+      "submit": "Enviar solicitação",
+      "submitting": "Enviando...",
+      "success": "Sua solicitação de reserva foi enviada. Entraremos em contato em 24h para confirmar.",
+      "error": "Ocorreu um erro. Por favor, tente novamente mais tarde.",
+      "selectTime": "Selecionar",
+      "selectGuests": "Selecionar",
+      "lunch": "Almoço",
+      "dinner": "Jantar",
+      "person": "pessoa",
+      "persons": "pessoas",
+      "personsMore": "pessoas",
+      "confirmation": "Entraremos em contato em 24h para confirmar sua reserva."
+    }
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados",
+    "legal": "Termos legais",
+    "privacy": "Política de privacidade",
+    "followUs": "Siga-nos",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Receba nossas novidades e ofertas exclusivas",
+      "placeholder": "Seu email",
+      "submit": "Inscrever-se"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Página não encontrada",
+      "description": "A página que você procura não existe ou foi movida."
+    },
+    "500": {
+      "title": "Erro do servidor",
+      "description": "Ocorreu um erro. Por favor, tente novamente mais tarde."
+    }
+  },
+  "validation": {
+    "required": "Este campo é obrigatório",
+    "email": "Por favor, insira um email válido",
+    "phone": "Por favor, insira um número de telefone válido",
+    "minLength": "Este campo deve conter pelo menos {min} caracteres"
+  },
+  "seo": {
+    "home": {
+      "title": "Les Botanistes | Restaurante Bistronômico Paris 7",
+      "description": "Restaurante bistronômico no coração do 7º arrondissement de Paris. Cozinha autoral, produtos frescos e ambiente refinado perto do Bon Marché."
+    },
+    "menu": {
+      "title": "Cardápio | Les Botanistes",
+      "description": "Descubra nosso cardápio bistronômico: entradas, pratos principais e sobremesas preparados com produtos sazonais."
+    },
+    "about": {
+      "title": "Nossa História | Les Botanistes",
+      "description": "Descubra a história e filosofia do restaurante Les Botanistes, uma paixão pela gastronomia francesa."
+    },
+    "contact": {
+      "title": "Contato | Les Botanistes",
+      "description": "Entre em contato: endereço, telefone, email e horários. Restaurante bistronômico Paris 7, perto do Bon Marché."
+    },
+    "reservation": {
+      "title": "Reservar | Les Botanistes",
+      "description": "Reserve sua mesa no restaurante Les Botanistes. Experiência bistronômica única em Paris 7."
+    }
+  }
+}
