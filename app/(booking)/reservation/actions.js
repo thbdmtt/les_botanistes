@@ -3,6 +3,16 @@
 import { Resend } from 'resend'
 
 export async function sendReservationRequest(prevState, formData) {
+  // Vérification honeypot anti-bot
+  const honeypot = formData.get('website') || ''
+  if (honeypot) {
+    // Bot détecté - retourner succès silencieux sans envoyer d'email
+    return {
+      success: true,
+      message: 'Votre demande de réservation a bien été envoyée. Nous vous recontacterons sous 24h pour confirmer.',
+    }
+  }
+
   // Récupération des champs du formulaire
   const firstName = formData.get('firstName')?.trim() || ''
   const lastName = formData.get('lastName')?.trim() || ''
