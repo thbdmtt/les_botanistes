@@ -200,8 +200,8 @@ export default function ContactPage() {
               </div>
               <h3 className="font-medium mb-2">Métro</h3>
               <p className="text-sm text-gris-chaud">
-                Ligne 1 - Louvre Rivoli<br />
-                Ligne 7 - Palais Royal
+                Sèvres-Babylone<br />
+                Lignes 10 et 12
               </p>
             </div>
 
@@ -212,8 +212,8 @@ export default function ContactPage() {
               </div>
               <h3 className="font-medium mb-2">Bus</h3>
               <p className="text-sm text-gris-chaud">
-                Lignes 21, 67, 69, 72<br />
-                Arrêt Palais Royal
+                Lignes 39, 63, 68, 94<br />
+                Arrêt Sèvres-Babylone
               </p>
             </div>
 
@@ -224,8 +224,8 @@ export default function ContactPage() {
               </div>
               <h3 className="font-medium mb-2">Parking</h3>
               <p className="text-sm text-gris-chaud">
-                Parking Louvre<br />
-                à 200m du restaurant
+                Parking Indigo Sèvres-Babylone<br />
+                (Bon Marché) – à 200 m
               </p>
             </div>
           </div>
