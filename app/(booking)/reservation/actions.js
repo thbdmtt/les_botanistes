@@ -103,62 +103,127 @@ export async function sendReservationRequest(prevState, formData) {
   // Sujet de l'email
   const emailSubject = `Demande de réservation – ${formattedDate} à ${time}`
 
-  // Contenu HTML de l'email
+  // Contenu HTML premium de l'email
   const htmlContent = `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #C9A227; border-bottom: 2px solid #C9A227; padding-bottom: 10px;">
-        Nouvelle demande de réservation
-      </h2>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: 'Helvetica Neue', Arial, sans-serif;">
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f5f5f5; padding: 40px 20px;">
+        <tr>
+          <td align="center">
+            <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
 
-      <div style="background-color: #f9f9f9; padding: 20px; margin: 20px 0; border-left: 4px solid #C9A227;">
-        <h3 style="margin: 0 0 15px 0; color: #333;">Détails de la réservation</h3>
-        <table style="width: 100%; border-collapse: collapse;">
-          <tr>
-            <td style="padding: 8px 0; font-weight: bold; width: 140px;">Date</td>
-            <td style="padding: 8px 0;">${formattedDate}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 0; font-weight: bold;">Heure</td>
-            <td style="padding: 8px 0;">${time}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 0; font-weight: bold;">Convives</td>
-            <td style="padding: 8px 0;">${guests} personne${guests !== '1' ? 's' : ''}</td>
-          </tr>
-        </table>
-      </div>
+              <!-- Header -->
+              <tr>
+                <td style="background-color: #0B0B0C; padding: 30px 40px; text-align: center;">
+                  <h1 style="margin: 0; color: #C9A227; font-family: Georgia, serif; font-size: 28px; font-weight: normal;">
+                    Les Botanistes
+                  </h1>
+                  <p style="margin: 8px 0 0 0; color: #888888; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">
+                    Restaurant Bistronomique
+                  </p>
+                </td>
+              </tr>
 
-      <div style="margin: 20px 0;">
-        <h3 style="color: #333; margin-bottom: 15px;">Coordonnées du client</h3>
-        <table style="width: 100%; border-collapse: collapse;">
-          <tr>
-            <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold; width: 140px;">Nom</td>
-            <td style="padding: 8px 0; border-bottom: 1px solid #eee;">${firstName} ${lastName}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 0; border-bottom: 1px solid #eee; font-weight: bold;">Email</td>
-            <td style="padding: 8px 0; border-bottom: 1px solid #eee;">
-              <a href="mailto:${email}" style="color: #C9A227;">${email}</a>
-            </td>
-          </tr>
-        </table>
-      </div>
+              <!-- Title -->
+              <tr>
+                <td style="padding: 40px 40px 20px 40px; border-bottom: 1px solid #eee;">
+                  <h2 style="margin: 0; color: #0B0B0C; font-family: Georgia, serif; font-size: 24px; font-weight: normal;">
+                    Nouvelle demande de réservation
+                  </h2>
+                  <p style="margin: 10px 0 0 0; color: #666666; font-size: 14px;">
+                    Une demande de réservation a été soumise via le site.
+                  </p>
+                </td>
+              </tr>
 
-      <div style="margin-top: 30px; padding: 15px; background-color: #fff3cd; border-radius: 4px;">
-        <p style="margin: 0; font-size: 14px; color: #856404;">
-          <strong>Action requise :</strong> Merci de confirmer cette réservation auprès du client.
-        </p>
-      </div>
+              <!-- Reservation Details -->
+              <tr>
+                <td style="padding: 30px 40px;">
+                  <div style="background-color: #0B0B0C; border-radius: 8px; padding: 25px; margin-bottom: 25px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="33%" style="text-align: center; padding: 10px;">
+                          <p style="margin: 0 0 5px 0; color: #C9A227; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;">Date</p>
+                          <p style="margin: 0; color: #ffffff; font-size: 16px; font-weight: 500;">${formattedDate}</p>
+                        </td>
+                        <td width="33%" style="text-align: center; padding: 10px; border-left: 1px solid #333; border-right: 1px solid #333;">
+                          <p style="margin: 0 0 5px 0; color: #C9A227; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;">Heure</p>
+                          <p style="margin: 0; color: #ffffff; font-size: 16px; font-weight: 500;">${time}</p>
+                        </td>
+                        <td width="33%" style="text-align: center; padding: 10px;">
+                          <p style="margin: 0 0 5px 0; color: #C9A227; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;">Convives</p>
+                          <p style="margin: 0; color: #ffffff; font-size: 16px; font-weight: 500;">${guests} personne${guests !== '1' ? 's' : ''}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
 
-      <p style="margin-top: 30px; font-size: 12px; color: #888;">
-        Cette demande a été envoyée depuis le formulaire de réservation du site les-botanistes.fr
-      </p>
-    </div>
+                  <!-- Client Info -->
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Client</span>
+                        <p style="margin: 5px 0 0 0; color: #0B0B0C; font-size: 16px; font-weight: 500;">${firstName} ${lastName}</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Email</span>
+                        <p style="margin: 5px 0 0 0;"><a href="mailto:${email}" style="color: #C9A227; font-size: 16px; text-decoration: none;">${email}</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Action Required -->
+              <tr>
+                <td style="padding: 0 40px 30px 40px;">
+                  <div style="background-color: #fff8e6; border-left: 3px solid #C9A227; padding: 15px 20px; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #8a6d00; font-size: 14px;">
+                      <strong>Action requise :</strong> Merci de confirmer cette réservation auprès du client.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Action Button -->
+              <tr>
+                <td style="padding: 0 40px 40px 40px;">
+                  <a href="mailto:${email}?subject=Confirmation de votre réservation - Les Botanistes" style="display: inline-block; background-color: #C9A227; color: #ffffff; padding: 14px 28px; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 4px;">
+                    Répondre à ${firstName}
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Footer -->
+              <tr>
+                <td style="background-color: #fafafa; padding: 25px 40px; text-align: center; border-top: 1px solid #eee;">
+                  <p style="margin: 0; color: #999999; font-size: 12px;">
+                    Cette demande a été envoyée depuis le formulaire de réservation du site
+                  </p>
+                  <p style="margin: 5px 0 0 0;">
+                    <a href="https://les-botanistes.fr" style="color: #C9A227; font-size: 12px; text-decoration: none;">les-botanistes.fr</a>
+                  </p>
+                </td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+      </table>
+    </body>
+    </html>
   `
 
   try {
     const { error } = await resend.emails.send({
-      from: `${firstName} ${lastName} – Réservation <restaurant.lesbotanistes@orange.fr>`,
+      from: `${firstName} ${lastName} (Réservation) <contact@les-botanistes.fr>`,
       to: 'restaurant.lesbotanistes@orange.fr',
       replyTo: email,
       subject: emailSubject,

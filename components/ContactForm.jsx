@@ -34,6 +34,18 @@ export default function ContactForm() {
       </p>
 
       <form action={formAction} className="space-y-5">
+        {/* Honeypot anti-bot - champ invisible pour les humains */}
+        <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
+          <label htmlFor="website">Ne pas remplir ce champ</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label htmlFor="firstName" className="block text-sm text-muted-foreground mb-2">

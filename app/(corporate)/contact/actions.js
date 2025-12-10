@@ -1,8 +1,61 @@
 'use server'
 
 import { Resend } from 'resend'
+import { headers } from 'next/headers'
+
+// Rate limiting - stockage en mémoire des tentatives par IP
+const rateLimitMap = new Map()
+const RATE_LIMIT_WINDOW = 60 * 1000 // 60 secondes
+const RATE_LIMIT_MAX_REQUESTS = 3 // 3 requêtes max par fenêtre
+
+function checkRateLimit(ip) {
+  const now = Date.now()
+  const windowStart = now - RATE_LIMIT_WINDOW
+
+  // Récupérer les tentatives pour cette IP
+  const attempts = rateLimitMap.get(ip) || []
+
+  // Filtrer les tentatives dans la fenêtre de temps
+  const recentAttempts = attempts.filter(timestamp => timestamp > windowStart)
+
+  // Mettre à jour le Map avec les tentatives récentes
+  rateLimitMap.set(ip, recentAttempts)
+
+  // Vérifier si la limite est atteinte
+  if (recentAttempts.length >= RATE_LIMIT_MAX_REQUESTS) {
+    return false // Limite atteinte
+  }
+
+  // Enregistrer la nouvelle tentative
+  recentAttempts.push(now)
+  rateLimitMap.set(ip, recentAttempts)
+
+  return true // OK, peut continuer
+}
 
 export async function sendContactEmail(prevState, formData) {
+  // Vérification honeypot anti-bot
+  const honeypot = formData.get('website') || ''
+  if (honeypot) {
+    // Bot détecté - retourner succès silencieux sans envoyer d'email
+    return {
+      success: true,
+      message: 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.',
+    }
+  }
+
+  // Vérification rate limiting
+  const headersList = headers()
+  const ip = headersList.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+
+  if (!checkRateLimit(ip)) {
+    // Limite atteinte - retourner succès silencieux sans envoyer d'email
+    return {
+      success: true,
+      message: 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.',
+    }
+  }
+
   // Récupération des champs du formulaire
   const firstName = formData.get('firstName')?.trim() || ''
   const lastName = formData.get('lastName')?.trim() || ''
@@ -42,58 +95,120 @@ export async function sendContactEmail(prevState, formData) {
   // Sujet de l'email
   const emailSubject = `Nouveau message via le site - ${subject || 'Contact'}`
 
-  // Contenu HTML de l'email
+  // Contenu HTML premium de l'email
   const htmlContent = `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #C9A227; border-bottom: 2px solid #C9A227; padding-bottom: 10px;">
-        Nouveau message de contact
-      </h2>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: 'Helvetica Neue', Arial, sans-serif;">
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f5f5f5; padding: 40px 20px;">
+        <tr>
+          <td align="center">
+            <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
 
-      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-        <tr>
-          <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; width: 140px;">Prénom</td>
-          <td style="padding: 10px; border-bottom: 1px solid #eee;">${firstName}</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Nom</td>
-          <td style="padding: 10px; border-bottom: 1px solid #eee;">${lastName}</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Email</td>
-          <td style="padding: 10px; border-bottom: 1px solid #eee;">
-            <a href="mailto:${email}" style="color: #C9A227;">${email}</a>
+              <!-- Header -->
+              <tr>
+                <td style="background-color: #0B0B0C; padding: 30px 40px; text-align: center;">
+                  <h1 style="margin: 0; color: #C9A227; font-family: Georgia, serif; font-size: 28px; font-weight: normal;">
+                    Les Botanistes
+                  </h1>
+                  <p style="margin: 8px 0 0 0; color: #888888; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">
+                    Restaurant Bistronomique
+                  </p>
+                </td>
+              </tr>
+
+              <!-- Title -->
+              <tr>
+                <td style="padding: 40px 40px 20px 40px; border-bottom: 1px solid #eee;">
+                  <h2 style="margin: 0; color: #0B0B0C; font-family: Georgia, serif; font-size: 24px; font-weight: normal;">
+                    Nouveau message de contact
+                  </h2>
+                  <p style="margin: 10px 0 0 0; color: #666666; font-size: 14px;">
+                    Un visiteur vous a contacté via le formulaire du site.
+                  </p>
+                </td>
+              </tr>
+
+              <!-- Contact Info -->
+              <tr>
+                <td style="padding: 30px 40px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Nom complet</span>
+                        <p style="margin: 5px 0 0 0; color: #0B0B0C; font-size: 16px; font-weight: 500;">${firstName} ${lastName}</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Email</span>
+                        <p style="margin: 5px 0 0 0;"><a href="mailto:${email}" style="color: #C9A227; font-size: 16px; text-decoration: none;">${email}</a></p>
+                      </td>
+                    </tr>
+                    ${phone ? `
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Téléphone</span>
+                        <p style="margin: 5px 0 0 0;"><a href="tel:${phone}" style="color: #C9A227; font-size: 16px; text-decoration: none;">${phone}</a></p>
+                      </td>
+                    </tr>
+                    ` : ''}
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Sujet</span>
+                        <p style="margin: 5px 0 0 0; color: #0B0B0C; font-size: 16px;">${subject || 'Non spécifié'}</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Message -->
+              <tr>
+                <td style="padding: 0 40px 30px 40px;">
+                  <div style="background-color: #fafafa; border-left: 3px solid #C9A227; padding: 20px; border-radius: 0 4px 4px 0;">
+                    <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Message</span>
+                    <p style="margin: 10px 0 0 0; color: #333333; font-size: 15px; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Action Button -->
+              <tr>
+                <td style="padding: 0 40px 40px 40px;">
+                  <a href="mailto:${email}?subject=Re: ${subject || 'Votre message'}" style="display: inline-block; background-color: #C9A227; color: #ffffff; padding: 14px 28px; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 4px;">
+                    Répondre à ${firstName}
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Footer -->
+              <tr>
+                <td style="background-color: #fafafa; padding: 25px 40px; text-align: center; border-top: 1px solid #eee;">
+                  <p style="margin: 0; color: #999999; font-size: 12px;">
+                    Ce message a été envoyé depuis le formulaire de contact du site
+                  </p>
+                  <p style="margin: 5px 0 0 0;">
+                    <a href="https://les-botanistes.fr" style="color: #C9A227; font-size: 12px; text-decoration: none;">les-botanistes.fr</a>
+                  </p>
+                </td>
+              </tr>
+
+            </table>
           </td>
-        </tr>
-        ${phone ? `
-        <tr>
-          <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Téléphone</td>
-          <td style="padding: 10px; border-bottom: 1px solid #eee;">
-            <a href="tel:${phone}" style="color: #C9A227;">${phone}</a>
-          </td>
-        </tr>
-        ` : ''}
-        <tr>
-          <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Sujet</td>
-          <td style="padding: 10px; border-bottom: 1px solid #eee;">${subject || 'Non spécifié'}</td>
         </tr>
       </table>
-
-      <div style="margin-top: 30px;">
-        <h3 style="color: #333; margin-bottom: 10px;">Message :</h3>
-        <div style="background-color: #f9f9f9; padding: 20px; border-left: 4px solid #C9A227; white-space: pre-wrap;">
-          ${message}
-        </div>
-      </div>
-
-      <p style="margin-top: 30px; font-size: 12px; color: #888;">
-        Ce message a été envoyé depuis le formulaire de contact du site les-botanistes.fr
-      </p>
-    </div>
+    </body>
+    </html>
   `
 
   try {
     const { error } = await resend.emails.send({
-      from: 'from: `${firstName} ${lastName} (${subject}) <restaurant.lesbotanistes@orange.fr>`',
+      from: `${firstName} ${lastName} (${subject || 'Contact'}) <contact@les-botanistes.fr>`,
       to: 'restaurant.lesbotanistes@orange.fr',
       replyTo: email,
       subject: emailSubject,
