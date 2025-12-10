@@ -1,12 +1,55 @@
 'use server'
 
 import { Resend } from 'resend'
+import { headers } from 'next/headers'
+
+// Rate limiting - stockage en mémoire des tentatives par IP
+const rateLimitMap = new Map()
+const RATE_LIMIT_WINDOW = 60 * 1000 // 60 secondes
+const RATE_LIMIT_MAX_REQUESTS = 3 // 3 requêtes max par fenêtre
+
+function checkRateLimit(ip) {
+  const now = Date.now()
+  const windowStart = now - RATE_LIMIT_WINDOW
+
+  // Récupérer les tentatives pour cette IP
+  const attempts = rateLimitMap.get(ip) || []
+
+  // Filtrer les tentatives dans la fenêtre de temps
+  const recentAttempts = attempts.filter(timestamp => timestamp > windowStart)
+
+  // Mettre à jour le Map avec les tentatives récentes
+  rateLimitMap.set(ip, recentAttempts)
+
+  // Vérifier si la limite est atteinte
+  if (recentAttempts.length >= RATE_LIMIT_MAX_REQUESTS) {
+    return false // Limite atteinte
+  }
+
+  // Enregistrer la nouvelle tentative
+  recentAttempts.push(now)
+  rateLimitMap.set(ip, recentAttempts)
+
+  return true // OK, peut continuer
+}
 
 export async function sendReservationRequest(prevState, formData) {
   // Vérification honeypot anti-bot
   const honeypot = formData.get('website') || ''
   if (honeypot) {
     // Bot détecté - retourner succès silencieux sans envoyer d'email
+    return {
+      success: true,
+      message: 'Votre demande de réservation a bien été envoyée. Nous vous recontacterons sous 24h pour confirmer.',
+    }
+  }
+
+  // Vérification rate limiting
+  const headersList = headers()
+  const ip = headersList.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+
+  if (!checkRateLimit(ip)) {
+    // Limite atteinte - retourner succès silencieux sans envoyer d'email
     return {
       success: true,
       message: 'Votre demande de réservation a bien été envoyée. Nous vous recontacterons sous 24h pour confirmer.',
