@@ -1,7 +1,7 @@
 'use client'
 
 import { useFormState, useFormStatus } from 'react-dom'
-import { sendContactEmail } from '@/app/(corporate)/contact/actions'
+import { sendContactEmail } from '@/app/[locale]/(corporate)/contact/actions'
 
 const initialState = {
   success: false,

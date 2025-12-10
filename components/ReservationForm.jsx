@@ -1,7 +1,7 @@
 'use client'
 
 import { useFormState, useFormStatus } from 'react-dom'
-import { sendReservationRequest } from '@/app/(booking)/reservation/actions'
+import { sendReservationRequest } from '@/app/[locale]/(booking)/reservation/actions'
 import { Separator } from '@/components/ui'
 
 const initialState = {

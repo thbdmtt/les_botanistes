@@ -1,72 +1,4 @@
 import './globals.css'
-import { ThemeProvider } from '@/components/ThemeProvider'
-import { Header, Footer } from '@/components/layout'
-import { RestaurantJsonLd, WebSiteJsonLd } from '@/lib/jsonld'
-
-const siteConfig = {
-  name: 'Les Botanistes',
-  description: 'Restaurant bistronomique à Paris 7, rue Chomel, près du Bon Marché. Cuisine française de saison, élégante et raffinée.',
-  url: 'https://les-botanistes.fr',
-  locale: 'fr_FR',
-}
-
-export const metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: `${siteConfig.name} | Restaurant Bistronomique Paris 7`,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  keywords: [
-    'restaurant bistronomique',
-    'Paris 7',
-    'cuisine française',
-    'cuisine de saison',
-    'Les Botanistes',
-    'Bon Marché',
-    'Sèvres-Babylone',
-    'rue Chomel',
-  ],
-  authors: [{ name: siteConfig.name }],
-  creator: siteConfig.name,
-  openGraph: {
-    type: 'website',
-    locale: siteConfig.locale,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: ['/og-default.jpg'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: ['/og-default.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
-  manifest: '/manifest.json',
-  formatDetection: {
-    telephone: true,
-    date: false,
-    address: true,
-    email: true,
-  },
-}
 
 export const viewport = {
   themeColor: [
@@ -77,36 +9,6 @@ export const viewport = {
   initialScale: 1,
 }
 
-// Script pour éviter le flash de thème au chargement
-// S'exécute avant React pour appliquer immédiatement le thème
-const themeScript = `
-  (function() {
-    function getTheme() {
-      const stored = localStorage.getItem('theme');
-      if (stored && stored !== 'system') return stored;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    document.documentElement.classList.add(getTheme());
-  })();
-`
-
 export default function RootLayout({ children }) {
-  return (
-    <html lang="fr" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <RestaurantJsonLd />
-        <WebSiteJsonLd />
-      </head>
-      <body className="font-sans min-h-screen flex flex-col bg-background text-foreground antialiased">
-        <ThemeProvider defaultTheme="system">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
-      </body>
-    </html>
-  )
+  return children
 }
