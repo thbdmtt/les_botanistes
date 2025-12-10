@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { siteConfig } from '@/lib/config'
 import Logo from '@/components/ui/Logo'
 import { Separator } from '@/components/ui'
