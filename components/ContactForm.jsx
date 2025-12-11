@@ -94,12 +94,14 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="phone" className="block text-sm text-muted-foreground mb-2">
-            Téléphone
+            Téléphone *
           </label>
           <input
             type="tel"
             id="phone"
             name="phone"
+            required
+            aria-required="true"
             className="w-full px-4 py-3 bg-background border border-border rounded-sm
                      focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
             placeholder="+33 6 00 00 00 00"

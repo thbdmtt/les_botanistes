@@ -8,6 +8,38 @@ const rateLimitMap = new Map()
 const RATE_LIMIT_WINDOW = 60 * 1000 // 60 secondes
 const RATE_LIMIT_MAX_REQUESTS = 3 // 3 requêtes max par fenêtre
 
+/**
+ * Normalise un numéro de téléphone au format E.164
+ * @param {string} value - Le numéro de téléphone à normaliser
+ * @returns {string} - Le numéro normalisé
+ */
+function normalizePhone(value) {
+  // 1. Suppression des espaces, tirets, points et autres caractères non numériques sauf le plus
+  let normalized = value.replace(/[^\d+]/g, '')
+
+  // 2. Conversion des formats courants
+  // 2a. Si le numéro commence par "00", on le convertit en "+.."
+  if (normalized.startsWith('00')) {
+    normalized = '+' + normalized.slice(2)
+  }
+
+  // 2b. Si le numéro commence par "0" (ex: 06..., 07...), on convertit en +33...
+  if (normalized.startsWith('0') && normalized.length >= 10) {
+    normalized = '+33' + normalized.slice(1)
+  }
+
+  return normalized
+}
+
+/**
+ * Valide un numéro de téléphone au format E.164
+ * @param {string} value - Le numéro de téléphone normalisé
+ * @returns {boolean} - true si valide, false sinon
+ */
+function isValidE164(value) {
+  return /^\+[1-9]\d{1,14}$/.test(value)
+}
+
 function checkRateLimit(ip) {
   const now = Date.now()
   const windowStart = now - RATE_LIMIT_WINDOW
@@ -60,12 +92,13 @@ export async function sendReservationRequest(prevState, formData) {
   const firstName = formData.get('firstName')?.trim() || ''
   const lastName = formData.get('lastName')?.trim() || ''
   const email = formData.get('email')?.trim() || ''
+  const phoneRaw = formData.get('phone')?.trim() || ''
   const date = formData.get('date')?.trim() || ''
   const time = formData.get('time')?.trim() || ''
   const guests = formData.get('guests')?.trim() || ''
 
   // Validation des champs obligatoires
-  if (!firstName || !lastName || !email || !date || !time || !guests) {
+  if (!firstName || !lastName || !email || !phoneRaw || !date || !time || !guests) {
     return {
       success: false,
       message: 'Merci de remplir tous les champs obligatoires.',
@@ -78,6 +111,15 @@ export async function sendReservationRequest(prevState, formData) {
     return {
       success: false,
       message: 'Merci de saisir une adresse email valide.',
+    }
+  }
+
+  // Normalisation et validation du téléphone au format E.164
+  const phone = normalizePhone(phoneRaw)
+  if (!isValidE164(phone)) {
+    return {
+      success: false,
+      message: 'Veuillez entrer un numéro de téléphone international valide (format +33612345678).',
     }
   }
 
@@ -175,6 +217,12 @@ export async function sendReservationRequest(prevState, formData) {
                       <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                         <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Email</span>
                         <p style="margin: 5px 0 0 0;"><a href="mailto:${email}" style="color: #C9A227; font-size: 16px; text-decoration: none;">${email}</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Téléphone</span>
+                        <p style="margin: 5px 0 0 0;"><a href="tel:${phone}" style="color: #C9A227; font-size: 16px; text-decoration: none;">${phone}</a></p>
                       </td>
                     </tr>
                   </table>
