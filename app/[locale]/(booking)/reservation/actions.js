@@ -271,8 +271,8 @@ export async function sendReservationRequest(prevState, formData) {
 
   try {
     const { error } = await resend.emails.send({
-      from: `${firstName} ${lastName} (Réservation) <onboarding@resend.dev>`,
-      to: 'thibaud.myotte@gmail.com',
+      from: `${firstName} ${lastName} (Réservation) <contact@lesbotanistes.com>`,
+      to: 'restaurant.lesbotanistes@orange.fr',
       replyTo: email,
       subject: emailSubject,
       html: htmlContent,
