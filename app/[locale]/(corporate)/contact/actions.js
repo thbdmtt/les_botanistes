@@ -247,7 +247,7 @@ export async function sendContactEmail(prevState, formData) {
 
   try {
     const { error } = await resend.emails.send({
-      from: `${firstName} ${lastName} (${subject || 'Contact'}) <contact@les-botanistes.fr>`,
+      from: `${firstName} ${lastName} (${subject || 'Contact'}) <contact@lesbotanistes.com>`,
       to: 'restaurant.lesbotanistes@orange.fr',
       replyTo: email,
       subject: emailSubject,
