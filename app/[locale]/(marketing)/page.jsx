@@ -24,9 +24,8 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={300}>
             <p className="body-luxe max-w-2xl mx-auto">
-              Au cœur de Paris, Les Botanistes vous invite à un voyage gustatif unique.
-              Notre chef sublime les plus beaux produits de saison dans une cuisine
-              inventive qui célèbre la nature et son extraordinaire générosité.
+              Au cœur de Paris, Les Botanistes cultivent depuis 15 ans une cuisine française
+              authentique, nourrie par la transmission et le respect des produits de saison.
             </p>
           </FadeIn>
         </div>
@@ -59,9 +58,9 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
                   </svg>
                 </div>
-                <h3 className="font-serif text-xl mb-3">Créativité Culinaire</h3>
+                <h3 className="font-serif text-xl mb-3">Cuisine soignée</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Une cuisine inventive qui repousse les frontières du goût.
+                  Une tradition familiale où le geste, le goût et la précision se transmettent de père en fils depuis plus de 15 ans.
                 </p>
               </div>
             </FadeIn>
@@ -74,13 +73,40 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                   </svg>
                 </div>
-                <h3 className="font-serif text-xl mb-3">Service Attentionné</h3>
+                <h3 className="font-serif text-xl mb-3">Service attentionné</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Une équipe passionnée, dévouée à rendre chaque instant mémorable.
+                  Une équipe passionnée, dévouée à rendre chaque moment chaleureux et mémorable.
                 </p>
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* Section Cave remarquable */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow text-center">
+          <FadeIn>
+            <div className="w-16 h-16 mx-auto mb-6 border border-gold/30 rounded-full flex items-center justify-center">
+              <svg className="w-7 h-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <h2 className="font-serif text-3xl sm:text-4xl mb-6">
+              Une cave <span className="text-gold italic">remarquable</span>
+            </h2>
+          </FadeIn>
+          <FadeIn delay={200}>
+            <div className="separator-gold mx-auto mb-8" />
+          </FadeIn>
+          <FadeIn delay={300}>
+            <p className="body-luxe max-w-2xl mx-auto">
+              Plus de 650 références soigneusement choisies pour accompagner chaque moment,
+              du grand classique aux découvertes confidentielles.
+            </p>
+          </FadeIn>
         </div>
       </section>
 

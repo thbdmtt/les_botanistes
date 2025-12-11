@@ -57,9 +57,7 @@ export default function Hero() {
           className="max-w-xl mx-auto text-lg sm:text-xl text-gris-chaud font-light leading-relaxed mb-10 opacity-0 animate-fade-in-up"
           style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}
         >
-          Une expérience culinaire unique où la nature
-          <br className="hidden sm:block" />
-          rencontre l&apos;art de la haute gastronomie
+          Une expérience culinaire où la nature rencontre l&apos;art de vivre à la française.
         </p>
 
         {/* Boutons CTA */}
