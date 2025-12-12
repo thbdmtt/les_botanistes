@@ -24,7 +24,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={300}>
             <p className="body-luxe max-w-2xl mx-auto">
-              Au cœur de Paris, Les Botanistes cultivent depuis 15 ans une cuisine française
+              Au cœur de Paris, Les Botanistes cultivent depuis 2010 une cuisine française
               authentique, nourrie par la transmission et le respect des produits de saison.
             </p>
           </FadeIn>
