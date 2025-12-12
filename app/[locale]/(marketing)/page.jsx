@@ -122,9 +122,9 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={100}>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-blanc mb-6 text-balance">
-              Vivez une expérience
+              Venez partager un agréable
               <br />
-              <span className="italic">inoubliable</span>
+              <span className="italic">moment</span>
             </h2>
           </FadeIn>
           <FadeIn delay={200}>
