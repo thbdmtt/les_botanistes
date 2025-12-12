@@ -178,7 +178,7 @@ export default function ReservationPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 {/* Overlay sombre */}
-                <div className="absolute inset-0 bg-black/70" />
+                <div className="absolute inset-0 bg-black/75" />
                 {/* Contenu */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
@@ -187,14 +187,12 @@ export default function ReservationPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m18-6-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 10.5" />
                       </svg>
                     </div>
-                    <p className="text-sm text-gris-chaud/60 uppercase tracking-widest">
+                    <p className="text-sm text-gris-chaud/80 uppercase tracking-widest">
                       Espace privatisable
                     </p>
                   </div>
                 </div>
               </div>
-              {/* Décoration dorée */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-gold/20" />
             </div>
           </div>
         </div>
