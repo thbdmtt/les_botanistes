@@ -19,97 +19,97 @@ export const metadata = {
 const menuData = {
   entrees: [
     {
-      name: '6 Huîtres Creuses "Perle Blanche" n°3',
+      name: '6 huîtres creuses "Perle Blanche" n°3',
       // description: 'Crème d\'oursin, caviar d\'Aquitaine, gelée d\'eau de mer',
       price: 18,
-      
+
     },
     {
-      name: 'Foie Gras de Canard Mi-Cuit Cuit au Torchon, marmelade de Fruits Secs',
+      name: 'Foie gras de canard mi-cuit au torchon, Marmelade de fruits secs',
       // description: 'Confit au Sauternes, brioche toastée, chutney de figues',
       price: 23,
       // tag: 'Signature',
     },
     {
-      name: 'Salade Pastorale au Herbes Fraîches',
+      name: 'Salade pastorale aux herbes fraîches',
       // description: 'Beurre d\'agrumes, émulsion au champagne, caviar de citron',
       price: 9,
     },
     {
-      name: 'Œuf Bio Parfait aux Lentilles Vertes du Puy',
+      name: 'Œuf bio parfait aux lentilles vertes du Puy',
       // description: 'Crème de morilles, copeaux de truffe noire du Périgord',
       price: 16,
     },
     {
-      name: 'Feuilleté aux Champignons',
+      name: 'Feuilleté aux champignons',
       // description: 'Pomme verte, huile de noisette, pousses de shiso',
       price: 16,
     },
   ],
   plats: [
     {
-      name: 'Lièvre à la Royale, Purée de Céleri',
+      name: 'Lièvre à la royale, Purée de céleri',
       // description: 'Risotto crémeux à l\'encre de seiche, bisque parfumée au cognac',
       price: 68,
       tag: 'Chef',
     },
     {
-      name: 'Noix de Saint-Jacques, Endives Braisées',
+      name: 'Noix de Saint-Jacques, Endives braisées',
       // description: 'Pomme soufflée, sauce Périgueux, légumes racines confits',
       price: 40,
     },
     {
-      name: 'Onglet de Bœuf Poêlé, Gratin de Pommes de Terre',
+      name: 'Onglet de bœuf poêlé, Gratin de pommes de terre',
       // description: 'Cuisson rosée, jus corsé aux épices, purée de céleri truffée',
       price: 32,
     },
     {
-      name: 'Ris de Veau de Lait Rôti, Tombé d\'Épinards',
+      name: 'Ris de veau de lait rôti, Tombée d\'épinards',
       // description: 'Rôti sur l\'arête, beurre blanc aux herbes, artichauts violets',
       price: 55,
     },
     {
-      name: 'Volaille Fermière Cuite sur Coffre, Jus de Volaille, Sauce Homardine, Pommes Paillasson',
+      name: 'Volaille fermière cuite sur coffre, Jus de volaille, Sauce homardine, Pommes paillasson',
       // description: 'Morilles fraîches, jus de veau réduit, purée de panais',
       price: 37,
     },
   ],
   desserts: [
     {
-      name: 'Ananas rôti, Sorbet Mangue',
+      name: 'Ananas rôti, Sorbet mangue',
       // description: 'Crème anglaise à la vanille de Madagascar',
       price: 15,
       tag: 'Signature',
     },
     {
-      name: 'Crumble aux Pommes',
+      name: 'Crumble aux pommes',
       // description: 'Caramel au beurre salé, glace à la cannelle',
       price: 12,
     },
     {
-      name: 'Crème Renversée au Caramel et Gousse de Vanille',
+      name: 'Crème renversée au caramel et gousse de vanille',
       // description: 'Textures multiples, crémeux, croustillant, glace intense',
       price: 10,
     },
     {
-      name: 'Baba au Rhum Ambré, Crème fouettée',
+      name: 'Baba au rhum ambré, Crème fouettée',
       // description: 'Fruits rouges de saison, meringue légère, coulis de framboise',
       price: 14,
     },
     {
-      name: 'Moelleux au Chocolat, Glace Fromage Blanc',
+      name: 'Moelleux au chocolat, Glace fromage blanc',
       // description: 'Fruits rouges de saison, meringue légère, coulis de framboise',
       price: 14,
     },
     {
-      name: 'Glaces et Sorbets Maison',
+      name: 'Glaces et sorbets maison',
       // description: 'Fruits rouges de saison, meringue légère, coulis de framboise',
       price: 12,
     },
     {
-      name: 'Assiette de Fromages Affinés',
+      name: 'Assiette de fromages affinés',
       // description: 'Sélection de nos maîtres fromagers, confiture de cerises noires',
-      price:17,
+      price: 17,
     },
   ],
 }
