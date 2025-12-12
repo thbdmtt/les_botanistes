@@ -146,17 +146,16 @@ export default function CartePage() {
       <PageHeader
         subtitle="Notre Carte"
         title="Cuisine de saison"
-        description="Une carte bistronomique élaborée au fil des saisons, où chaque plat célèbre les meilleurs produits du marché."
+        description="Une ardoise qui évolue au fil des saisons, mettant à l’honneur les produits du marché."
       />
 
       {/* Note du chef */}
       <section className="pb-8">
         <div className="container-luxe max-w-2xl text-center">
           <blockquote className="italic text-muted-foreground">
-            &ldquo;Chaque assiette est une invitation au voyage, un hommage
-            à la générosité de notre terroir et à l&apos;excellence de nos producteurs.&rdquo;
+            &ldquo;La cuisine, c’est quand les choses ont le goût de ce qu’elles sont.&rdquo;
           </blockquote>
-          <p className="mt-4 text-sm text-gold">— Le Chef</p>
+          <p className="mt-4 text-sm text-gold">— Curnonsky</p>
         </div>
       </section>
 
@@ -174,7 +173,7 @@ export default function CartePage() {
       {/* Plats */}
       <MenuSection
         title="Les Plats"
-        subtitle="À partager ou à savourer"
+        subtitle="À savourer"
         items={menuData.plats}
       />
 
