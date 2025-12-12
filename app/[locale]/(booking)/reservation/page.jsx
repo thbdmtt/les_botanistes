@@ -110,10 +110,6 @@ export default function ReservationPage() {
                       <span className="text-gold mt-1">•</span>
                       Retard au-delà de 15 min : la réservation peut être annulée
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      Tenue correcte exigée
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -146,7 +142,7 @@ export default function ReservationPage() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3 text-gris-chaud">
                   <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  Capacité jusqu&apos;à 45 convives
+                  Capacité jusqu&apos;à 34 convives
                 </li>
                 <li className="flex items-center gap-3 text-gris-chaud">
                   <span className="w-1.5 h-1.5 bg-gold rounded-full" />
