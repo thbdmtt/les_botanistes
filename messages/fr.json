@@ -20,14 +20,45 @@
   },
   "home": {
     "hero": {
-      "subtitle": "Bienvenue",
-      "title": "Une cuisine d'auteur au cœur de Paris",
-      "description": "Découvrez une expérience gastronomique unique où tradition française et créativité contemporaine se rencontrent."
+      "subtitle": "Restaurant Bistronomique",
+      "title": "Les",
+      "titleHighlight": "Botanistes",
+      "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
+      "ctaMenu": "Découvrir la carte",
+      "ctaReservation": "Réserver une table",
+      "scrollIndicator": "Scroll"
     },
     "philosophy": {
-      "subtitle": "Notre philosophie",
-      "title": "L'art de la bistronomie",
-      "description": "Nous célébrons les produits d'exception et les savoir-faire artisanaux pour créer des plats qui racontent une histoire."
+      "subtitle": "Notre Philosophie",
+      "title": "L'excellence au service",
+      "titleHighlight": "de vos sens",
+      "description": "Au cœur de Paris, Les Botanistes cultivent depuis 2010 une cuisine française authentique, nourrie par la transmission et le respect des produits de saison."
+    },
+    "pillars": {
+      "products": {
+        "title": "Produits d'Exception",
+        "description": "Une sélection rigoureuse des meilleurs producteurs et artisans français."
+      },
+      "cuisine": {
+        "title": "Cuisine soignée",
+        "description": "Une tradition familiale où le geste, le goût et la précision se transmettent de père en fils depuis plus de 15 ans."
+      },
+      "service": {
+        "title": "Service attentionné",
+        "description": "Une équipe passionnée, dévouée à rendre chaque moment chaleureux et mémorable."
+      }
+    },
+    "cellar": {
+      "title": "Une cave",
+      "titleHighlight": "remarquable",
+      "description": "Plus de 650 références soigneusement choisies pour accompagner chaque moment, du grand classique aux découvertes confidentielles."
+    },
+    "cta": {
+      "subtitle": "Réservation",
+      "title": "Venez partager un agréable",
+      "titleHighlight": "moment",
+      "description": "Réservez votre table et laissez-nous vous transporter dans un univers où chaque détail est pensé pour votre plaisir.",
+      "button": "Réserver maintenant"
     }
   },
   "menu": {

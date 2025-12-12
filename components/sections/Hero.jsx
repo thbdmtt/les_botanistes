@@ -1,9 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui'
 
 export default function Hero() {
+  const t = useTranslations('home.hero')
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Image de fond avec effet parallaxe subtil */}
@@ -30,7 +32,7 @@ export default function Hero() {
           className="subtitle text-blanc/90 mb-6 opacity-0 animate-fade-in-up"
           style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
         >
-          Restaurant Bistronomique
+          {t('subtitle')}
         </p>
 
         {/* Titre principal */}
@@ -38,8 +40,8 @@ export default function Hero() {
           className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-blanc mb-6 opacity-0 animate-fade-in-up"
           style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
         >
-          Les{' '}
-          <span className="text-gold italic">Botanistes</span>
+          {t('title')}{' '}
+          <span className="text-gold italic">{t('titleHighlight')}</span>
         </h1>
 
         {/* Séparateur décoratif */}
@@ -57,7 +59,7 @@ export default function Hero() {
           className="max-w-xl mx-auto text-lg sm:text-xl text-gris-chaud font-light leading-relaxed mb-10 opacity-0 animate-fade-in-up"
           style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}
         >
-          Une expérience culinaire où la nature rencontre l&apos;art de vivre à la française.
+          {t('description')}
         </p>
 
         {/* Boutons CTA */}
@@ -66,10 +68,10 @@ export default function Hero() {
           style={{ animationDelay: '900ms', animationFillMode: 'forwards' }}
         >
           <Button href="/carte" variant="primary">
-            Découvrir la carte
+            {t('ctaMenu')}
           </Button>
           <Button href="/reservation" variant="secondary" className="border-blanc/50 text-blanc hover:bg-blanc hover:text-noir hover:border-blanc">
-            Réserver une table
+            {t('ctaReservation')}
           </Button>
         </div>
       </div>
@@ -80,7 +82,7 @@ export default function Hero() {
         style={{ animationDelay: '1200ms', animationFillMode: 'forwards' }}
       >
         <div className="flex flex-col items-center gap-2 text-blanc/60">
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <span className="text-xs uppercase tracking-widest">{t('scrollIndicator')}</span>
           <div className="w-6 h-10 border border-blanc/30 rounded-full flex justify-center pt-2">
             <div className="w-1 h-2 bg-gold rounded-full animate-bounce" />
           </div>
