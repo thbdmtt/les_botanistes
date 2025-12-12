@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { PageHeader } from '@/components/sections'
 import { siteConfig } from '@/lib/config'
 import { ReservationJsonLd } from '@/lib/jsonld'
@@ -165,9 +166,20 @@ export default function ReservationPage() {
               </a>
             </div>
 
-            {/* Image placeholder / décoration */}
+            {/* Image d'ambiance */}
             <div className="relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-gris-fonce to-noir rounded-sm overflow-hidden">
+                {/* Image */}
+                <Image
+                  src="/images/privatisation/espace-privatisable.jpg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                {/* Overlay sombre */}
+                <div className="absolute inset-0 bg-black/70" />
+                {/* Contenu */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-20 h-20 mx-auto mb-4 border border-gold/30 rounded-full flex items-center justify-center">
