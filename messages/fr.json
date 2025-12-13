@@ -142,9 +142,18 @@
     "access": {
       "subtitle": "Venir au restaurant",
       "title": "Accès",
-      "metro": "Métro",
-      "bus": "Bus",
-      "parking": "Parking"
+      "metro": {
+        "title": "Métro",
+        "details": "Sèvres-Babylone\nLignes 10 et 12"
+      },
+      "bus": {
+        "title": "Bus",
+        "details": "Lignes 39, 63, 68, 94\nArrêt Sèvres-Babylone"
+      },
+      "parking": {
+        "title": "Parking",
+        "details": "Parking Indigo Sèvres-Babylone\n(Bon Marché) – à 200 m"
+      }
     },
     "hours": {
       "lunch": "Déjeuner",

@@ -1,19 +1,9 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import { PageHeader } from '@/components/sections'
 import { siteConfig } from '@/lib/config'
 import ContactForm from '@/components/ContactForm'
-
-export const metadata = {
-  title: 'Contact',
-  description: 'Contactez le restaurant Les Botanistes. Adresse, horaires d\'ouverture et formulaire de contact. Nous sommes à votre écoute.',
-  openGraph: {
-    title: 'Contact | Les Botanistes',
-    description: 'Contactez-nous : adresse, téléphone, email et horaires. Restaurant bistronomique Paris 7, près du Bon Marché.',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://les-botanistes.fr/contact',
-  },
-}
 
 // Icônes
 function PhoneIcon({ className }) {
@@ -50,12 +40,14 @@ function ClockIcon({ className }) {
 }
 
 export default function ContactPage() {
+  const t = useTranslations('contact')
+
   return (
     <>
       <PageHeader
-        subtitle="Contact"
-        title="Nous rencontrer"
-        description="Une question, une remarque ? Notre équipe est à votre disposition pour vous répondre dans les meilleurs délais."
+        subtitle={t('header.subtitle')}
+        title={t('header.title')}
+        description={t('header.description')}
       />
 
       {/* Section principale */}
@@ -71,7 +63,7 @@ export default function ContactPage() {
                   <MapPinIcon className="w-5 h-5 text-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg mb-2">Adresse</h3>
+                  <h3 className="font-serif text-lg mb-2">{t('info.address')}</h3>
                   <address className="not-italic text-muted-foreground leading-relaxed">
                     {siteConfig.restaurant.address.street}<br />
                     {siteConfig.restaurant.address.postalCode} {siteConfig.restaurant.address.city}<br />
@@ -83,7 +75,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="inline-block mt-3 text-sm text-gold hover:text-gold-light transition-colors"
                   >
-                    Voir sur Google Maps →
+                    {t('info.viewOnMap')} →
                   </a>
                 </div>
               </div>
@@ -94,7 +86,7 @@ export default function ContactPage() {
                   <PhoneIcon className="w-5 h-5 text-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg mb-2">Téléphone</h3>
+                  <h3 className="font-serif text-lg mb-2">{t('info.phone')}</h3>
                   <a
                     href={`tel:${siteConfig.restaurant.phone}`}
                     className="text-muted-foreground hover:text-gold transition-colors"
@@ -102,7 +94,7 @@ export default function ContactPage() {
                     {siteConfig.restaurant.phone}
                   </a>
                   <p className="mt-1 text-sm text-muted-foreground/70">
-                    Du mardi au samedi, 10h-22h
+                    {t('info.phoneHours')}
                   </p>
                 </div>
               </div>
@@ -113,7 +105,7 @@ export default function ContactPage() {
                   <MailIcon className="w-5 h-5 text-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg mb-2">Email</h3>
+                  <h3 className="font-serif text-lg mb-2">{t('info.email')}</h3>
                   <a
                     href={`mailto:${siteConfig.restaurant.email}`}
                     className="text-muted-foreground hover:text-gold transition-colors"
@@ -121,7 +113,7 @@ export default function ContactPage() {
                     {siteConfig.restaurant.email}
                   </a>
                   <p className="mt-1 text-sm text-muted-foreground/70">
-                    Réponse sous 24-48h
+                    {t('info.responseTime')}
                   </p>
                 </div>
               </div>
@@ -132,18 +124,18 @@ export default function ContactPage() {
                   <ClockIcon className="w-5 h-5 text-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg mb-3">Horaires d&apos;ouverture</h3>
+                  <h3 className="font-serif text-lg mb-3">{t('info.hours')}</h3>
                   <div className="space-y-2 text-muted-foreground">
                     <div className="flex justify-between gap-8">
-                      <span>Déjeuner</span>
+                      <span>{t('hours.lunch')}</span>
                       <span className="text-foreground">{siteConfig.restaurant.hours.lunch}</span>
                     </div>
                     <div className="flex justify-between gap-8">
-                      <span>Dîner</span>
+                      <span>{t('hours.dinner')}</span>
                       <span className="text-foreground">{siteConfig.restaurant.hours.dinner}</span>
                     </div>
                     <p className="pt-2 text-sm text-gold/80">
-                      Fermé {siteConfig.restaurant.hours.closed}
+                      {t('hours.closed')} {siteConfig.restaurant.hours.closed}
                     </p>
                   </div>
                 </div>
@@ -178,7 +170,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="inline-block mt-4 btn-secondary text-sm py-2 px-6"
             >
-              Ouvrir dans Google Maps
+              {t('info.openInMaps')}
             </a>
           </div>
         </div>
@@ -188,8 +180,8 @@ export default function ContactPage() {
       <section className="section-padding bg-noir text-blanc">
         <div className="container-luxe">
           <div className="text-center mb-12">
-            <p className="subtitle text-gold/80 mb-4">Venir au restaurant</p>
-            <h2 className="font-serif text-2xl sm:text-3xl">Accès</h2>
+            <p className="subtitle text-gold/80 mb-4">{t('access.subtitle')}</p>
+            <h2 className="font-serif text-2xl sm:text-3xl">{t('access.title')}</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
@@ -198,10 +190,9 @@ export default function ContactPage() {
               <div className="w-12 h-12 mx-auto mb-4 border border-gris-fonce rounded-full flex items-center justify-center">
                 <span className="text-gold font-bold text-sm">M</span>
               </div>
-              <h3 className="font-medium mb-2">Métro</h3>
-              <p className="text-sm text-gris-chaud">
-                Sèvres-Babylone<br />
-                Lignes 10 et 12
+              <h3 className="font-medium mb-2">{t('access.metro.title')}</h3>
+              <p className="text-sm text-gris-chaud whitespace-pre-line">
+                {t('access.metro.details')}
               </p>
             </div>
 
@@ -210,10 +201,9 @@ export default function ContactPage() {
               <div className="w-12 h-12 mx-auto mb-4 border border-gris-fonce rounded-full flex items-center justify-center">
                 <span className="text-gold font-bold text-sm">Bus</span>
               </div>
-              <h3 className="font-medium mb-2">Bus</h3>
-              <p className="text-sm text-gris-chaud">
-                Lignes 39, 63, 68, 94<br />
-                Arrêt Sèvres-Babylone
+              <h3 className="font-medium mb-2">{t('access.bus.title')}</h3>
+              <p className="text-sm text-gris-chaud whitespace-pre-line">
+                {t('access.bus.details')}
               </p>
             </div>
 
@@ -222,10 +212,9 @@ export default function ContactPage() {
               <div className="w-12 h-12 mx-auto mb-4 border border-gris-fonce rounded-full flex items-center justify-center">
                 <span className="text-gold font-bold text-sm">P</span>
               </div>
-              <h3 className="font-medium mb-2">Parking</h3>
-              <p className="text-sm text-gris-chaud">
-                Parking Indigo Sèvres-Babylone<br />
-                (Bon Marché) – à 200 m
+              <h3 className="font-medium mb-2">{t('access.parking.title')}</h3>
+              <p className="text-sm text-gris-chaud whitespace-pre-line">
+                {t('access.parking.details')}
               </p>
             </div>
           </div>
