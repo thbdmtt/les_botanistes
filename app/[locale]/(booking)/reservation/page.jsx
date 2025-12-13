@@ -1,30 +1,20 @@
+'use client'
+
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { PageHeader } from '@/components/sections'
 import { siteConfig } from '@/lib/config'
-import { ReservationJsonLd } from '@/lib/jsonld'
 import ReservationForm from '@/components/ReservationForm'
 
-export const metadata = {
-  title: 'Réservation',
-  description: 'Réservez votre table au restaurant bistronomique Les Botanistes, Paris 7, près du Bon Marché. Privatisation disponible.',
-  openGraph: {
-    title: 'Réserver une table | Les Botanistes',
-    description: 'Réservez votre table au restaurant bistronomique Les Botanistes, Paris 7. Privatisation pour événements disponible.',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://les-botanistes.fr/reservation',
-  },
-}
-
 export default function ReservationPage() {
+  const t = useTranslations('reservation')
+
   return (
     <>
-      <ReservationJsonLd />
       <PageHeader
-        subtitle="Réservation"
-        title="Réservez votre table"
-        description="Pour une expérience inoubliable, réservez votre table et laissez-nous prendre soin de chaque détail."
+        subtitle={t('header.subtitle')}
+        title={t('header.title')}
+        description={t('header.description')}
       />
 
       {/* Section principale de réservation */}
@@ -35,26 +25,26 @@ export default function ReservationPage() {
             {/* Colonne gauche : Informations */}
             <div>
               <h2 className="font-serif text-2xl sm:text-3xl mb-6">
-                Informations <span className="text-gold">pratiques</span>
+                {t('info.title')} <span className="text-gold">{t('info.titleHighlight')}</span>
               </h2>
 
               <div className="space-y-8">
                 {/* Horaires */}
                 <div>
                   <h3 className="text-sm uppercase tracking-widest text-gold mb-4">
-                    Horaires d&apos;ouverture
+                    {t('info.hours.title')}
                   </h3>
                   <div className="space-y-2 text-muted-foreground">
                     <p className="flex justify-between">
-                      <span>Déjeuner</span>
+                      <span>{t('info.hours.lunch')}</span>
                       <span className="text-foreground">{siteConfig.restaurant.hours.lunch}</span>
                     </p>
                     <p className="flex justify-between">
-                      <span>Dîner</span>
+                      <span>{t('info.hours.dinner')}</span>
                       <span className="text-foreground">{siteConfig.restaurant.hours.dinner}</span>
                     </p>
                     <p className="text-sm text-gold/80 mt-2">
-                      Fermé {siteConfig.restaurant.hours.closed}
+                      {t('info.hours.closed')} {siteConfig.restaurant.hours.closed}
                     </p>
                   </div>
                 </div>
@@ -62,7 +52,7 @@ export default function ReservationPage() {
                 {/* Contact */}
                 <div>
                   <h3 className="text-sm uppercase tracking-widest text-gold mb-4">
-                    Nous contacter
+                    {t('info.contact')}
                   </h3>
                   <div className="space-y-2">
                     <p>
@@ -87,7 +77,7 @@ export default function ReservationPage() {
                 {/* Adresse */}
                 <div>
                   <h3 className="text-sm uppercase tracking-widest text-gold mb-4">
-                    Adresse
+                    {t('info.address')}
                   </h3>
                   <address className="not-italic text-muted-foreground">
                     {siteConfig.restaurant.address.street}<br />
@@ -97,19 +87,19 @@ export default function ReservationPage() {
 
                 {/* Informations importantes */}
                 <div className="p-6 bg-muted rounded-sm border-l-2 border-gold">
-                  <h3 className="font-serif text-lg mb-3">À noter</h3>
+                  <h3 className="font-serif text-lg mb-3">{t('info.notes.title')}</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-gold mt-1">•</span>
-                      Réservation recommandée 48h à l&apos;avance
+                      {t('info.notes.advance')}
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-gold mt-1">•</span>
-                      Merci de nous prévenir de toute allergie ou régime particulier
+                      {t('info.notes.allergies')}
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-gold mt-1">•</span>
-                      Retard au-delà de 15 min : la réservation peut être annulée
+                      {t('info.notes.lateness')}
                     </li>
                   </ul>
                 </div>
@@ -131,38 +121,36 @@ export default function ReservationPage() {
 
             {/* Texte */}
             <div>
-              <p className="subtitle text-gold/80 mb-4">Événements privés</p>
+              <p className="subtitle text-gold/80 mb-4">{t('privatisation.subtitle')}</p>
               <h2 className="font-serif text-3xl sm:text-4xl mb-6">
-                Privatisation du restaurant
+                {t('privatisation.title')}
               </h2>
               <p className="text-gris-chaud leading-relaxed mb-6">
-                Pour vos événements d&apos;exception — anniversaires, mariages,
-                séminaires d&apos;entreprise ou célébrations privées — offrez à vos
-                invités une expérience bistronomique dans un cadre exclusif.
+                {t('privatisation.description')}
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3 text-gris-chaud">
                   <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  Capacité jusqu&apos;à 34 convives
+                  {t('privatisation.features.capacity')}
                 </li>
                 <li className="flex items-center gap-3 text-gris-chaud">
                   <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  Menu personnalisé avec le Chef
+                  {t('privatisation.features.menu')}
                 </li>
                 <li className="flex items-center gap-3 text-gris-chaud">
                   <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  Service dédié et attentionné
+                  {t('privatisation.features.service')}
                 </li>
                 <li className="flex items-center gap-3 text-gris-chaud">
                   <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  Décoration florale sur demande
+                  {t('privatisation.features.decoration')}
                 </li>
               </ul>
               <a
                 href={`mailto:${siteConfig.restaurant.email}?subject=Demande de privatisation`}
                 className="btn-primary"
               >
-                Demander un devis
+                {t('privatisation.cta')}
               </a>
             </div>
 
@@ -188,7 +176,7 @@ export default function ReservationPage() {
                       </svg>
                     </div>
                     <p className="text-sm text-gris-chaud/80 uppercase tracking-widest">
-                      Espace privatisable
+                      {t('privatisation.imageLabel')}
                     </p>
                   </div>
                 </div>
@@ -202,31 +190,28 @@ export default function ReservationPage() {
       <section className="section-padding bg-muted">
         <div className="container-narrow">
           <h2 className="font-serif text-2xl sm:text-3xl text-center mb-12">
-            Questions fréquentes
+            {t('faq.title')}
           </h2>
 
           <div className="space-y-6">
             <div className="card-luxe">
-              <h3 className="font-serif text-lg mb-2">Comment annuler ma réservation ?</h3>
+              <h3 className="font-serif text-lg mb-2">{t('faq.cancellation.question')}</h3>
               <p className="text-sm text-muted-foreground">
-                Veuillez nous contacter par téléphone au moins 24h à l&apos;avance.
-                Toute annulation tardive pourra faire l&apos;objet d&apos;une facturation.
+                {t('faq.cancellation.answer')}
               </p>
             </div>
 
             <div className="card-luxe">
-              <h3 className="font-serif text-lg mb-2">Proposez-vous des menus végétariens ?</h3>
+              <h3 className="font-serif text-lg mb-2">{t('faq.vegetarian.question')}</h3>
               <p className="text-sm text-muted-foreground">
-                Oui, notre Chef peut adapter le menu dégustation en version végétarienne.
-                Merci de nous prévenir lors de la réservation.
+                {t('faq.vegetarian.answer')}
               </p>
             </div>
 
             <div className="card-luxe">
-              <h3 className="font-serif text-lg mb-2">Le restaurant est-il accessible PMR ?</h3>
+              <h3 className="font-serif text-lg mb-2">{t('faq.accessibility.question')}</h3>
               <p className="text-sm text-muted-foreground">
-                Notre établissement est accessible aux personnes à mobilité réduite.
-                N&apos;hésitez pas à nous contacter pour toute question.
+                {t('faq.accessibility.answer')}
               </p>
             </div>
           </div>

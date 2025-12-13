@@ -1,6 +1,7 @@
 'use client'
 
 import { useFormState, useFormStatus } from 'react-dom'
+import { useTranslations } from 'next-intl'
 import { sendReservationRequest } from '@/app/[locale]/(booking)/reservation/actions'
 import { Separator } from '@/components/ui'
 
@@ -12,6 +13,7 @@ const initialState = {
 // Bouton avec état de chargement
 function SubmitButton() {
   const { pending } = useFormStatus()
+  const t = useTranslations('reservation.form')
 
   return (
     <button
@@ -19,23 +21,23 @@ function SubmitButton() {
       disabled={pending}
       className="btn-secondary w-full justify-center mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      {pending ? 'Envoi en cours...' : 'Envoyer la demande'}
+      {pending ? t('submitting') : t('submit')}
     </button>
   )
 }
 
 export default function ReservationForm() {
   const [state, formAction] = useFormState(sendReservationRequest, initialState)
+  const t = useTranslations('reservation.form')
 
   return (
     <div className="card-luxe lg:sticky lg:top-32">
       <h2 className="font-serif text-2xl mb-6 text-center">
-        Réserver en ligne
+        {t('title')}
       </h2>
 
       <p className="text-center text-muted-foreground mb-8">
-        Choisissez votre date et votre créneau horaire pour vivre
-        une expérience bistronomique unique.
+        {t('description')}
       </p>
 
       {/* Bouton de réservation principal */}
@@ -47,14 +49,14 @@ export default function ReservationForm() {
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
           </svg>
-          Appeler pour réserver
+          {t('callToBook')}
         </a>
       </div>
 
       <div className="relative mb-8">
         <Separator variant="muted" />
         <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[var(--card)] px-4 text-xs text-muted-foreground uppercase tracking-wider">
-          ou
+          {t('or')}
         </span>
       </div>
 
@@ -75,7 +77,7 @@ export default function ReservationForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="firstName" className="block text-sm text-muted-foreground mb-2">
-              Prénom *
+              {t('firstName')} *
             </label>
             <input
               type="text"
@@ -84,12 +86,12 @@ export default function ReservationForm() {
               required
               className="w-full px-4 py-3 bg-background border border-border rounded-sm
                        focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-              placeholder="Votre prénom"
+              placeholder={t('placeholders.firstName')}
             />
           </div>
           <div>
             <label htmlFor="lastName" className="block text-sm text-muted-foreground mb-2">
-              Nom *
+              {t('lastName')} *
             </label>
             <input
               type="text"
@@ -98,14 +100,14 @@ export default function ReservationForm() {
               required
               className="w-full px-4 py-3 bg-background border border-border rounded-sm
                        focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-              placeholder="Votre nom"
+              placeholder={t('placeholders.lastName')}
             />
           </div>
         </div>
 
         <div>
           <label htmlFor="email" className="block text-sm text-muted-foreground mb-2">
-            Email *
+            {t('email')} *
           </label>
           <input
             type="email"
@@ -114,13 +116,13 @@ export default function ReservationForm() {
             required
             className="w-full px-4 py-3 bg-background border border-border rounded-sm
                      focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-            placeholder="votre@email.com"
+            placeholder={t('placeholders.email')}
           />
         </div>
 
         <div>
           <label htmlFor="phone" className="block text-sm text-muted-foreground mb-2">
-            Téléphone *
+            {t('phone')} *
           </label>
           <input
             type="tel"
@@ -130,14 +132,14 @@ export default function ReservationForm() {
             aria-required="true"
             className="w-full px-4 py-3 bg-background border border-border rounded-sm
                      focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
-            placeholder="+33 6 00 00 00 00"
+            placeholder={t('placeholders.phone')}
           />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="date" className="block text-sm text-muted-foreground mb-2">
-              Date souhaitée *
+              {t('date')} *
             </label>
             <input
               type="date"
@@ -150,7 +152,7 @@ export default function ReservationForm() {
           </div>
           <div>
             <label htmlFor="time" className="block text-sm text-muted-foreground mb-2">
-              Créneau *
+              {t('time')} *
             </label>
             <select
               id="time"
@@ -159,8 +161,8 @@ export default function ReservationForm() {
               className="w-full px-4 py-3 bg-background border border-border rounded-sm
                        focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
             >
-              <option value="">Sélectionner</option>
-              <optgroup label="Déjeuner">
+              <option value="">{t('selectTime')}</option>
+              <optgroup label={t('lunch')}>
                 <option value="12:00">12:00</option>
                 <option value="12:15">12:15</option>
                 <option value="12:30">12:30</option>
@@ -171,7 +173,7 @@ export default function ReservationForm() {
                 <option value="13:45">13:45</option>
                 <option value="14:00">14:00</option>
               </optgroup>
-              <optgroup label="Dîner">
+              <optgroup label={t('dinner')}>
                 <option value="19:00">19:00</option>
                 <option value="19:15">19:15</option>
                 <option value="19:30">19:30</option>
@@ -192,7 +194,7 @@ export default function ReservationForm() {
 
         <div>
           <label htmlFor="guests" className="block text-sm text-muted-foreground mb-2">
-            Nombre de convives *
+            {t('guests')} *
           </label>
           <select
             id="guests"
@@ -201,14 +203,14 @@ export default function ReservationForm() {
             className="w-full px-4 py-3 bg-background border border-border rounded-sm
                      focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
           >
-            <option value="">Sélectionner</option>
-            <option value="1">1 personne</option>
-            <option value="2">2 personnes</option>
-            <option value="3">3 personnes</option>
-            <option value="4">4 personnes</option>
-            <option value="5">5 personnes</option>
-            <option value="6">6 personnes</option>
-            <option value="7+">7+ personnes</option>
+            <option value="">{t('selectGuests')}</option>
+            <option value="1">1 {t('person')}</option>
+            <option value="2">2 {t('persons')}</option>
+            <option value="3">3 {t('persons')}</option>
+            <option value="4">4 {t('persons')}</option>
+            <option value="5">5 {t('persons')}</option>
+            <option value="6">6 {t('persons')}</option>
+            <option value="7+">7+ {t('personsMore')}</option>
           </select>
         </div>
 
@@ -229,7 +231,7 @@ export default function ReservationForm() {
       </form>
 
       <p className="mt-6 text-xs text-center text-muted-foreground">
-        Nous vous recontacterons sous 24h pour confirmer votre réservation.
+        {t('confirmation')}
       </p>
     </div>
   )

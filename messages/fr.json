@@ -157,8 +157,26 @@
     "pageDescription": "Réservez votre table au restaurant Les Botanistes. Expérience bistronomique unique à Paris.",
     "header": {
       "subtitle": "Réservation",
-      "title": "Réserver votre table",
-      "description": "Vivez une expérience gastronomique inoubliable dans notre écrin parisien."
+      "title": "Réservez votre table",
+      "description": "Pour une expérience inoubliable, réservez votre table et laissez-nous prendre soin de chaque détail."
+    },
+    "info": {
+      "title": "Informations",
+      "titleHighlight": "pratiques",
+      "hours": {
+        "title": "Horaires d'ouverture",
+        "lunch": "Déjeuner",
+        "dinner": "Dîner",
+        "closed": "Fermé"
+      },
+      "contact": "Nous contacter",
+      "address": "Adresse",
+      "notes": {
+        "title": "À noter",
+        "advance": "Réservation recommandée 48h à l'avance",
+        "allergies": "Merci de nous prévenir de toute allergie ou régime particulier",
+        "lateness": "Retard au-delà de 15 min : la réservation peut être annulée"
+      }
     },
     "form": {
       "title": "Réserver en ligne",
@@ -168,6 +186,7 @@
       "firstName": "Prénom",
       "lastName": "Nom",
       "email": "Email",
+      "phone": "Téléphone",
       "date": "Date souhaitée",
       "time": "Créneau",
       "guests": "Nombre de convives",
@@ -182,7 +201,41 @@
       "person": "personne",
       "persons": "personnes",
       "personsMore": "personnes",
-      "confirmation": "Nous vous recontacterons sous 24h pour confirmer votre réservation."
+      "confirmation": "Nous vous recontacterons sous 24h pour confirmer votre réservation.",
+      "placeholders": {
+        "firstName": "Votre prénom",
+        "lastName": "Votre nom",
+        "email": "votre@email.com",
+        "phone": "+33 6 00 00 00 00"
+      }
+    },
+    "privatisation": {
+      "subtitle": "Événements privés",
+      "title": "Privatisation du restaurant",
+      "description": "Pour vos événements d'exception — anniversaires, mariages, séminaires d'entreprise ou célébrations privées — offrez à vos invités une expérience bistronomique dans un cadre exclusif.",
+      "features": {
+        "capacity": "Capacité jusqu'à 34 convives",
+        "menu": "Menu personnalisé avec le Chef",
+        "service": "Service dédié et attentionné",
+        "decoration": "Décoration florale sur demande"
+      },
+      "cta": "Demander un devis",
+      "imageLabel": "Espace privatisable"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "cancellation": {
+        "question": "Comment annuler ma réservation ?",
+        "answer": "Veuillez nous contacter par téléphone au moins 24h à l'avance. Toute annulation tardive pourra faire l'objet d'une facturation."
+      },
+      "vegetarian": {
+        "question": "Proposez-vous des menus végétariens ?",
+        "answer": "Oui, notre Chef peut adapter le menu dégustation en version végétarienne. Merci de nous prévenir lors de la réservation."
+      },
+      "accessibility": {
+        "question": "Le restaurant est-il accessible PMR ?",
+        "answer": "Notre établissement est accessible aux personnes à mobilité réduite. N'hésitez pas à nous contacter pour toute question."
+      }
     }
   },
   "footer": {
