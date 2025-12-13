@@ -20,50 +20,93 @@
   },
   "home": {
     "hero": {
-      "subtitle": "Restaurant Bistronomique",
+      "subtitle": "Bistronomisches Restaurant",
       "title": "Les",
       "titleHighlight": "Botanistes",
-      "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
-      "ctaMenu": "Découvrir la carte",
-      "ctaReservation": "Réserver une table",
-      "scrollIndicator": "Scroll"
+      "description": "Ein kulinarisches Erlebnis, wo Natur auf französische Lebensart trifft.",
+      "ctaMenu": "Speisekarte entdecken",
+      "ctaReservation": "Tisch reservieren",
+      "scrollIndicator": "Scrollen"
     },
     "philosophy": {
-      "subtitle": "Notre Philosophie",
-      "title": "L'excellence au service",
-      "titleHighlight": "de vos sens",
-      "description": "Au cœur de Paris, Les Botanistes cultivent depuis 2010 une cuisine française authentique, nourrie par la transmission et le respect des produits de saison."
+      "subtitle": "Unsere Philosophie",
+      "title": "Exzellenz im Dienste",
+      "titleHighlight": "Ihrer Sinne",
+      "description": "Im Herzen von Paris pflegen Les Botanistes seit 2010 eine authentische französische Küche, genährt von Tradition und Respekt für saisonale Produkte."
     },
     "pillars": {
       "products": {
-        "title": "Produits d'Exception",
-        "description": "Une sélection rigoureuse des meilleurs producteurs et artisans français."
+        "title": "Außergewöhnliche Produkte",
+        "description": "Eine sorgfältige Auswahl der besten französischen Produzenten und Handwerker."
       },
       "cuisine": {
-        "title": "Cuisine soignée",
-        "description": "Une tradition familiale où le geste, le goût et la précision se transmettent de père en fils depuis plus de 15 ans."
+        "title": "Raffinierte Küche",
+        "description": "Eine Familientradition, in der Können, Geschmack und Präzision seit über 15 Jahren von Vater zu Sohn weitergegeben werden."
       },
       "service": {
-        "title": "Service attentionné",
-        "description": "Une équipe passionnée, dévouée à rendre chaque moment chaleureux et mémorable."
+        "title": "Aufmerksamer Service",
+        "description": "Ein leidenschaftliches Team, das jeden Moment herzlich und unvergesslich gestaltet."
       }
     },
     "cellar": {
-      "title": "Une cave",
-      "titleHighlight": "remarquable",
-      "description": "Plus de 650 références soigneusement choisies pour accompagner chaque moment, du grand classique aux découvertes confidentielles."
+      "title": "Ein bemerkenswerter",
+      "titleHighlight": "Weinkeller",
+      "description": "Über 650 sorgfältig ausgewählte Referenzen, um jeden Moment zu begleiten, von großen Klassikern bis zu Geheimtipps."
     },
     "cta": {
-      "subtitle": "Réservation",
-      "title": "Venez partager un agréable",
-      "titleHighlight": "moment",
-      "description": "Réservez votre table et laissez-nous vous transporter dans un univers où chaque détail est pensé pour votre plaisir.",
-      "button": "Réserver maintenant"
+      "subtitle": "Reservierung",
+      "title": "Kommen Sie und teilen Sie einen angenehmen",
+      "titleHighlight": "Moment",
+      "description": "Reservieren Sie Ihren Tisch und lassen Sie sich in eine Welt entführen, in der jedes Detail für Ihr Vergnügen durchdacht ist.",
+      "button": "Jetzt reservieren"
     }
   },
   "menu": {
     "pageTitle": "Speisekarte",
     "pageDescription": "Entdecken Sie unsere bistronomische Speisekarte, eine Einladung zur kulinarischen Reise.",
+    "header": {
+      "subtitle": "Unsere Speisekarte",
+      "title": "Saisonale Küche",
+      "description": "Eine Karte, die sich mit den Jahreszeiten entwickelt und Marktfrische Produkte in den Vordergrund stellt."
+    },
+    "quote": {
+      "text": "Kochen bedeutet, dass die Dinge nach dem schmecken, was sie sind.",
+      "author": "Curnonsky"
+    },
+    "sections": {
+      "starters": {
+        "title": "Vorspeisen",
+        "subtitle": "Zum Anfang"
+      },
+      "mains": {
+        "title": "Hauptgerichte",
+        "subtitle": "Zum Genießen"
+      },
+      "desserts": {
+        "title": "Desserts",
+        "subtitle": "Süße Köstlichkeiten"
+      }
+    },
+    "tastingMenus": {
+      "subtitle": "Unsere Menüs",
+      "title": "Degustationsmenüs",
+      "discovery": {
+        "title": "Entdeckungsmenü",
+        "description": "5 Gänge für eine erste Erkundung"
+      },
+      "botaniste": {
+        "title": "Botaniste Menü",
+        "description": "7 Gänge für ein vollständiges Erlebnis"
+      },
+      "wineNote": "Weinbegleitung",
+      "note": "Nettopreise, Service inbegriffen. Einheitliches Menü für den gesamten Tisch."
+    },
+    "cta": {
+      "subtitle": "Reservierung",
+      "title": "Reservieren Sie Ihren Tisch",
+      "description": "Für ein optimales Erlebnis empfehlen wir, mindestens 48 Stunden im Voraus zu reservieren.",
+      "button": "Reservieren"
+    },
     "categories": {
       "starters": "Vorspeisen",
       "mains": "Hauptgerichte",
@@ -142,9 +185,18 @@
     "access": {
       "subtitle": "Anfahrt",
       "title": "Anfahrt",
-      "metro": "Metro",
-      "bus": "Bus",
-      "parking": "Parkplatz"
+      "metro": {
+        "title": "Metro",
+        "details": "Sèvres-Babylone\nLinien 10 und 12"
+      },
+      "bus": {
+        "title": "Bus",
+        "details": "Linien 39, 63, 68, 94\nHaltestelle Sèvres-Babylone"
+      },
+      "parking": {
+        "title": "Parkplatz",
+        "details": "Parkhaus Indigo Sèvres-Babylone\n(Bon Marché) – 200m entfernt"
+      }
     },
     "hours": {
       "lunch": "Mittagessen",
@@ -158,7 +210,25 @@
     "header": {
       "subtitle": "Reservierung",
       "title": "Reservieren Sie Ihren Tisch",
-      "description": "Erleben Sie ein unvergessliches gastronomisches Erlebnis in unserem Pariser Ambiente."
+      "description": "Für ein unvergessliches Erlebnis reservieren Sie Ihren Tisch und lassen Sie uns für jedes Detail sorgen."
+    },
+    "info": {
+      "title": "Praktische",
+      "titleHighlight": "Informationen",
+      "hours": {
+        "title": "Öffnungszeiten",
+        "lunch": "Mittagessen",
+        "dinner": "Abendessen",
+        "closed": "Geschlossen"
+      },
+      "contact": "Kontaktieren Sie uns",
+      "address": "Adresse",
+      "notes": {
+        "title": "Bitte beachten",
+        "advance": "Reservierung 48h im Voraus empfohlen",
+        "allergies": "Bitte informieren Sie uns über Allergien oder besondere Ernährungsbedürfnisse",
+        "lateness": "Verspätung über 15 Min.: Reservierung kann storniert werden"
+      }
     },
     "form": {
       "title": "Online reservieren",
@@ -168,6 +238,7 @@
       "firstName": "Vorname",
       "lastName": "Nachname",
       "email": "E-Mail",
+      "phone": "Telefon",
       "date": "Gewünschtes Datum",
       "time": "Zeitfenster",
       "guests": "Anzahl der Gäste",
@@ -182,7 +253,41 @@
       "person": "Person",
       "persons": "Personen",
       "personsMore": "Personen",
-      "confirmation": "Wir werden Sie innerhalb von 24h kontaktieren, um Ihre Reservierung zu bestätigen."
+      "confirmation": "Wir werden Sie innerhalb von 24h kontaktieren, um Ihre Reservierung zu bestätigen.",
+      "placeholders": {
+        "firstName": "Ihr Vorname",
+        "lastName": "Ihr Nachname",
+        "email": "ihre@email.de",
+        "phone": "+33 6 00 00 00 00"
+      }
+    },
+    "privatisation": {
+      "subtitle": "Private Veranstaltungen",
+      "title": "Restaurant-Privatisierung",
+      "description": "Für Ihre besonderen Anlässe — Geburtstage, Hochzeiten, Firmenseminare oder private Feiern — bieten Sie Ihren Gästen ein bistronomisches Erlebnis in exklusivem Rahmen.",
+      "features": {
+        "capacity": "Kapazität bis zu 34 Gäste",
+        "menu": "Personalisiertes Menü mit dem Küchenchef",
+        "service": "Engagierter und aufmerksamer Service",
+        "decoration": "Blumendekoration auf Anfrage"
+      },
+      "cta": "Angebot anfordern",
+      "imageLabel": "Privatisierbarer Raum"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "cancellation": {
+        "question": "Wie storniere ich meine Reservierung?",
+        "answer": "Bitte kontaktieren Sie uns telefonisch mindestens 24h im Voraus. Späte Stornierungen können kostenpflichtig sein."
+      },
+      "vegetarian": {
+        "question": "Bieten Sie vegetarische Menüs an?",
+        "answer": "Ja, unser Küchenchef kann das Degustationsmenü in einer vegetarischen Version anpassen. Bitte teilen Sie uns dies bei der Reservierung mit."
+      },
+      "accessibility": {
+        "question": "Ist das Restaurant barrierefrei?",
+        "answer": "Unser Restaurant ist für Menschen mit eingeschränkter Mobilität zugänglich. Bei Fragen kontaktieren Sie uns bitte."
+      }
     }
   },
   "footer": {

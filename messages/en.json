@@ -20,50 +20,93 @@
   },
   "home": {
     "hero": {
-      "subtitle": "Restaurant Bistronomique",
+      "subtitle": "Bistronomic Restaurant",
       "title": "Les",
       "titleHighlight": "Botanistes",
-      "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
-      "ctaMenu": "Découvrir la carte",
-      "ctaReservation": "Réserver une table",
+      "description": "A culinary experience where nature meets the French art of living.",
+      "ctaMenu": "Discover the menu",
+      "ctaReservation": "Book a table",
       "scrollIndicator": "Scroll"
     },
     "philosophy": {
-      "subtitle": "Notre Philosophie",
-      "title": "L'excellence au service",
-      "titleHighlight": "de vos sens",
-      "description": "Au cœur de Paris, Les Botanistes cultivent depuis 2010 une cuisine française authentique, nourrie par la transmission et le respect des produits de saison."
+      "subtitle": "Our Philosophy",
+      "title": "Excellence at the service",
+      "titleHighlight": "of your senses",
+      "description": "In the heart of Paris, Les Botanistes have been cultivating authentic French cuisine since 2010, nurtured by tradition and respect for seasonal products."
     },
     "pillars": {
       "products": {
-        "title": "Produits d'Exception",
-        "description": "Une sélection rigoureuse des meilleurs producteurs et artisans français."
+        "title": "Exceptional Products",
+        "description": "A rigorous selection from the finest French producers and artisans."
       },
       "cuisine": {
-        "title": "Cuisine soignée",
-        "description": "Une tradition familiale où le geste, le goût et la précision se transmettent de père en fils depuis plus de 15 ans."
+        "title": "Refined Cuisine",
+        "description": "A family tradition where skill, taste and precision have been passed down from father to son for over 15 years."
       },
       "service": {
-        "title": "Service attentionné",
-        "description": "Une équipe passionnée, dévouée à rendre chaque moment chaleureux et mémorable."
+        "title": "Attentive Service",
+        "description": "A passionate team, dedicated to making every moment warm and memorable."
       }
     },
     "cellar": {
-      "title": "Une cave",
-      "titleHighlight": "remarquable",
-      "description": "Plus de 650 références soigneusement choisies pour accompagner chaque moment, du grand classique aux découvertes confidentielles."
+      "title": "A remarkable",
+      "titleHighlight": "wine cellar",
+      "description": "Over 650 carefully selected references to accompany every moment, from great classics to hidden gems."
     },
     "cta": {
-      "subtitle": "Réservation",
-      "title": "Venez partager un agréable",
+      "subtitle": "Reservation",
+      "title": "Come share a pleasant",
       "titleHighlight": "moment",
-      "description": "Réservez votre table et laissez-nous vous transporter dans un univers où chaque détail est pensé pour votre plaisir.",
-      "button": "Réserver maintenant"
+      "description": "Book your table and let us transport you to a world where every detail is designed for your pleasure.",
+      "button": "Book now"
     }
   },
   "menu": {
     "pageTitle": "Menu",
     "pageDescription": "Discover our bistronomic menu, an invitation to a culinary journey.",
+    "header": {
+      "subtitle": "Our Menu",
+      "title": "Seasonal Cuisine",
+      "description": "A menu that evolves with the seasons, showcasing market-fresh products."
+    },
+    "quote": {
+      "text": "Cooking is when things taste like what they are.",
+      "author": "Curnonsky"
+    },
+    "sections": {
+      "starters": {
+        "title": "Starters",
+        "subtitle": "To begin"
+      },
+      "mains": {
+        "title": "Main Courses",
+        "subtitle": "To savour"
+      },
+      "desserts": {
+        "title": "Desserts",
+        "subtitle": "Sweet delights"
+      }
+    },
+    "tastingMenus": {
+      "subtitle": "Our Menus",
+      "title": "Tasting Menus",
+      "discovery": {
+        "title": "Discovery Menu",
+        "description": "5 courses for a first exploration"
+      },
+      "botaniste": {
+        "title": "Botaniste Menu",
+        "description": "7 courses for a complete experience"
+      },
+      "wineNote": "Wine pairing",
+      "note": "Net prices, service included. Single menu for the entire table."
+    },
+    "cta": {
+      "subtitle": "Reservation",
+      "title": "Book your table",
+      "description": "For an optimal experience, we recommend booking at least 48 hours in advance.",
+      "button": "Book"
+    },
     "categories": {
       "starters": "Starters",
       "mains": "Main courses",
@@ -142,9 +185,18 @@
     "access": {
       "subtitle": "Getting here",
       "title": "Access",
-      "metro": "Metro",
-      "bus": "Bus",
-      "parking": "Parking"
+      "metro": {
+        "title": "Metro",
+        "details": "Sèvres-Babylone\nLines 10 and 12"
+      },
+      "bus": {
+        "title": "Bus",
+        "details": "Lines 39, 63, 68, 94\nSèvres-Babylone stop"
+      },
+      "parking": {
+        "title": "Parking",
+        "details": "Indigo Sèvres-Babylone car park\n(Bon Marché) – 200m away"
+      }
     },
     "hours": {
       "lunch": "Lunch",
@@ -158,7 +210,25 @@
     "header": {
       "subtitle": "Reservation",
       "title": "Book your table",
-      "description": "Experience an unforgettable gastronomic journey in our Parisian setting."
+      "description": "For an unforgettable experience, book your table and let us take care of every detail."
+    },
+    "info": {
+      "title": "Practical",
+      "titleHighlight": "information",
+      "hours": {
+        "title": "Opening hours",
+        "lunch": "Lunch",
+        "dinner": "Dinner",
+        "closed": "Closed"
+      },
+      "contact": "Contact us",
+      "address": "Address",
+      "notes": {
+        "title": "Please note",
+        "advance": "Booking recommended 48h in advance",
+        "allergies": "Please inform us of any allergies or dietary requirements",
+        "lateness": "Delay beyond 15 min: reservation may be cancelled"
+      }
     },
     "form": {
       "title": "Book online",
@@ -168,6 +238,7 @@
       "firstName": "First name",
       "lastName": "Last name",
       "email": "Email",
+      "phone": "Phone",
       "date": "Preferred date",
       "time": "Time slot",
       "guests": "Number of guests",
@@ -182,7 +253,41 @@
       "person": "person",
       "persons": "people",
       "personsMore": "people",
-      "confirmation": "We will contact you within 24h to confirm your reservation."
+      "confirmation": "We will contact you within 24h to confirm your reservation.",
+      "placeholders": {
+        "firstName": "Your first name",
+        "lastName": "Your last name",
+        "email": "your@email.com",
+        "phone": "+33 6 00 00 00 00"
+      }
+    },
+    "privatisation": {
+      "subtitle": "Private events",
+      "title": "Restaurant privatisation",
+      "description": "For your special events — birthdays, weddings, corporate seminars or private celebrations — offer your guests a bistronomic experience in an exclusive setting.",
+      "features": {
+        "capacity": "Capacity up to 34 guests",
+        "menu": "Personalised menu with the Chef",
+        "service": "Dedicated and attentive service",
+        "decoration": "Floral decoration on request"
+      },
+      "cta": "Request a quote",
+      "imageLabel": "Private dining space"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "cancellation": {
+        "question": "How do I cancel my reservation?",
+        "answer": "Please contact us by phone at least 24h in advance. Late cancellations may be subject to a charge."
+      },
+      "vegetarian": {
+        "question": "Do you offer vegetarian menus?",
+        "answer": "Yes, our Chef can adapt the tasting menu to a vegetarian version. Please let us know when booking."
+      },
+      "accessibility": {
+        "question": "Is the restaurant wheelchair accessible?",
+        "answer": "Our establishment is accessible to people with reduced mobility. Please contact us with any questions."
+      }
     }
   },
   "footer": {
