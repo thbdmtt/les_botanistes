@@ -64,6 +64,49 @@
   "menu": {
     "pageTitle": "La Carte",
     "pageDescription": "Découvrez notre carte bistronomique, une invitation au voyage gustatif.",
+    "header": {
+      "subtitle": "Notre Carte",
+      "title": "Cuisine de saison",
+      "description": "Une ardoise qui évolue au fil des saisons, mettant à l'honneur les produits du marché."
+    },
+    "quote": {
+      "text": "La cuisine, c'est quand les choses ont le goût de ce qu'elles sont.",
+      "author": "Curnonsky"
+    },
+    "sections": {
+      "starters": {
+        "title": "Les Entrées",
+        "subtitle": "Pour commencer"
+      },
+      "mains": {
+        "title": "Les Plats",
+        "subtitle": "À savourer"
+      },
+      "desserts": {
+        "title": "Les Desserts",
+        "subtitle": "Douceurs sucrées"
+      }
+    },
+    "tastingMenus": {
+      "subtitle": "Nos Menus",
+      "title": "Menus Dégustation",
+      "discovery": {
+        "title": "Menu Découverte",
+        "description": "5 services pour une première exploration"
+      },
+      "botaniste": {
+        "title": "Menu Botaniste",
+        "description": "7 services pour une expérience complète"
+      },
+      "wineNote": "Accord mets & vins",
+      "note": "Prix nets, service compris. Menu unique pour l'ensemble de la table."
+    },
+    "cta": {
+      "subtitle": "Réservation",
+      "title": "Réservez votre table",
+      "description": "Pour une expérience optimale, nous vous recommandons de réserver au moins 48 heures à l'avance.",
+      "button": "Réserver"
+    },
     "categories": {
       "starters": "Entrées",
       "mains": "Plats",
