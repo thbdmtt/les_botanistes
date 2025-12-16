@@ -339,5 +339,46 @@
       "title": "Book | Les Botanistes",
       "description": "Book your table at Les Botanistes restaurant. Traditional French cuisine in Paris 7th."
     }
+  },
+  "legal": {
+    "header": {
+      "subtitle": "Legal Information",
+      "title": "Legal Notice"
+    },
+    "sections": {
+      "editor": {
+        "title": "1. Website Publisher",
+        "intro": "The website is published by:",
+        "headquarters": "Registered office:"
+      },
+      "hosting": {
+        "title": "2. Hosting Provider",
+        "intro": "The website is hosted by:",
+        "website": "Website:"
+      },
+      "contact": {
+        "title": "3. Contact",
+        "intro": "For any questions regarding the site or its content:"
+      },
+      "intellectual": {
+        "title": "4. Intellectual Property",
+        "content1": "All content on this website (texts, images, videos, logos, graphics, icons, etc.) is the exclusive property of Les Botanistes or its partners and is protected by French and international intellectual property laws.",
+        "content2": "Any reproduction, representation, modification, publication, transmission, distortion, in whole or in part, of the site or its content, by any means whatsoever, and on any medium whatsoever, is prohibited without prior written authorisation."
+      },
+      "liability": {
+        "title": "5. Limitation of Liability",
+        "content1": "The information contained on this website is as accurate as possible and the site is periodically updated, but may nevertheless contain inaccuracies, omissions or gaps.",
+        "content2": "Les Botanistes cannot be held responsible for direct and indirect damage caused to the user's equipment when accessing the site."
+      },
+      "links": {
+        "title": "6. Hyperlinks",
+        "content": "The site may contain hyperlinks to other sites. Les Botanistes has no control over these sites and disclaims all responsibility for their content."
+      },
+      "law": {
+        "title": "7. Applicable Law",
+        "content": "These legal notices are governed by French law. In the event of a dispute, the French courts shall have sole jurisdiction."
+      }
+    },
+    "lastUpdate": "Last updated:"
   }
 }

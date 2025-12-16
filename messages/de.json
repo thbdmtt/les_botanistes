@@ -63,7 +63,7 @@
   },
   "menu": {
     "pageTitle": "Speisekarte",
-    "pageDescription": "Entdecken Sie unsere bistronomische Speisekarte, eine Einladung zur kulinarischen Reise.",
+    "pageDescription": "Entdecken Sie unsere traditionelle französische Speisekarte, eine Einladung zur kulinarischen Reise.",
     "header": {
       "subtitle": "Unsere Speisekarte",
       "title": "Saisonale Küche",
@@ -339,5 +339,46 @@
       "title": "Reservieren | Les Botanistes",
       "description": "Reservieren Sie Ihren Tisch im Restaurant Les Botanistes. Traditionelle französische Küche in Paris 7."
     }
+  },
+  "legal": {
+    "header": {
+      "subtitle": "Rechtliche Informationen",
+      "title": "Impressum"
+    },
+    "sections": {
+      "editor": {
+        "title": "1. Herausgeber der Website",
+        "intro": "Die Website wird herausgegeben von:",
+        "headquarters": "Sitz:"
+      },
+      "hosting": {
+        "title": "2. Hosting-Anbieter",
+        "intro": "Die Website wird gehostet von:",
+        "website": "Website:"
+      },
+      "contact": {
+        "title": "3. Kontakt",
+        "intro": "Bei Fragen zur Website oder ihrem Inhalt:"
+      },
+      "intellectual": {
+        "title": "4. Geistiges Eigentum",
+        "content1": "Alle Inhalte dieser Website (Texte, Bilder, Videos, Logos, Grafiken, Icons usw.) sind ausschließliches Eigentum von Les Botanistes oder seinen Partnern und durch französische und internationale Gesetze zum Schutz des geistigen Eigentums geschützt.",
+        "content2": "Jede Vervielfältigung, Darstellung, Änderung, Veröffentlichung, Übertragung, Verfälschung der Website oder ihres Inhalts, ganz oder teilweise, mit welchem Verfahren und auf welchem Träger auch immer, ist ohne vorherige schriftliche Genehmigung untersagt."
+      },
+      "liability": {
+        "title": "5. Haftungsbeschränkung",
+        "content1": "Die auf dieser Website enthaltenen Informationen sind so genau wie möglich und die Website wird regelmäßig aktualisiert, kann jedoch dennoch Ungenauigkeiten, Auslassungen oder Lücken enthalten.",
+        "content2": "Les Botanistes kann nicht für direkte und indirekte Schäden verantwortlich gemacht werden, die beim Zugriff auf die Website an der Ausrüstung des Benutzers verursacht werden."
+      },
+      "links": {
+        "title": "6. Hyperlinks",
+        "content": "Die Website kann Hyperlinks zu anderen Websites enthalten. Les Botanistes hat keine Kontrolle über diese Websites und lehnt jede Verantwortung für deren Inhalt ab."
+      },
+      "law": {
+        "title": "7. Anwendbares Recht",
+        "content": "Dieses Impressum unterliegt französischem Recht. Im Streitfall sind ausschließlich französische Gerichte zuständig."
+      }
+    },
+    "lastUpdate": "Letzte Aktualisierung:"
   }
 }

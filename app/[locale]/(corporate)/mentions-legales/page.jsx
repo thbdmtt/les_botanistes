@@ -1,12 +1,27 @@
-import { PageHeader } from '@/components/sections'
-import { siteConfig } from '@/lib/config'
+'use client'
 
-export const metadata = {
-  title: 'Mentions légales',
-  description: 'Mentions légales du restaurant Les Botanistes. Informations sur l\'éditeur, l\'hébergeur et les conditions d\'utilisation du site.',
-  robots: { index: false, follow: true },
-  alternates: {
-    canonical: 'https://les-botanistes.fr/mentions-legales',
+import { useTranslations } from 'next-intl'
+import { PageHeader } from '@/components/sections'
+
+// Données légales statiques de la société
+const LEGAL_DATA = {
+  company: {
+    name: 'C-11 BIS',
+    type: 'SARL',
+    capital: '8 000 €',
+    rcs: 'Paris 519 783 369',
+    address: '11 bis rue Chomel',
+    postalCode: '75007',
+    city: 'Paris',
+    country: 'France',
+    email: 'restaurant.lesbotanistes@orange.fr',
+  },
+  hosting: {
+    name: 'Vercel Inc.',
+    address: '340 S Lemon Ave #4133',
+    city: 'Walnut, CA 91789',
+    country: 'États-Unis',
+    website: 'vercel.com',
   },
 }
 
@@ -22,119 +37,88 @@ function Section({ title, children }) {
 }
 
 export default function MentionsLegalesPage() {
+  const t = useTranslations('legal')
+
   return (
     <>
       <PageHeader
-        subtitle="Informations légales"
-        title="Mentions légales"
+        subtitle={t('header.subtitle')}
+        title={t('header.title')}
       />
 
       <article className="pb-16 sm:pb-24">
         <div className="container-narrow">
 
-          <Section title="1. Éditeur du site">
+          <Section title={t('sections.editor.title')}>
             <p>
-              Le site <strong>les-botanistes.fr</strong> est édité par :
+              {t('sections.editor.intro')} <strong>les-botanistes.fr</strong>
             </p>
             <p>
-              <strong>{siteConfig.name}</strong><br />
-              Société par Actions Simplifiée (SAS)<br />
-              Capital social : 50 000 €<br />
-              RCS Paris : 123 456 789<br />
-              N° TVA Intracommunautaire : FR 12 345678901
+              <strong>{LEGAL_DATA.company.name}</strong><br />
+              {LEGAL_DATA.company.type} – Capital {LEGAL_DATA.company.capital}<br />
+              RCS {LEGAL_DATA.company.rcs}
             </p>
             <p>
-              <strong>Siège social :</strong><br />
-              {siteConfig.restaurant.address.street}<br />
-              {siteConfig.restaurant.address.postalCode} {siteConfig.restaurant.address.city}
-            </p>
-            <p>
-              <strong>Directeur de la publication :</strong> M. Jean Dupont, Gérant
+              <strong>{t('sections.editor.headquarters')}</strong><br />
+              {LEGAL_DATA.company.address}<br />
+              {LEGAL_DATA.company.postalCode} {LEGAL_DATA.company.city}
             </p>
           </Section>
 
-          <Section title="2. Hébergeur">
+          <Section title={t('sections.hosting.title')}>
             <p>
-              Le site est hébergé par :
+              {t('sections.hosting.intro')}
             </p>
             <p>
-              <strong>Vercel Inc.</strong><br />
-              340 S Lemon Ave #4133<br />
-              Walnut, CA 91789, États-Unis<br />
-              Site web : vercel.com
-            </p>
-          </Section>
-
-          <Section title="3. Contact">
-            <p>
-              Pour toute question relative au site ou à son contenu :
-            </p>
-            <p>
-              Téléphone : {siteConfig.restaurant.phone}<br />
-              Email : {siteConfig.restaurant.email}
+              <strong>{LEGAL_DATA.hosting.name}</strong><br />
+              {LEGAL_DATA.hosting.address}<br />
+              {LEGAL_DATA.hosting.city}, {LEGAL_DATA.hosting.country}<br />
+              {t('sections.hosting.website')} {LEGAL_DATA.hosting.website}
             </p>
           </Section>
 
-          <Section title="4. Propriété intellectuelle">
+          <Section title={t('sections.contact.title')}>
             <p>
-              L&apos;ensemble du contenu de ce site (textes, images, vidéos, logos, graphismes,
-              icônes, etc.) est la propriété exclusive de {siteConfig.name} ou de ses partenaires
-              et est protégé par les lois françaises et internationales relatives à la propriété
-              intellectuelle.
+              {t('sections.contact.intro')}
             </p>
             <p>
-              Toute reproduction, représentation, modification, publication, transmission,
-              dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé
-              que ce soit, et sur quelque support que ce soit est interdite sans l&apos;autorisation
-              écrite préalable de {siteConfig.name}.
-            </p>
-            <p>
-              Toute exploitation non autorisée du site ou de son contenu serait constitutive
-              d&apos;une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de
-              la propriété intellectuelle.
+              Email : <a href={`mailto:${LEGAL_DATA.company.email}`} className="text-gold hover:underline">{LEGAL_DATA.company.email}</a>
             </p>
           </Section>
 
-          <Section title="5. Limitation de responsabilité">
+          <Section title={t('sections.intellectual.title')}>
             <p>
-              Les informations contenues sur ce site sont aussi précises que possible et le site
-              est périodiquement remis à jour, mais peut toutefois contenir des inexactitudes,
-              des omissions ou des lacunes.
+              {t('sections.intellectual.content1')}
             </p>
             <p>
-              {siteConfig.name} ne pourra être tenu responsable des dommages directs et indirects
-              causés au matériel de l&apos;utilisateur, lors de l&apos;accès au site, et résultant soit de
-              l&apos;utilisation d&apos;un matériel ne répondant pas aux spécifications techniques requises,
-              soit de l&apos;apparition d&apos;un bug ou d&apos;une incompatibilité.
+              {t('sections.intellectual.content2')}
             </p>
           </Section>
 
-          <Section title="6. Liens hypertextes">
+          <Section title={t('sections.liability.title')}>
             <p>
-              Le site peut contenir des liens hypertextes vers d&apos;autres sites. {siteConfig.name}
-              n&apos;exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur
-              contenu ou aux éventuels collectes de données qu&apos;ils pourraient opérer.
+              {t('sections.liability.content1')}
+            </p>
+            <p>
+              {t('sections.liability.content2')}
             </p>
           </Section>
 
-          <Section title="7. Droit applicable">
+          <Section title={t('sections.links.title')}>
             <p>
-              Les présentes mentions légales sont régies par le droit français. En cas de litige,
-              les tribunaux français seront seuls compétents.
+              {t('sections.links.content')}
             </p>
           </Section>
 
-          <Section title="8. Crédits">
+          <Section title={t('sections.law.title')}>
             <p>
-              <strong>Conception et développement :</strong> Studio Digital<br />
-              <strong>Photographies :</strong> © {siteConfig.name}<br />
-              <strong>Icônes :</strong> Heroicons
+              {t('sections.law.content')}
             </p>
           </Section>
 
           <div className="mt-16 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              Dernière mise à jour : Janvier 2025
+              {t('lastUpdate')} Décembre 2025
             </p>
           </div>
         </div>
