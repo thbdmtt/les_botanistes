@@ -23,47 +23,90 @@
       "subtitle": "伝統的なフランス料理",
       "title": "Les",
       "titleHighlight": "Botanistes",
-      "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
-      "ctaMenu": "Découvrir la carte",
-      "ctaReservation": "Réserver une table",
-      "scrollIndicator": "Scroll"
+      "description": "自然とフランスの生活美学が出会う、特別な美食体験。",
+      "ctaMenu": "メニューを見る",
+      "ctaReservation": "テーブルを予約",
+      "scrollIndicator": "スクロール"
     },
     "philosophy": {
-      "subtitle": "Notre Philosophie",
-      "title": "L'excellence au service",
-      "titleHighlight": "de vos sens",
-      "description": "Au cœur de Paris, Les Botanistes cultivent depuis 2010 une cuisine française authentique, nourrie par la transmission et le respect des produits de saison."
+      "subtitle": "私たちの哲学",
+      "title": "卓越したおもてなし",
+      "titleHighlight": "五感への贈り物",
+      "description": "パリの中心で、Les Botanistesは2010年より、伝統の継承と旬の食材への敬意に育まれた、本格的なフランス料理を提供しています。"
     },
     "pillars": {
       "products": {
-        "title": "Produits d'Exception",
-        "description": "Une sélection rigoureuse des meilleurs producteurs et artisans français."
+        "title": "厳選素材",
+        "description": "フランス最高の生産者と職人から厳選された食材。"
       },
       "cuisine": {
-        "title": "Cuisine soignée",
-        "description": "Une tradition familiale où le geste, le goût et la précision se transmettent de père en fils depuis plus de 15 ans."
+        "title": "丁寧な料理",
+        "description": "15年以上にわたり父から子へと受け継がれてきた、技術、味覚、精密さの家族の伝統。"
       },
       "service": {
-        "title": "Service attentionné",
-        "description": "Une équipe passionnée, dévouée à rendre chaque moment chaleureux et mémorable."
+        "title": "心のこもったサービス",
+        "description": "情熱を持ったチームが、温かく思い出に残るひとときをお届けします。"
       }
     },
     "cellar": {
-      "title": "Une cave",
-      "titleHighlight": "remarquable",
-      "description": "Plus de 650 références soigneusement choisies pour accompagner chaque moment, du grand classique aux découvertes confidentielles."
+      "title": "特別な",
+      "titleHighlight": "ワインセラー",
+      "description": "650種類以上のワインを丁寧に厳選。定番の銘柄から隠れた逸品まで、あらゆるシーンにふさわしい一本をご用意しています。"
     },
     "cta": {
-      "subtitle": "Réservation",
-      "title": "Venez partager un agréable",
-      "titleHighlight": "moment",
-      "description": "Réservez votre table et laissez-nous vous transporter dans un univers où chaque détail est pensé pour votre plaisir.",
-      "button": "Réserver maintenant"
+      "subtitle": "ご予約",
+      "title": "素敵なひとときを",
+      "titleHighlight": "ご一緒に",
+      "description": "ご予約いただき、細部までこだわった特別な空間で、至福のひとときをお過ごしください。",
+      "button": "今すぐ予約"
     }
   },
   "menu": {
     "pageTitle": "メニュー",
     "pageDescription": "伝統的なフランス料理のメニューをご覧ください。美食の旅へのご招待です。",
+    "header": {
+      "subtitle": "お品書き",
+      "title": "季節の料理",
+      "description": "季節とともに変わるメニュー、市場の恵みを最大限に活かした料理をお楽しみください。"
+    },
+    "quote": {
+      "text": "料理とは、素材本来の味を引き出すこと。",
+      "author": "キュルノンスキー"
+    },
+    "sections": {
+      "starters": {
+        "title": "前菜",
+        "subtitle": "お食事の始まりに"
+      },
+      "mains": {
+        "title": "メインディッシュ",
+        "subtitle": "心ゆくまでご堪能ください"
+      },
+      "desserts": {
+        "title": "デザート",
+        "subtitle": "甘美なひととき"
+      }
+    },
+    "tastingMenus": {
+      "subtitle": "コースメニュー",
+      "title": "テイスティングメニュー",
+      "discovery": {
+        "title": "ディスカバリーメニュー",
+        "description": "5品で味わう最初の出会い"
+      },
+      "botaniste": {
+        "title": "ボタニストメニュー",
+        "description": "7品で堪能する完全なる体験"
+      },
+      "wineNote": "ワインペアリング",
+      "note": "税・サービス料込み。テーブル全員で同じメニューをお選びください。"
+    },
+    "cta": {
+      "subtitle": "ご予約",
+      "title": "テーブルをご予約ください",
+      "description": "最高の体験のため、48時間前までのご予約をおすすめします。",
+      "button": "予約する"
+    },
     "categories": {
       "starters": "前菜",
       "mains": "メインディッシュ",
@@ -142,9 +185,18 @@
     "access": {
       "subtitle": "アクセス",
       "title": "アクセス",
-      "metro": "メトロ",
-      "bus": "バス",
-      "parking": "駐車場"
+      "metro": {
+        "title": "地下鉄",
+        "details": "セーヴル＝バビロン駅\n10番線・12番線"
+      },
+      "bus": {
+        "title": "バス",
+        "details": "39、63、68、94番線\nセーヴル＝バビロン停留所"
+      },
+      "parking": {
+        "title": "駐車場",
+        "details": "Parking Indigo Sèvres-Babylone\n（ボン・マルシェ近く）徒歩約200m"
+      }
     },
     "hours": {
       "lunch": "ランチ",
@@ -160,6 +212,24 @@
       "title": "テーブルを予約",
       "description": "パリの隠れ家で忘れられない美食体験をお楽しみください。"
     },
+    "info": {
+      "title": "ご案内",
+      "titleHighlight": "情報",
+      "hours": {
+        "title": "営業時間",
+        "lunch": "ランチ",
+        "dinner": "ディナー",
+        "closed": "定休日"
+      },
+      "contact": "お問い合わせ",
+      "address": "住所",
+      "notes": {
+        "title": "ご注意",
+        "advance": "48時間前までのご予約をおすすめします",
+        "allergies": "アレルギーや特別な食事制限がある場合はお知らせください",
+        "lateness": "15分以上の遅刻の場合、予約がキャンセルされることがあります"
+      }
+    },
     "form": {
       "title": "オンライン予約",
       "description": "ユニークな美食体験のために、日時をお選びください。",
@@ -168,6 +238,7 @@
       "firstName": "名",
       "lastName": "姓",
       "email": "メールアドレス",
+      "phone": "電話番号",
       "date": "ご希望の日付",
       "time": "時間帯",
       "guests": "人数",
@@ -182,7 +253,41 @@
       "person": "名",
       "persons": "名",
       "personsMore": "名以上",
-      "confirmation": "24時間以内にご予約の確認のためご連絡いたします。"
+      "confirmation": "24時間以内にご予約の確認のためご連絡いたします。",
+      "placeholders": {
+        "firstName": "お名前",
+        "lastName": "お名前（姓）",
+        "email": "your@email.com",
+        "phone": "+33 6 00 00 00 00"
+      }
+    },
+    "privatisation": {
+      "subtitle": "プライベートイベント",
+      "title": "レストラン貸切",
+      "description": "特別なイベント — お誕生日、結婚式、企業セミナー、プライベートな祝賀会など — 大切なゲストに、贅沢な空間で忘れられない美食体験をお届けします。",
+      "features": {
+        "capacity": "最大34名様まで収容可能",
+        "menu": "シェフと相談してカスタムメニュー",
+        "service": "専属スタッフによる心のこもったサービス",
+        "decoration": "ご要望に応じてフラワーデコレーション"
+      },
+      "cta": "お見積もりを依頼",
+      "imageLabel": "貸切可能スペース"
+    },
+    "faq": {
+      "title": "よくあるご質問",
+      "cancellation": {
+        "question": "予約をキャンセルするには？",
+        "answer": "24時間前までにお電話でご連絡ください。直前のキャンセルは料金が発生する場合があります。"
+      },
+      "vegetarian": {
+        "question": "ベジタリアンメニューはありますか？",
+        "answer": "はい、シェフがテイスティングメニューをベジタリアン仕様にアレンジできます。ご予約時にお知らせください。"
+      },
+      "accessibility": {
+        "question": "車椅子でのアクセスは可能ですか？",
+        "answer": "当レストランはバリアフリー対応です。ご不明な点がございましたらお気軽にお問い合わせください。"
+      }
     }
   },
   "footer": {
@@ -234,5 +339,46 @@
       "title": "予約 | Les Botanistes",
       "description": "Les Botanistesレストランのテーブルをご予約ください。パリ7区で伝統的なフランス料理を。"
     }
+  },
+  "legal": {
+    "header": {
+      "subtitle": "法的情報",
+      "title": "利用規約"
+    },
+    "sections": {
+      "editor": {
+        "title": "1. サイト運営者",
+        "intro": "本サイトの運営者：",
+        "headquarters": "本社所在地："
+      },
+      "hosting": {
+        "title": "2. ホスティング",
+        "intro": "本サイトのホスティング：",
+        "website": "ウェブサイト："
+      },
+      "contact": {
+        "title": "3. お問い合わせ",
+        "intro": "サイトまたはコンテンツに関するお問い合わせ："
+      },
+      "intellectual": {
+        "title": "4. 知的財産権",
+        "content1": "本サイトのすべてのコンテンツ（テキスト、画像、動画、ロゴ、グラフィック、アイコンなど）は、Les Botanistesまたはそのパートナーの独占的な財産であり、知的財産に関するフランスおよび国際法により保護されています。",
+        "content2": "本サイトまたはそのコンテンツの全部または一部の複製、表示、改変、公開、送信、変形は、いかなる方法、いかなる媒体においても、事前の書面による許可なく禁止されています。"
+      },
+      "liability": {
+        "title": "5. 責任の制限",
+        "content1": "本サイトに掲載されている情報は可能な限り正確であり、定期的に更新されていますが、不正確さ、漏れ、または不備が含まれている場合があります。",
+        "content2": "Les Botanistesは、本サイトへのアクセス中にユーザーの機器に生じた直接的および間接的な損害について責任を負いません。"
+      },
+      "links": {
+        "title": "6. ハイパーリンク",
+        "content": "本サイトには他のサイトへのハイパーリンクが含まれている場合があります。Les Botanistesはこれらのサイトを管理しておらず、そのコンテンツについて一切の責任を負いません。"
+      },
+      "law": {
+        "title": "7. 準拠法",
+        "content": "本利用規約はフランス法に準拠します。紛争が生じた場合、フランスの裁判所のみが管轄権を有します。"
+      }
+    },
+    "lastUpdate": "最終更新日："
   }
 }

@@ -23,47 +23,90 @@
       "subtitle": "Cocina tradicional francesa",
       "title": "Les",
       "titleHighlight": "Botanistes",
-      "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
-      "ctaMenu": "Découvrir la carte",
-      "ctaReservation": "Réserver une table",
+      "description": "Una experiencia culinaria donde la naturaleza se encuentra con el arte de vivir a la francesa.",
+      "ctaMenu": "Descubrir la carta",
+      "ctaReservation": "Reservar una mesa",
       "scrollIndicator": "Scroll"
     },
     "philosophy": {
-      "subtitle": "Notre Philosophie",
-      "title": "L'excellence au service",
-      "titleHighlight": "de vos sens",
-      "description": "Au cœur de Paris, Les Botanistes cultivent depuis 2010 une cuisine française authentique, nourrie par la transmission et le respect des produits de saison."
+      "subtitle": "Nuestra Filosofía",
+      "title": "La excelencia al servicio",
+      "titleHighlight": "de sus sentidos",
+      "description": "En el corazón de París, Les Botanistes cultivan desde 2010 una cocina francesa auténtica, nutrida por la transmisión y el respeto de los productos de temporada."
     },
     "pillars": {
       "products": {
-        "title": "Produits d'Exception",
-        "description": "Une sélection rigoureuse des meilleurs producteurs et artisans français."
+        "title": "Productos de Excepción",
+        "description": "Una selección rigurosa de los mejores productores y artesanos franceses."
       },
       "cuisine": {
-        "title": "Cuisine soignée",
-        "description": "Une tradition familiale où le geste, le goût et la précision se transmettent de père en fils depuis plus de 15 ans."
+        "title": "Cocina cuidada",
+        "description": "Una tradición familiar donde el gesto, el gusto y la precisión se transmiten de padres a hijos desde hace más de 15 años."
       },
       "service": {
-        "title": "Service attentionné",
-        "description": "Une équipe passionnée, dévouée à rendre chaque moment chaleureux et mémorable."
+        "title": "Servicio atento",
+        "description": "Un equipo apasionado, dedicado a hacer cada momento cálido y memorable."
       }
     },
     "cellar": {
-      "title": "Une cave",
-      "titleHighlight": "remarquable",
-      "description": "Plus de 650 références soigneusement choisies pour accompagner chaque moment, du grand classique aux découvertes confidentielles."
+      "title": "Una bodega",
+      "titleHighlight": "excepcional",
+      "description": "Más de 650 referencias cuidadosamente seleccionadas para acompañar cada momento, desde los grandes clásicos hasta descubrimientos confidenciales."
     },
     "cta": {
-      "subtitle": "Réservation",
-      "title": "Venez partager un agréable",
-      "titleHighlight": "moment",
-      "description": "Réservez votre table et laissez-nous vous transporter dans un univers où chaque détail est pensé pour votre plaisir.",
-      "button": "Réserver maintenant"
+      "subtitle": "Reserva",
+      "title": "Venga a compartir un agradable",
+      "titleHighlight": "momento",
+      "description": "Reserve su mesa y déjenos transportarle a un universo donde cada detalle está pensado para su placer.",
+      "button": "Reservar ahora"
     }
   },
   "menu": {
     "pageTitle": "La Carta",
     "pageDescription": "Descubra nuestra carta de cocina tradicional francesa, una invitación al viaje culinario.",
+    "header": {
+      "subtitle": "Nuestra Carta",
+      "title": "Cocina de temporada",
+      "description": "Una pizarra que evoluciona con las estaciones, destacando los productos del mercado."
+    },
+    "quote": {
+      "text": "La cocina es cuando las cosas tienen el sabor de lo que son.",
+      "author": "Curnonsky"
+    },
+    "sections": {
+      "starters": {
+        "title": "Entrantes",
+        "subtitle": "Para empezar"
+      },
+      "mains": {
+        "title": "Platos Principales",
+        "subtitle": "Para saborear"
+      },
+      "desserts": {
+        "title": "Postres",
+        "subtitle": "Dulces delicias"
+      }
+    },
+    "tastingMenus": {
+      "subtitle": "Nuestros Menús",
+      "title": "Menús Degustación",
+      "discovery": {
+        "title": "Menú Descubrimiento",
+        "description": "5 platos para una primera exploración"
+      },
+      "botaniste": {
+        "title": "Menú Botaniste",
+        "description": "7 platos para una experiencia completa"
+      },
+      "wineNote": "Maridaje de vinos",
+      "note": "Precios netos, servicio incluido. Menú único para toda la mesa."
+    },
+    "cta": {
+      "subtitle": "Reserva",
+      "title": "Reserve su mesa",
+      "description": "Para una experiencia óptima, le recomendamos reservar con al menos 48 horas de antelación.",
+      "button": "Reservar"
+    },
     "categories": {
       "starters": "Entrantes",
       "mains": "Platos principales",
@@ -142,9 +185,18 @@
     "access": {
       "subtitle": "Cómo llegar",
       "title": "Acceso",
-      "metro": "Metro",
-      "bus": "Autobús",
-      "parking": "Aparcamiento"
+      "metro": {
+        "title": "Metro",
+        "details": "Sèvres-Babylone\nLíneas 10 y 12"
+      },
+      "bus": {
+        "title": "Autobús",
+        "details": "Líneas 39, 63, 68, 94\nParada Sèvres-Babylone"
+      },
+      "parking": {
+        "title": "Aparcamiento",
+        "details": "Parking Indigo Sèvres-Babylone\n(Bon Marché) – a 200 m"
+      }
     },
     "hours": {
       "lunch": "Almuerzo",
@@ -160,6 +212,24 @@
       "title": "Reserve su mesa",
       "description": "Viva una experiencia gastronómica inolvidable en nuestro refugio parisino."
     },
+    "info": {
+      "title": "Información",
+      "titleHighlight": "práctica",
+      "hours": {
+        "title": "Horarios de apertura",
+        "lunch": "Almuerzo",
+        "dinner": "Cena",
+        "closed": "Cerrado"
+      },
+      "contact": "Contáctenos",
+      "address": "Dirección",
+      "notes": {
+        "title": "A tener en cuenta",
+        "advance": "Reserva recomendada con 48h de antelación",
+        "allergies": "Por favor, infórmenos de cualquier alergia o dieta especial",
+        "lateness": "Retraso superior a 15 min: la reserva puede ser cancelada"
+      }
+    },
     "form": {
       "title": "Reservar en línea",
       "description": "Elija su fecha y horario para vivir una experiencia culinaria única.",
@@ -168,6 +238,7 @@
       "firstName": "Nombre",
       "lastName": "Apellido",
       "email": "Email",
+      "phone": "Teléfono",
       "date": "Fecha deseada",
       "time": "Horario",
       "guests": "Número de comensales",
@@ -182,7 +253,41 @@
       "person": "persona",
       "persons": "personas",
       "personsMore": "personas",
-      "confirmation": "Le contactaremos en 24h para confirmar su reserva."
+      "confirmation": "Le contactaremos en 24h para confirmar su reserva.",
+      "placeholders": {
+        "firstName": "Su nombre",
+        "lastName": "Su apellido",
+        "email": "su@email.com",
+        "phone": "+33 6 00 00 00 00"
+      }
+    },
+    "privatisation": {
+      "subtitle": "Eventos privados",
+      "title": "Privatización del restaurante",
+      "description": "Para sus eventos excepcionales — cumpleaños, bodas, seminarios de empresa o celebraciones privadas — ofrezca a sus invitados una experiencia gastronómica en un marco exclusivo.",
+      "features": {
+        "capacity": "Capacidad hasta 34 comensales",
+        "menu": "Menú personalizado con el Chef",
+        "service": "Servicio dedicado y atento",
+        "decoration": "Decoración floral bajo pedido"
+      },
+      "cta": "Solicitar presupuesto",
+      "imageLabel": "Espacio privatizable"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "cancellation": {
+        "question": "¿Cómo cancelar mi reserva?",
+        "answer": "Por favor, contáctenos por teléfono con al menos 24h de antelación. Cualquier cancelación tardía podrá ser facturada."
+      },
+      "vegetarian": {
+        "question": "¿Ofrecen menús vegetarianos?",
+        "answer": "Sí, nuestro Chef puede adaptar el menú degustación en versión vegetariana. Por favor, infórmenos al hacer la reserva."
+      },
+      "accessibility": {
+        "question": "¿El restaurante es accesible para PMR?",
+        "answer": "Nuestro establecimiento es accesible para personas con movilidad reducida. No dude en contactarnos para cualquier pregunta."
+      }
     }
   },
   "footer": {
@@ -234,5 +339,46 @@
       "title": "Reservar | Les Botanistes",
       "description": "Reserve su mesa en el restaurante Les Botanistes. Cocina tradicional francesa en París 7."
     }
+  },
+  "legal": {
+    "header": {
+      "subtitle": "Información legal",
+      "title": "Aviso legal"
+    },
+    "sections": {
+      "editor": {
+        "title": "1. Editor del sitio",
+        "intro": "El sitio es editado por:",
+        "headquarters": "Sede social:"
+      },
+      "hosting": {
+        "title": "2. Alojamiento",
+        "intro": "El sitio está alojado por:",
+        "website": "Sitio web:"
+      },
+      "contact": {
+        "title": "3. Contacto",
+        "intro": "Para cualquier pregunta relativa al sitio o su contenido:"
+      },
+      "intellectual": {
+        "title": "4. Propiedad intelectual",
+        "content1": "Todo el contenido de este sitio (textos, imágenes, vídeos, logotipos, gráficos, iconos, etc.) es propiedad exclusiva de Les Botanistes o sus socios y está protegido por las leyes francesas e internacionales relativas a la propiedad intelectual.",
+        "content2": "Cualquier reproducción, representación, modificación, publicación, transmisión, desnaturalización, total o parcial del sitio o su contenido, por cualquier procedimiento y en cualquier soporte, está prohibida sin autorización escrita previa."
+      },
+      "liability": {
+        "title": "5. Limitación de responsabilidad",
+        "content1": "La información contenida en este sitio es lo más precisa posible y el sitio se actualiza periódicamente, pero puede contener inexactitudes, omisiones o lagunas.",
+        "content2": "Les Botanistes no será responsable de los daños directos e indirectos causados al equipo del usuario durante el acceso al sitio."
+      },
+      "links": {
+        "title": "6. Enlaces hipertexto",
+        "content": "El sitio puede contener enlaces hipertexto hacia otros sitios. Les Botanistes no ejerce ningún control sobre estos sitios y declina toda responsabilidad en cuanto a su contenido."
+      },
+      "law": {
+        "title": "7. Derecho aplicable",
+        "content": "El presente aviso legal se rige por el derecho francés. En caso de litigio, los tribunales franceses serán los únicos competentes."
+      }
+    },
+    "lastUpdate": "Última actualización:"
   }
 }

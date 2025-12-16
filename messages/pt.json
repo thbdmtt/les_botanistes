@@ -14,7 +14,7 @@
     "home": "Início",
     "menu": "Cardápio",
     "about": "Nossa História",
-    "contact": "Contato",
+    "contact": "Contacto",
     "reservation": "Reservar",
     "privatisation": "Eventos Privados"
   },
@@ -23,47 +23,90 @@
       "subtitle": "Cozinha tradicional francesa",
       "title": "Les",
       "titleHighlight": "Botanistes",
-      "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
-      "ctaMenu": "Découvrir la carte",
-      "ctaReservation": "Réserver une table",
+      "description": "Uma experiência culinária onde a natureza encontra a arte de viver à francesa.",
+      "ctaMenu": "Descobrir o cardápio",
+      "ctaReservation": "Reservar uma mesa",
       "scrollIndicator": "Scroll"
     },
     "philosophy": {
-      "subtitle": "Notre Philosophie",
-      "title": "L'excellence au service",
-      "titleHighlight": "de vos sens",
-      "description": "Au cœur de Paris, Les Botanistes cultivent depuis 2010 une cuisine française authentique, nourrie par la transmission et le respect des produits de saison."
+      "subtitle": "A Nossa Filosofia",
+      "title": "A excelência ao serviço",
+      "titleHighlight": "dos seus sentidos",
+      "description": "No coração de Paris, Les Botanistes cultivam desde 2010 uma cozinha francesa autêntica, nutrida pela transmissão e pelo respeito dos produtos da estação."
     },
     "pillars": {
       "products": {
-        "title": "Produits d'Exception",
-        "description": "Une sélection rigoureuse des meilleurs producteurs et artisans français."
+        "title": "Produtos de Exceção",
+        "description": "Uma seleção rigorosa dos melhores produtores e artesãos franceses."
       },
       "cuisine": {
-        "title": "Cuisine soignée",
-        "description": "Une tradition familiale où le geste, le goût et la précision se transmettent de père en fils depuis plus de 15 ans."
+        "title": "Cozinha cuidada",
+        "description": "Uma tradição familiar onde o gesto, o gosto e a precisão se transmitem de pais para filhos há mais de 15 anos."
       },
       "service": {
-        "title": "Service attentionné",
-        "description": "Une équipe passionnée, dévouée à rendre chaque moment chaleureux et mémorable."
+        "title": "Serviço atento",
+        "description": "Uma equipa apaixonada, dedicada a tornar cada momento caloroso e memorável."
       }
     },
     "cellar": {
-      "title": "Une cave",
-      "titleHighlight": "remarquable",
-      "description": "Plus de 650 références soigneusement choisies pour accompagner chaque moment, du grand classique aux découvertes confidentielles."
+      "title": "Uma cave",
+      "titleHighlight": "excecional",
+      "description": "Mais de 650 referências cuidadosamente selecionadas para acompanhar cada momento, dos grandes clássicos às descobertas confidenciais."
     },
     "cta": {
-      "subtitle": "Réservation",
-      "title": "Venez partager un agréable",
-      "titleHighlight": "moment",
-      "description": "Réservez votre table et laissez-nous vous transporter dans un univers où chaque détail est pensé pour votre plaisir.",
-      "button": "Réserver maintenant"
+      "subtitle": "Reserva",
+      "title": "Venha partilhar um agradável",
+      "titleHighlight": "momento",
+      "description": "Reserve a sua mesa e deixe-nos transportá-lo para um universo onde cada detalhe é pensado para o seu prazer.",
+      "button": "Reservar agora"
     }
   },
   "menu": {
     "pageTitle": "Cardápio",
-    "pageDescription": "Descubra nosso cardápio de cozinha tradicional francesa, um convite à viagem culinária.",
+    "pageDescription": "Descubra o nosso cardápio de cozinha tradicional francesa, um convite à viagem culinária.",
+    "header": {
+      "subtitle": "O Nosso Cardápio",
+      "title": "Cozinha de estação",
+      "description": "Uma ementa que evolui ao sabor das estações, destacando os produtos do mercado."
+    },
+    "quote": {
+      "text": "A cozinha é quando as coisas têm o sabor daquilo que são.",
+      "author": "Curnonsky"
+    },
+    "sections": {
+      "starters": {
+        "title": "Entradas",
+        "subtitle": "Para começar"
+      },
+      "mains": {
+        "title": "Pratos Principais",
+        "subtitle": "Para saborear"
+      },
+      "desserts": {
+        "title": "Sobremesas",
+        "subtitle": "Doces delícias"
+      }
+    },
+    "tastingMenus": {
+      "subtitle": "Os Nossos Menus",
+      "title": "Menus Degustação",
+      "discovery": {
+        "title": "Menu Descoberta",
+        "description": "5 pratos para uma primeira exploração"
+      },
+      "botaniste": {
+        "title": "Menu Botaniste",
+        "description": "7 pratos para uma experiência completa"
+      },
+      "wineNote": "Harmonização de vinhos",
+      "note": "Preços líquidos, serviço incluído. Menu único para toda a mesa."
+    },
+    "cta": {
+      "subtitle": "Reserva",
+      "title": "Reserve a sua mesa",
+      "description": "Para uma experiência ótima, recomendamos reservar com pelo menos 48 horas de antecedência.",
+      "button": "Reservar"
+    },
     "categories": {
       "starters": "Entradas",
       "mains": "Pratos principais",
@@ -80,71 +123,80 @@
     "pageTitle": "Nossa História",
     "pageDescription": "Descubra a história do Les Botanistes, um restaurante nascido da paixão pela gastronomia francesa.",
     "story": {
-      "subtitle": "Nossa história",
+      "subtitle": "A nossa história",
       "title": "Uma paixão transmitida"
     },
     "team": {
-      "subtitle": "A equipe",
+      "subtitle": "A equipa",
       "title": "Os artesãos do sabor"
     },
     "values": {
-      "subtitle": "Nossos valores",
-      "title": "Excelência todos os dias"
+      "subtitle": "Os nossos valores",
+      "title": "A excelência todos os dias"
     }
   },
   "contact": {
-    "pageTitle": "Contato",
-    "pageDescription": "Entre em contato com o restaurante Les Botanistes. Endereço, horários e formulário de contato.",
+    "pageTitle": "Contacto",
+    "pageDescription": "Entre em contacto com o restaurante Les Botanistes. Morada, horários e formulário de contacto.",
     "header": {
-      "subtitle": "Contato",
-      "title": "Entre em contato",
-      "description": "Uma pergunta ou comentário? Nossa equipe está à sua disposição para responder o mais rápido possível."
+      "subtitle": "Contacto",
+      "title": "Entre em contacto",
+      "description": "Uma pergunta ou comentário? A nossa equipa está à sua disposição para responder o mais rapidamente possível."
     },
     "info": {
-      "address": "Endereço",
+      "address": "Morada",
       "phone": "Telefone",
       "email": "Email",
       "hours": "Horário de funcionamento",
       "viewOnMap": "Ver no Google Maps",
       "openInMaps": "Abrir no Google Maps",
       "responseTime": "Resposta em 24-48h",
-      "phoneHours": "Terça a sábado, 10h-22h"
+      "phoneHours": "De terça a sábado, 10h-22h"
     },
     "form": {
       "title": "Envie-nos uma mensagem",
       "required": "Todos os campos marcados com * são obrigatórios.",
       "firstName": "Nome",
-      "lastName": "Sobrenome",
+      "lastName": "Apelido",
       "email": "Email",
       "phone": "Telefone",
       "subject": "Assunto",
       "message": "Mensagem",
       "submit": "Enviar mensagem",
-      "submitting": "Enviando...",
-      "success": "Sua mensagem foi enviada com sucesso. Responderemos o mais rápido possível.",
+      "submitting": "A enviar...",
+      "success": "A sua mensagem foi enviada com sucesso. Responderemos o mais rapidamente possível.",
       "error": "Ocorreu um erro. Por favor, tente novamente mais tarde.",
       "subjects": {
-        "select": "Selecione um assunto",
+        "select": "Selecionar um assunto",
         "reservation": "Reserva",
         "privatisation": "Evento privado",
         "information": "Pedido de informação",
-        "feedback": "Feedback",
+        "feedback": "Comentários",
         "other": "Outro"
       },
       "placeholders": {
-        "firstName": "Seu nome",
-        "lastName": "Seu sobrenome",
+        "firstName": "O seu nome",
+        "lastName": "O seu apelido",
         "email": "seu@email.com",
         "phone": "+33 6 00 00 00 00",
-        "message": "Sua mensagem..."
+        "message": "A sua mensagem..."
       }
     },
     "access": {
       "subtitle": "Como chegar",
       "title": "Acesso",
-      "metro": "Metrô",
-      "bus": "Ônibus",
-      "parking": "Estacionamento"
+      "metro": {
+        "title": "Metro",
+        "details": "Sèvres-Babylone\nLinhas 10 e 12"
+      },
+      "bus": {
+        "title": "Autocarro",
+        "details": "Linhas 39, 63, 68, 94\nParagem Sèvres-Babylone"
+      },
+      "parking": {
+        "title": "Estacionamento",
+        "details": "Parking Indigo Sèvres-Babylone\n(Bon Marché) – a 200 m"
+      }
     },
     "hours": {
       "lunch": "Almoço",
@@ -154,26 +206,45 @@
   },
   "reservation": {
     "pageTitle": "Reservar",
-    "pageDescription": "Reserve sua mesa no restaurante Les Botanistes. Cozinha tradicional francesa em Paris.",
+    "pageDescription": "Reserve a sua mesa no restaurante Les Botanistes. Cozinha tradicional francesa em Paris.",
     "header": {
       "subtitle": "Reserva",
-      "title": "Reserve sua mesa",
-      "description": "Viva uma experiência gastronômica inesquecível em nosso refúgio parisiense."
+      "title": "Reserve a sua mesa",
+      "description": "Viva uma experiência gastronómica inesquecível no nosso refúgio parisiense."
+    },
+    "info": {
+      "title": "Informações",
+      "titleHighlight": "práticas",
+      "hours": {
+        "title": "Horário de funcionamento",
+        "lunch": "Almoço",
+        "dinner": "Jantar",
+        "closed": "Fechado"
+      },
+      "contact": "Contacte-nos",
+      "address": "Morada",
+      "notes": {
+        "title": "A ter em conta",
+        "advance": "Reserva recomendada com 48h de antecedência",
+        "allergies": "Por favor, informe-nos de qualquer alergia ou dieta especial",
+        "lateness": "Atraso superior a 15 min: a reserva pode ser cancelada"
+      }
     },
     "form": {
       "title": "Reservar online",
-      "description": "Escolha sua data e horário para viver uma experiência culinária única.",
+      "description": "Escolha a sua data e horário para viver uma experiência culinária única.",
       "callToBook": "Ligar para reservar",
       "or": "ou",
       "firstName": "Nome",
-      "lastName": "Sobrenome",
+      "lastName": "Apelido",
       "email": "Email",
-      "date": "Data desejada",
+      "phone": "Telefone",
+      "date": "Data pretendida",
       "time": "Horário",
       "guests": "Número de pessoas",
-      "submit": "Enviar solicitação",
-      "submitting": "Enviando...",
-      "success": "Sua solicitação de reserva foi enviada. Entraremos em contato em 24h para confirmar.",
+      "submit": "Enviar pedido",
+      "submitting": "A enviar...",
+      "success": "O seu pedido de reserva foi enviado. Entraremos em contacto em 24h para confirmar.",
       "error": "Ocorreu um erro. Por favor, tente novamente mais tarde.",
       "selectTime": "Selecionar",
       "selectGuests": "Selecionar",
@@ -182,7 +253,41 @@
       "person": "pessoa",
       "persons": "pessoas",
       "personsMore": "pessoas",
-      "confirmation": "Entraremos em contato em 24h para confirmar sua reserva."
+      "confirmation": "Entraremos em contacto em 24h para confirmar a sua reserva.",
+      "placeholders": {
+        "firstName": "O seu nome",
+        "lastName": "O seu apelido",
+        "email": "seu@email.com",
+        "phone": "+33 6 00 00 00 00"
+      }
+    },
+    "privatisation": {
+      "subtitle": "Eventos privados",
+      "title": "Privatização do restaurante",
+      "description": "Para os seus eventos excecionais — aniversários, casamentos, seminários de empresa ou celebrações privadas — ofereça aos seus convidados uma experiência gastronómica num espaço exclusivo.",
+      "features": {
+        "capacity": "Capacidade até 34 convidados",
+        "menu": "Menu personalizado com o Chef",
+        "service": "Serviço dedicado e atento",
+        "decoration": "Decoração floral sob pedido"
+      },
+      "cta": "Pedir orçamento",
+      "imageLabel": "Espaço privatizável"
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "cancellation": {
+        "question": "Como cancelar a minha reserva?",
+        "answer": "Por favor, contacte-nos por telefone com pelo menos 24h de antecedência. Qualquer cancelamento tardio poderá ser faturado."
+      },
+      "vegetarian": {
+        "question": "Oferecem menus vegetarianos?",
+        "answer": "Sim, o nosso Chef pode adaptar o menu degustação em versão vegetariana. Por favor, informe-nos ao fazer a reserva."
+      },
+      "accessibility": {
+        "question": "O restaurante é acessível a pessoas com mobilidade reduzida?",
+        "answer": "O nosso estabelecimento é acessível a pessoas com mobilidade reduzida. Não hesite em contactar-nos para qualquer questão."
+      }
     }
   },
   "footer": {
@@ -192,15 +297,15 @@
     "followUs": "Siga-nos",
     "newsletter": {
       "title": "Newsletter",
-      "description": "Receba nossas novidades e ofertas exclusivas",
-      "placeholder": "Seu email",
-      "submit": "Inscrever-se"
+      "description": "Receba as nossas novidades e ofertas exclusivas",
+      "placeholder": "O seu email",
+      "submit": "Subscrever"
     }
   },
   "errors": {
     "404": {
       "title": "Página não encontrada",
-      "description": "A página que você procura não existe ou foi movida."
+      "description": "A página que procura não existe ou foi movida."
     },
     "500": {
       "title": "Erro do servidor",
@@ -209,8 +314,8 @@
   },
   "validation": {
     "required": "Este campo é obrigatório",
-    "email": "Por favor, insira um email válido",
-    "phone": "Por favor, insira um número de telefone válido",
+    "email": "Por favor, introduza um email válido",
+    "phone": "Por favor, introduza um número de telefone válido",
     "minLength": "Este campo deve conter pelo menos {min} caracteres"
   },
   "seo": {
@@ -220,19 +325,60 @@
     },
     "menu": {
       "title": "Cardápio | Les Botanistes",
-      "description": "Descubra nosso cardápio de cozinha tradicional francesa: entradas, pratos principais e sobremesas preparados com produtos sazonais."
+      "description": "Descubra o nosso cardápio de cozinha tradicional francesa: entradas, pratos principais e sobremesas preparados com produtos da estação."
     },
     "about": {
       "title": "Nossa História | Les Botanistes",
       "description": "Descubra a história e filosofia do restaurante Les Botanistes, uma paixão pela gastronomia francesa."
     },
     "contact": {
-      "title": "Contato | Les Botanistes",
-      "description": "Entre em contato: endereço, telefone, email e horários. Cozinha tradicional francesa Paris 7, perto do Bon Marché."
+      "title": "Contacto | Les Botanistes",
+      "description": "Contacte-nos: morada, telefone, email e horários. Cozinha tradicional francesa Paris 7, perto do Bon Marché."
     },
     "reservation": {
       "title": "Reservar | Les Botanistes",
-      "description": "Reserve sua mesa no restaurante Les Botanistes. Cozinha tradicional francesa em Paris 7."
+      "description": "Reserve a sua mesa no restaurante Les Botanistes. Cozinha tradicional francesa em Paris 7."
     }
+  },
+  "legal": {
+    "header": {
+      "subtitle": "Informações legais",
+      "title": "Termos legais"
+    },
+    "sections": {
+      "editor": {
+        "title": "1. Editor do site",
+        "intro": "O site é editado por:",
+        "headquarters": "Sede social:"
+      },
+      "hosting": {
+        "title": "2. Alojamento",
+        "intro": "O site é alojado por:",
+        "website": "Website:"
+      },
+      "contact": {
+        "title": "3. Contacto",
+        "intro": "Para qualquer questão relativa ao site ou ao seu conteúdo:"
+      },
+      "intellectual": {
+        "title": "4. Propriedade intelectual",
+        "content1": "Todo o conteúdo deste site (textos, imagens, vídeos, logótipos, gráficos, ícones, etc.) é propriedade exclusiva de Les Botanistes ou dos seus parceiros e está protegido pelas leis francesas e internacionais relativas à propriedade intelectual.",
+        "content2": "Qualquer reprodução, representação, modificação, publicação, transmissão, desnaturação, total ou parcial do site ou do seu conteúdo, por qualquer processo e em qualquer suporte, é proibida sem autorização escrita prévia."
+      },
+      "liability": {
+        "title": "5. Limitação de responsabilidade",
+        "content1": "As informações contidas neste site são tão precisas quanto possível e o site é atualizado periodicamente, mas pode conter imprecisões, omissões ou lacunas.",
+        "content2": "Les Botanistes não poderá ser responsabilizado pelos danos diretos e indiretos causados ao equipamento do utilizador durante o acesso ao site."
+      },
+      "links": {
+        "title": "6. Ligações hipertexto",
+        "content": "O site pode conter ligações hipertexto para outros sites. Les Botanistes não exerce qualquer controlo sobre estes sites e declina toda a responsabilidade quanto ao seu conteúdo."
+      },
+      "law": {
+        "title": "7. Direito aplicável",
+        "content": "Os presentes termos legais são regidos pelo direito francês. Em caso de litígio, os tribunais franceses serão os únicos competentes."
+      }
+    },
+    "lastUpdate": "Última atualização:"
   }
 }
