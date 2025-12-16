@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Logo className="text-blanc [&_span]:text-blanc [&_.text-gold]:text-gold" />
             <p className="mt-4 text-sm text-gris-chaud leading-relaxed">
-              Cuisine bistronomique de saison au cœur du 7ème arrondissement.
+              Cuisine traditionnelle française au cœur du 7ème arrondissement.
             </p>
 
             {/* Réseaux sociaux */}

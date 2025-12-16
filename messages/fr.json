@@ -1,7 +1,7 @@
 {
   "common": {
     "siteName": "Les Botanistes",
-    "tagline": "Restaurant Bistronomique",
+    "tagline": "Cuisine traditionnelle française",
     "callToAction": "Réserver une table",
     "learnMore": "En savoir plus",
     "viewMenu": "Voir la carte",
@@ -20,7 +20,7 @@
   },
   "home": {
     "hero": {
-      "subtitle": "Restaurant Bistronomique",
+      "subtitle": "Cuisine traditionnelle française",
       "title": "Les",
       "titleHighlight": "Botanistes",
       "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
@@ -63,7 +63,7 @@
   },
   "menu": {
     "pageTitle": "La Carte",
-    "pageDescription": "Découvrez notre carte bistronomique, une invitation au voyage gustatif.",
+    "pageDescription": "Découvrez notre carte de cuisine traditionnelle française, une invitation au voyage gustatif.",
     "header": {
       "subtitle": "Notre Carte",
       "title": "Cuisine de saison",
@@ -206,7 +206,7 @@
   },
   "reservation": {
     "pageTitle": "Réserver",
-    "pageDescription": "Réservez votre table au restaurant Les Botanistes. Expérience bistronomique unique à Paris.",
+    "pageDescription": "Réservez votre table au restaurant Les Botanistes. Cuisine traditionnelle française à Paris.",
     "header": {
       "subtitle": "Réservation",
       "title": "Réservez votre table",
@@ -232,7 +232,7 @@
     },
     "form": {
       "title": "Réserver en ligne",
-      "description": "Choisissez votre date et votre créneau horaire pour vivre une expérience bistronomique unique.",
+      "description": "Choisissez votre date et votre créneau horaire pour vivre une expérience culinaire unique.",
       "callToBook": "Appeler pour réserver",
       "or": "ou",
       "firstName": "Prénom",
@@ -264,7 +264,7 @@
     "privatisation": {
       "subtitle": "Événements privés",
       "title": "Privatisation du restaurant",
-      "description": "Pour vos événements d'exception — anniversaires, mariages, séminaires d'entreprise ou célébrations privées — offrez à vos invités une expérience bistronomique dans un cadre exclusif.",
+      "description": "Pour vos événements d'exception — anniversaires, mariages, séminaires d'entreprise ou célébrations privées — offrez à vos invités une expérience gastronomique dans un cadre exclusif.",
       "features": {
         "capacity": "Capacité jusqu'à 34 convives",
         "menu": "Menu personnalisé avec le Chef",
@@ -320,12 +320,12 @@
   },
   "seo": {
     "home": {
-      "title": "Les Botanistes | Restaurant Bistronomique Paris 7",
-      "description": "Restaurant bistronomique au cœur du 7ème arrondissement de Paris. Cuisine d'auteur, produits frais et ambiance raffinée près du Bon Marché."
+      "title": "Les Botanistes | Restaurant de cuisine traditionnelle française Paris 7",
+      "description": "Restaurant de cuisine traditionnelle française au cœur du 7ème arrondissement de Paris. Produits frais et ambiance raffinée près du Bon Marché."
     },
     "menu": {
       "title": "La Carte | Les Botanistes",
-      "description": "Découvrez notre carte bistronomique : entrées, plats et desserts élaborés avec des produits de saison."
+      "description": "Découvrez notre carte de cuisine traditionnelle française : entrées, plats et desserts élaborés avec des produits de saison."
     },
     "about": {
       "title": "Notre Histoire | Les Botanistes",
@@ -333,11 +333,11 @@
     },
     "contact": {
       "title": "Contact | Les Botanistes",
-      "description": "Contactez-nous : adresse, téléphone, email et horaires. Restaurant bistronomique Paris 7, près du Bon Marché."
+      "description": "Contactez-nous : adresse, téléphone, email et horaires. Restaurant de cuisine traditionnelle française Paris 7, près du Bon Marché."
     },
     "reservation": {
       "title": "Réserver | Les Botanistes",
-      "description": "Réservez votre table au restaurant Les Botanistes. Expérience bistronomique unique à Paris 7ème."
+      "description": "Réservez votre table au restaurant Les Botanistes. Cuisine traditionnelle française à Paris 7ème."
     }
   }
 }

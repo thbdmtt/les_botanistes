@@ -1,7 +1,7 @@
 {
   "common": {
     "siteName": "Les Botanistes",
-    "tagline": "Bistronomisches Restaurant",
+    "tagline": "Traditionelle französische Küche",
     "callToAction": "Tisch reservieren",
     "learnMore": "Mehr erfahren",
     "viewMenu": "Speisekarte ansehen",
@@ -20,7 +20,7 @@
   },
   "home": {
     "hero": {
-      "subtitle": "Bistronomisches Restaurant",
+      "subtitle": "Traditionelle französische Küche",
       "title": "Les",
       "titleHighlight": "Botanistes",
       "description": "Ein kulinarisches Erlebnis, wo Natur auf französische Lebensart trifft.",
@@ -206,7 +206,7 @@
   },
   "reservation": {
     "pageTitle": "Reservieren",
-    "pageDescription": "Reservieren Sie Ihren Tisch im Restaurant Les Botanistes. Einzigartiges bistronomisches Erlebnis in Paris.",
+    "pageDescription": "Reservieren Sie Ihren Tisch im Restaurant Les Botanistes. Traditionelle französische Küche in Paris.",
     "header": {
       "subtitle": "Reservierung",
       "title": "Reservieren Sie Ihren Tisch",
@@ -232,7 +232,7 @@
     },
     "form": {
       "title": "Online reservieren",
-      "description": "Wählen Sie Ihr Datum und Ihre Uhrzeit für ein einzigartiges bistronomisches Erlebnis.",
+      "description": "Wählen Sie Ihr Datum und Ihre Uhrzeit für ein einzigartiges kulinarisches Erlebnis.",
       "callToBook": "Anrufen zum Reservieren",
       "or": "oder",
       "firstName": "Vorname",
@@ -264,7 +264,7 @@
     "privatisation": {
       "subtitle": "Private Veranstaltungen",
       "title": "Restaurant-Privatisierung",
-      "description": "Für Ihre besonderen Anlässe — Geburtstage, Hochzeiten, Firmenseminare oder private Feiern — bieten Sie Ihren Gästen ein bistronomisches Erlebnis in exklusivem Rahmen.",
+      "description": "Für Ihre besonderen Anlässe — Geburtstage, Hochzeiten, Firmenseminare oder private Feiern — bieten Sie Ihren Gästen ein gastronomisches Erlebnis in exklusivem Rahmen.",
       "features": {
         "capacity": "Kapazität bis zu 34 Gäste",
         "menu": "Personalisiertes Menü mit dem Küchenchef",
@@ -320,12 +320,12 @@
   },
   "seo": {
     "home": {
-      "title": "Les Botanistes | Bistronomisches Restaurant Paris 7",
-      "description": "Bistronomisches Restaurant im Herzen des 7. Arrondissements von Paris. Autorenküche, frische Produkte und raffiniertes Ambiente in der Nähe des Bon Marché."
+      "title": "Les Botanistes | Traditionelle französische Küche Paris 7",
+      "description": "Restaurant für traditionelle französische Küche im Herzen des 7. Arrondissements von Paris. Frische Produkte und raffiniertes Ambiente in der Nähe des Bon Marché."
     },
     "menu": {
       "title": "Speisekarte | Les Botanistes",
-      "description": "Entdecken Sie unsere bistronomische Speisekarte: Vorspeisen, Hauptgerichte und Desserts mit saisonalen Produkten."
+      "description": "Entdecken Sie unsere traditionelle französische Speisekarte: Vorspeisen, Hauptgerichte und Desserts mit saisonalen Produkten."
     },
     "about": {
       "title": "Unsere Geschichte | Les Botanistes",
@@ -333,11 +333,11 @@
     },
     "contact": {
       "title": "Kontakt | Les Botanistes",
-      "description": "Kontaktieren Sie uns: Adresse, Telefon, E-Mail und Öffnungszeiten. Bistronomisches Restaurant Paris 7, in der Nähe des Bon Marché."
+      "description": "Kontaktieren Sie uns: Adresse, Telefon, E-Mail und Öffnungszeiten. Traditionelle französische Küche Paris 7, in der Nähe des Bon Marché."
     },
     "reservation": {
       "title": "Reservieren | Les Botanistes",
-      "description": "Reservieren Sie Ihren Tisch im Restaurant Les Botanistes. Einzigartiges bistronomisches Erlebnis in Paris 7."
+      "description": "Reservieren Sie Ihren Tisch im Restaurant Les Botanistes. Traditionelle französische Küche in Paris 7."
     }
   }
 }
