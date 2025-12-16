@@ -1,7 +1,7 @@
 {
   "common": {
     "siteName": "Les Botanistes",
-    "tagline": "ビストロノミーレストラン",
+    "tagline": "伝統的なフランス料理",
     "callToAction": "テーブルを予約",
     "learnMore": "詳しく見る",
     "viewMenu": "メニューを見る",
@@ -20,7 +20,7 @@
   },
   "home": {
     "hero": {
-      "subtitle": "Restaurant Bistronomique",
+      "subtitle": "伝統的なフランス料理",
       "title": "Les",
       "titleHighlight": "Botanistes",
       "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
@@ -63,7 +63,7 @@
   },
   "menu": {
     "pageTitle": "メニュー",
-    "pageDescription": "ビストロノミーメニューをご覧ください。美食の旅へのご招待です。",
+    "pageDescription": "伝統的なフランス料理のメニューをご覧ください。美食の旅へのご招待です。",
     "categories": {
       "starters": "前菜",
       "mains": "メインディッシュ",
@@ -154,7 +154,7 @@
   },
   "reservation": {
     "pageTitle": "予約",
-    "pageDescription": "Les Botanistesレストランのテーブルをご予約ください。パリでユニークなビストロノミー体験を。",
+    "pageDescription": "Les Botanistesレストランのテーブルをご予約ください。パリで伝統的なフランス料理を。",
     "header": {
       "subtitle": "ご予約",
       "title": "テーブルを予約",
@@ -162,7 +162,7 @@
     },
     "form": {
       "title": "オンライン予約",
-      "description": "ユニークなビストロノミー体験のために、日時をお選びください。",
+      "description": "ユニークな美食体験のために、日時をお選びください。",
       "callToBook": "電話で予約",
       "or": "または",
       "firstName": "名",
@@ -215,12 +215,12 @@
   },
   "seo": {
     "home": {
-      "title": "Les Botanistes | パリ7区 ビストロノミーレストラン",
-      "description": "パリ7区の中心にあるビストロノミーレストラン。創作料理、新鮮な食材、ボン・マルシェ近くの洗練された雰囲気。"
+      "title": "Les Botanistes | パリ7区 伝統的なフランス料理",
+      "description": "パリ7区の中心にある伝統的なフランス料理レストラン。新鮮な食材、ボン・マルシェ近くの洗練された雰囲気。"
     },
     "menu": {
       "title": "メニュー | Les Botanistes",
-      "description": "ビストロノミーメニューをご覧ください：旬の食材を使った前菜、メインディッシュ、デザート。"
+      "description": "伝統的なフランス料理のメニューをご覧ください：旬の食材を使った前菜、メインディッシュ、デザート。"
     },
     "about": {
       "title": "私たちの物語 | Les Botanistes",
@@ -228,11 +228,11 @@
     },
     "contact": {
       "title": "お問い合わせ | Les Botanistes",
-      "description": "お問い合わせ：住所、電話、メール、営業時間。パリ7区、ボン・マルシェ近くのビストロノミーレストラン。"
+      "description": "お問い合わせ：住所、電話、メール、営業時間。パリ7区、ボン・マルシェ近くの伝統的なフランス料理レストラン。"
     },
     "reservation": {
       "title": "予約 | Les Botanistes",
-      "description": "Les Botanistesレストランのテーブルをご予約ください。パリ7区でユニークなビストロノミー体験を。"
+      "description": "Les Botanistesレストランのテーブルをご予約ください。パリ7区で伝統的なフランス料理を。"
     }
   }
 }

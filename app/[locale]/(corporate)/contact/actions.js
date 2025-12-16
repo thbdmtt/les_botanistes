@@ -157,7 +157,7 @@ export async function sendContactEmail(prevState, formData) {
                     Les Botanistes
                   </h1>
                   <p style="margin: 8px 0 0 0; color: #888888; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">
-                    Restaurant Bistronomique
+                    Cuisine traditionnelle française
                   </p>
                 </td>
               </tr>

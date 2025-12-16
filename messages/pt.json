@@ -1,7 +1,7 @@
 {
   "common": {
     "siteName": "Les Botanistes",
-    "tagline": "Restaurante Bistronômico",
+    "tagline": "Cozinha tradicional francesa",
     "callToAction": "Reservar mesa",
     "learnMore": "Saiba mais",
     "viewMenu": "Ver cardápio",
@@ -20,7 +20,7 @@
   },
   "home": {
     "hero": {
-      "subtitle": "Restaurant Bistronomique",
+      "subtitle": "Cozinha tradicional francesa",
       "title": "Les",
       "titleHighlight": "Botanistes",
       "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
@@ -63,7 +63,7 @@
   },
   "menu": {
     "pageTitle": "Cardápio",
-    "pageDescription": "Descubra nosso cardápio bistronômico, um convite à viagem culinária.",
+    "pageDescription": "Descubra nosso cardápio de cozinha tradicional francesa, um convite à viagem culinária.",
     "categories": {
       "starters": "Entradas",
       "mains": "Pratos principais",
@@ -154,7 +154,7 @@
   },
   "reservation": {
     "pageTitle": "Reservar",
-    "pageDescription": "Reserve sua mesa no restaurante Les Botanistes. Experiência bistronômica única em Paris.",
+    "pageDescription": "Reserve sua mesa no restaurante Les Botanistes. Cozinha tradicional francesa em Paris.",
     "header": {
       "subtitle": "Reserva",
       "title": "Reserve sua mesa",
@@ -162,7 +162,7 @@
     },
     "form": {
       "title": "Reservar online",
-      "description": "Escolha sua data e horário para viver uma experiência bistronômica única.",
+      "description": "Escolha sua data e horário para viver uma experiência culinária única.",
       "callToBook": "Ligar para reservar",
       "or": "ou",
       "firstName": "Nome",
@@ -215,12 +215,12 @@
   },
   "seo": {
     "home": {
-      "title": "Les Botanistes | Restaurante Bistronômico Paris 7",
-      "description": "Restaurante bistronômico no coração do 7º arrondissement de Paris. Cozinha autoral, produtos frescos e ambiente refinado perto do Bon Marché."
+      "title": "Les Botanistes | Cozinha tradicional francesa Paris 7",
+      "description": "Restaurante de cozinha tradicional francesa no coração do 7º arrondissement de Paris. Produtos frescos e ambiente refinado perto do Bon Marché."
     },
     "menu": {
       "title": "Cardápio | Les Botanistes",
-      "description": "Descubra nosso cardápio bistronômico: entradas, pratos principais e sobremesas preparados com produtos sazonais."
+      "description": "Descubra nosso cardápio de cozinha tradicional francesa: entradas, pratos principais e sobremesas preparados com produtos sazonais."
     },
     "about": {
       "title": "Nossa História | Les Botanistes",
@@ -228,11 +228,11 @@
     },
     "contact": {
       "title": "Contato | Les Botanistes",
-      "description": "Entre em contato: endereço, telefone, email e horários. Restaurante bistronômico Paris 7, perto do Bon Marché."
+      "description": "Entre em contato: endereço, telefone, email e horários. Cozinha tradicional francesa Paris 7, perto do Bon Marché."
     },
     "reservation": {
       "title": "Reservar | Les Botanistes",
-      "description": "Reserve sua mesa no restaurante Les Botanistes. Experiência bistronômica única em Paris 7."
+      "description": "Reserve sua mesa no restaurante Les Botanistes. Cozinha tradicional francesa em Paris 7."
     }
   }
 }

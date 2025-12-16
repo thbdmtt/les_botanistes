@@ -20,7 +20,7 @@ export async function generateMetadata({ params: { locale } }) {
     },
     description: t('home.description'),
     keywords: [
-      'restaurant bistronomique',
+      'cuisine traditionnelle française',
       'Paris 7',
       'cuisine française',
       'cuisine de saison',
