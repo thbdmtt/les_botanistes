@@ -5,6 +5,11 @@
 import { readSheet, rowToObject } from './sheets';
 
 /**
+ * Supported locales for the application
+ */
+export type Locale = 'fr' | 'en' | 'es' | 'de' | 'it' | 'pt' | 'ja';
+
+/**
  * Raw row structure from Google Sheets
  * Matches the spreadsheet columns exactly
  */
@@ -104,4 +109,21 @@ export async function loadAllSections(): Promise<Record<SectionId, MenuItemData[
   ]);
 
   return { starters, mains, desserts };
+}
+
+/**
+ * Get the localized name for a menu item
+ *
+ * LANGUAGE RULE:
+ * - FR locale → name_fr (French)
+ * - ALL other locales (en, es, de, it, pt, ja) → name_en (English)
+ *
+ * No exceptions, no additional fallback logic.
+ *
+ * @param item - The menu item
+ * @param locale - The current locale
+ * @returns The appropriate name based on locale
+ */
+export function getMenuLabel(item: MenuItemData, locale: Locale | string): string {
+  return locale === 'fr' ? item.name_fr : item.name_en;
 }
