@@ -2,7 +2,15 @@
  * Menu data loaders from Google Sheets
  * Server-side only - never import in client components
  */
+import { unstable_cache } from 'next/cache';
 import { readSheet, rowToObject } from './sheets';
+
+/**
+ * Cache configuration
+ * - revalidate: 300 seconds (5 minutes)
+ * - tags: used for on-demand revalidation if needed
+ */
+const CACHE_REVALIDATE_SECONDS = 300;
 
 /**
  * Supported locales for the application
@@ -49,11 +57,11 @@ const SHEET_NAMES: Record<SectionId, string> = {
 };
 
 /**
- * Loads menu items from a specific section
+ * Internal function to load menu items from a specific section
  * @param sectionId - The section to load ('starters', 'mains', 'desserts')
  * @returns Array of active menu items
  */
-async function loadSection(sectionId: SectionId): Promise<MenuItemData[]> {
+async function fetchSection(sectionId: SectionId): Promise<MenuItemData[]> {
   const sheetName = SHEET_NAMES[sectionId];
   const { headers, rows } = await readSheet(sheetName);
 
@@ -75,6 +83,20 @@ async function loadSection(sectionId: SectionId): Promise<MenuItemData[]> {
 
   return items;
 }
+
+/**
+ * Cached version of section loader
+ * Caches for 5 minutes to avoid hitting Google Sheets on every request
+ */
+const loadSection = (sectionId: SectionId) =>
+  unstable_cache(
+    () => fetchSection(sectionId),
+    [`menu-section-${sectionId}`],
+    {
+      revalidate: CACHE_REVALIDATE_SECONDS,
+      tags: ['menu', `menu-${sectionId}`],
+    }
+  )();
 
 /**
  * Load starters from Google Sheets
