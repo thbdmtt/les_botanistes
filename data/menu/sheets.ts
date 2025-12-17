@@ -7,7 +7,10 @@ import { google } from 'googleapis';
 // Environment variables required for Google Sheets access
 const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
 const CLIENT_EMAIL = process.env.GOOGLE_SHEETS_CLIENT_EMAIL;
-const PRIVATE_KEY = process.env.GOOGLE_SHEETS_PRIVATE_KEY?.replace(/\\n/g, '\n');
+const PRIVATE_KEY = process.env.GOOGLE_SHEETS_PRIVATE_KEY_BASE64
+  ? Buffer.from(process.env.GOOGLE_SHEETS_PRIVATE_KEY_BASE64, 'base64').toString('utf8')
+  : undefined;
+
 
 /**
  * Raw row data from Google Sheets
