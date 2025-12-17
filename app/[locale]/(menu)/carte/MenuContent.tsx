@@ -1,15 +1,30 @@
 'use client'
 
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { PageHeader } from '@/components/sections'
 import { MenuItem, Separator } from '@/components/ui'
-import { menu, getLocalizedText } from '@/data/menu'
+import type { SectionId } from '@/lib/menu'
 
 // Feature flag pour afficher/masquer la section Menus Dégustation
-// Mettre à true pour réactiver la section
 const SHOW_TASTING_MENUS = false
 
-function MenuSection({ sectionId, items, locale, t }) {
+/**
+ * Menu item with localized name (after getMenuLabel applied server-side)
+ */
+interface LocalizedMenuItem {
+  id: string
+  name: string
+  price: number
+  tag?: string
+}
+
+interface MenuSectionProps {
+  sectionId: SectionId
+  items: LocalizedMenuItem[]
+  t: ReturnType<typeof useTranslations>
+}
+
+function MenuSection({ sectionId, items, t }: MenuSectionProps) {
   return (
     <section className="py-12 sm:py-16">
       <div className="container-luxe max-w-3xl">
@@ -28,10 +43,11 @@ function MenuSection({ sectionId, items, locale, t }) {
           {items.map((item) => (
             <MenuItem
               key={item.id}
-              name={getLocalizedText(item.title, locale)}
-              description={item.description ? getLocalizedText(item.description, locale) : undefined}
+              name={item.name}
+              description={undefined}
               price={item.price}
               tag={item.tag}
+              className={undefined}
             />
           ))}
         </div>
@@ -40,12 +56,27 @@ function MenuSection({ sectionId, items, locale, t }) {
   )
 }
 
-export default function CartePage() {
-  const t = useTranslations('menu')
-  const locale = useLocale()
+interface TastingMenu {
+  id: 'discovery' | 'botaniste'
+  services: number
+  price: number
+  winePrice: number
+}
 
-  // Sort sections by order
-  const sortedSections = [...menu.sections].sort((a, b) => a.order - b.order)
+interface MenuContentProps {
+  sections: {
+    starters: LocalizedMenuItem[]
+    mains: LocalizedMenuItem[]
+    desserts: LocalizedMenuItem[]
+  }
+  tastingMenus: TastingMenu[]
+}
+
+export default function MenuContent({ sections, tastingMenus }: MenuContentProps) {
+  const t = useTranslations('menu')
+
+  // Define section order
+  const sectionOrder: SectionId[] = ['starters', 'mains', 'desserts']
 
   return (
     <>
@@ -53,6 +84,7 @@ export default function CartePage() {
         subtitle={t('header.subtitle')}
         title={t('header.title')}
         description={t('header.description')}
+        className={undefined}
       />
 
       {/* Note du chef */}
@@ -68,15 +100,14 @@ export default function CartePage() {
       <Separator variant="gold-wide" className="opacity-30" />
 
       {/* Menu sections */}
-      {sortedSections.map((section, index) => (
-        <div key={section.id}>
+      {sectionOrder.map((sectionId, index) => (
+        <div key={sectionId}>
           <MenuSection
-            sectionId={section.id}
-            items={section.items}
-            locale={locale}
+            sectionId={sectionId}
+            items={sections[sectionId]}
             t={t}
           />
-          {index < sortedSections.length - 1 && (
+          {index < sectionOrder.length - 1 && (
             <Separator variant="gold-wide" className="opacity-30" />
           )}
         </div>
@@ -90,7 +121,7 @@ export default function CartePage() {
             <h2 className="font-serif text-2xl sm:text-3xl mb-8">{t('tastingMenus.title')}</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {menu.tastingMenus.map((tm) => (
+              {tastingMenus.map((tm) => (
                 <div
                   key={tm.id}
                   className={`card-luxe ${tm.id === 'botaniste' ? 'border-gold/50' : ''}`}

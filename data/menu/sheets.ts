@@ -93,7 +93,7 @@ export async function readSheet(sheetName: string): Promise<SheetData> {
  * @param row - Array of cell values
  * @returns Object with header keys and row values
  */
-export function rowToObject<T extends Record<string, unknown>>(
+export function rowToObject<T>(
   headers: string[],
   row: SheetRow
 ): T {
