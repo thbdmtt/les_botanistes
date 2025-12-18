@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { Hero } from '@/components/sections'
 import { FadeIn } from '@/components/animations'
 
@@ -135,12 +136,12 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={300}>
-            <a
+            <Link
               href="/reservation"
               className="btn-primary"
             >
               {t('cta.button')}
-            </a>
+            </Link>
           </FadeIn>
         </div>
       </section>

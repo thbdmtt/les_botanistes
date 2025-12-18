@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { PageHeader } from '@/components/sections'
 import { MenuItem, Separator } from '@/components/ui'
 import type { SectionId } from '@/lib/menu'
@@ -157,9 +158,9 @@ export default function MenuContent({ sections, tastingMenus }: MenuContentProps
           <p className="text-gris-chaud mb-8 max-w-md mx-auto">
             {t('cta.description')}
           </p>
-          <a href="/reservation" className="btn-primary">
+          <Link href="/reservation" className="btn-primary">
             {t('cta.button')}
-          </a>
+          </Link>
         </div>
       </section>
     </>
