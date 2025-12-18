@@ -252,7 +252,7 @@
       "dinner": "Cena",
       "person": "persona",
       "persons": "personas",
-      "personsMore": "personas",
+      "largeGroupNotice": "Para reservas de más de 8 personas, por favor contáctenos.",
       "confirmation": "Le contactaremos en 24h para confirmar su reserva.",
       "placeholders": {
         "firstName": "Su nombre",

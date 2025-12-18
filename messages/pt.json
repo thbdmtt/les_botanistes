@@ -252,7 +252,7 @@
       "dinner": "Jantar",
       "person": "pessoa",
       "persons": "pessoas",
-      "personsMore": "pessoas",
+      "largeGroupNotice": "Para reservas de mais de 8 pessoas, por favor contacte-nos.",
       "confirmation": "Entraremos em contacto em 24h para confirmar a sua reserva.",
       "placeholders": {
         "firstName": "O seu nome",

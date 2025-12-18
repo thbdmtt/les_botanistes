@@ -252,7 +252,7 @@
       "dinner": "Abendessen",
       "person": "Person",
       "persons": "Personen",
-      "personsMore": "Personen",
+      "largeGroupNotice": "Für Reservierungen von mehr als 8 Personen kontaktieren Sie uns bitte.",
       "confirmation": "Wir werden Sie innerhalb von 24h kontaktieren, um Ihre Reservierung zu bestätigen.",
       "placeholders": {
         "firstName": "Ihr Vorname",

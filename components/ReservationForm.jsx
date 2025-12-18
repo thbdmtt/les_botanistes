@@ -210,8 +210,12 @@ export default function ReservationForm() {
             <option value="4">4 {t('persons')}</option>
             <option value="5">5 {t('persons')}</option>
             <option value="6">6 {t('persons')}</option>
-            <option value="7+">7+ {t('personsMore')}</option>
+            <option value="7">7 {t('persons')}</option>
+            <option value="8">8 {t('persons')}</option>
           </select>
+          <p className="mt-2 text-xs text-muted-foreground">
+            {t('largeGroupNotice')}
+          </p>
         </div>
 
         <SubmitButton />

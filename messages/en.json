@@ -252,7 +252,7 @@
       "dinner": "Dinner",
       "person": "person",
       "persons": "people",
-      "personsMore": "people",
+      "largeGroupNotice": "For reservations of more than 8 people, please contact us.",
       "confirmation": "We will contact you within 24h to confirm your reservation.",
       "placeholders": {
         "firstName": "Your first name",

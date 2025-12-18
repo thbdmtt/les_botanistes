@@ -252,7 +252,7 @@
       "dinner": "ディナー",
       "person": "名",
       "persons": "名",
-      "personsMore": "名以上",
+      "largeGroupNotice": "9名様以上のご予約につきましては、お手数ですが直接店舗までご連絡ください。",
       "confirmation": "24時間以内にご予約の確認のためご連絡いたします。",
       "placeholders": {
         "firstName": "お名前",
