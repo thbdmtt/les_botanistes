@@ -138,14 +138,20 @@ export async function loadAllSections(): Promise<Record<SectionId, MenuItemData[
  *
  * LANGUAGE RULE:
  * - FR locale → name_fr (French)
- * - ALL other locales (en, es, de, it, pt, ja) → name_en (English)
+ * - ALL other locales → name_en if available, otherwise fallback to name_fr
  *
- * No exceptions, no additional fallback logic.
+ * Fallback ensures no empty strings are ever displayed.
  *
  * @param item - The menu item
  * @param locale - The current locale
- * @returns The appropriate name based on locale
+ * @returns The appropriate name based on locale, never empty
  */
 export function getMenuLabel(item: MenuItemData, locale: Locale | string): string {
-  return locale === 'fr' ? item.name_fr : item.name_en;
+  if (locale === 'fr') {
+    return item.name_fr;
+  }
+
+  // For non-FR locales: use English if available, fallback to French
+  const englishLabel = item.name_en?.trim();
+  return englishLabel || item.name_fr;
 }
