@@ -12,6 +12,12 @@ const PRIVATE_KEY = process.env.GOOGLE_SHEETS_PRIVATE_KEY_BASE64
   : undefined;
 
 
+if (!SPREADSHEET_ID) {
+  throw new Error('GOOGLE_SHEETS_SPREADSHEET_ID is missing');
+}
+console.log('SPREADSHEET_ID:', SPREADSHEET_ID);
+
+
 /**
  * Raw row data from Google Sheets
  * Each row is an array of cell values (strings)
