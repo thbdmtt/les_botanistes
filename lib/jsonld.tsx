@@ -33,13 +33,9 @@ export function RestaurantJsonLd() {
     '@type': 'Restaurant',
     '@id': `${siteConfig.url}/#restaurant`,
 
-    // Identité
     name: siteConfig.name,
     description: 'Restaurant de cuisine traditionnelle française à Paris 7e, près du Bon Marché. Une cuisine de saison élégante et raffinée, dans un cadre intimiste.',
     url: siteConfig.url,
-
-    // Visuels
-    logo: `${siteConfig.url}/logo.png`,
     image: [
       `${siteConfig.url}/images/restaurant/salle-principale.jpg`,
       `${siteConfig.url}/images/restaurant/facade.jpg`,
@@ -118,22 +114,10 @@ export function RestaurantJsonLd() {
       },
     ],
 
-    // Présence en ligne
-    sameAs: [
-      siteConfig.social.instagram,
-    ],
-
-    // Informations complémentaires
+    sameAs: [siteConfig.social.instagram],
     inLanguage: 'fr-FR',
-    paymentAccepted: ['Cash', 'Credit Card'],
+    paymentAccepted: 'Cash, Credit Card, Debit Card',
     currenciesAccepted: 'EUR',
-
-    // Histoire (transmission familiale)
-    founder: {
-      '@type': 'Person',
-      name: 'Famille propriétaire',
-      description: 'Restaurant familial transmis de père en fils',
-    },
   }
 
   return (
@@ -244,7 +228,7 @@ export function MenuJsonLd({ sections }: { sections: MenuSectionData[] }) {
     description: 'Cuisine traditionnelle française de saison',
     url: `${siteConfig.url}/carte`,
     inLanguage: 'fr-FR',
-    mainEntityOfPage: `${siteConfig.url}/carte`,
+    mainEntity: { '@id': `${siteConfig.url}/#restaurant` },
     hasMenuSection: sections.map((section) => ({
       '@type': 'MenuSection',
       name: section.name,
