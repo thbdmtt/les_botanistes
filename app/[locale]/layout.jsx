@@ -3,7 +3,7 @@ import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { Header, Footer } from '@/components/layout'
-import { RestaurantJsonLd, WebSiteJsonLd } from '@/lib/jsonld'
+import { RestaurantJsonLd, WebSiteJsonLd } from '@/lib/jsonld.tsx'
 import { locales, localeNames } from '@/i18n/routing'
 
 // Génération des métadonnées dynamiques basées sur la locale
