@@ -1,6 +1,7 @@
 import { getLocale } from 'next-intl/server'
 import { loadAllSections, getMenuLabel } from '@/lib/menu'
 import type { MenuItemData, SectionId } from '@/lib/menu'
+import { MenuJsonLd } from '@/lib/jsonld'
 import MenuContent from './MenuContent'
 
 // Tasting menus data (static, not from Google Sheets)
@@ -45,10 +46,38 @@ export default async function CartePage() {
     desserts: localizeItems(rawSections.desserts, locale),
   }
 
+  // Prepare data for MenuJsonLd (SEO)
+  const menuSectionsForSeo = [
+    {
+      name: 'Entrées',
+      items: sections.starters.map((item) => ({
+        name: item.name,
+        price: item.price,
+      })),
+    },
+    {
+      name: 'Plats',
+      items: sections.mains.map((item) => ({
+        name: item.name,
+        price: item.price,
+      })),
+    },
+    {
+      name: 'Desserts',
+      items: sections.desserts.map((item) => ({
+        name: item.name,
+        price: item.price,
+      })),
+    },
+  ]
+
   return (
-    <MenuContent
-      sections={sections}
-      tastingMenus={tastingMenus}
-    />
+    <>
+      <MenuJsonLd sections={menuSectionsForSeo} />
+      <MenuContent
+        sections={sections}
+        tastingMenus={tastingMenus}
+      />
+    </>
   )
 }
