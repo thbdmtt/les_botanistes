@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { useTranslations } from 'next-intl'
 import { sendReservationRequest } from '@/app/[locale]/(booking)/reservation/actions'
@@ -10,15 +11,28 @@ const initialState = {
   message: '',
 }
 
+function isSundayDate(value) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value)
+  if (!match) return false
+
+  const year = Number(match[1])
+  const month = Number(match[2])
+  const day = Number(match[3])
+  const parsed = new Date(Date.UTC(year, month - 1, day))
+
+  return parsed.getUTCDay() === 0
+}
+
 // Bouton avec état de chargement
-function SubmitButton() {
+function SubmitButton({ isSundaySelected }) {
   const { pending } = useFormStatus()
   const t = useTranslations('reservation.form')
+  const isDisabled = pending || isSundaySelected
 
   return (
     <button
       type="submit"
-      disabled={pending}
+      disabled={isDisabled}
       className="btn-secondary w-full justify-center mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {pending ? t('submitting') : t('submit')}
@@ -28,7 +42,17 @@ function SubmitButton() {
 
 export default function ReservationForm() {
   const [state, formAction] = useFormState(sendReservationRequest, initialState)
+  const [isSundaySelected, setIsSundaySelected] = useState(false)
   const t = useTranslations('reservation.form')
+  const sundayError = 'Le restaurant est fermé le dimanche. Merci de choisir un autre jour.'
+
+  const handleDateChange = (event) => {
+    const selectedDate = event.target.value
+    const isSunday = isSundayDate(selectedDate)
+
+    setIsSundaySelected(isSunday)
+    event.target.setCustomValidity(isSunday ? sundayError : '')
+  }
 
   return (
     <div className="card-luxe lg:sticky lg:top-32">
@@ -146,6 +170,7 @@ export default function ReservationForm() {
               id="date"
               name="date"
               required
+              onChange={handleDateChange}
               className="w-full px-4 py-3 bg-background border border-border rounded-sm
                        focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
             />
@@ -218,7 +243,7 @@ export default function ReservationForm() {
           </p>
         </div>
 
-        <SubmitButton />
+        <SubmitButton isSundaySelected={isSundaySelected} />
 
         {/* Message de succès ou d'erreur */}
         {state.message && (
