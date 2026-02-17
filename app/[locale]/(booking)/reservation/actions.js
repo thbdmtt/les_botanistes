@@ -40,6 +40,31 @@ function isValidE164(value) {
   return /^\+[1-9]\d{1,14}$/.test(value)
 }
 
+/**
+ * Parse une date ISO (YYYY-MM-DD) de manière déterministe.
+ * @param {string} value
+ * @returns {Date | null}
+ */
+function parseISODate(value) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value)
+  if (!match) return null
+
+  const year = Number(match[1])
+  const month = Number(match[2])
+  const day = Number(match[3])
+
+  const parsed = new Date(Date.UTC(year, month - 1, day))
+  if (
+    parsed.getUTCFullYear() !== year ||
+    parsed.getUTCMonth() !== month - 1 ||
+    parsed.getUTCDate() !== day
+  ) {
+    return null
+  }
+
+  return parsed
+}
+
 function checkRateLimit(ip) {
   const now = Date.now()
   const windowStart = now - RATE_LIMIT_WINDOW
@@ -105,6 +130,23 @@ export async function sendReservationRequest(prevState, formData) {
     }
   }
 
+  // Validation de la date (format + date réelle)
+  const reservationDate = parseISODate(date)
+  if (!reservationDate) {
+    return {
+      success: false,
+      message: 'Merci de sélectionner une date valide.',
+    }
+  }
+
+  // Règle métier: aucune demande de réservation le dimanche
+  if (reservationDate.getUTCDay() === 0) {
+    return {
+      success: false,
+      message: 'Le restaurant est fermé le dimanche. Merci de choisir un autre jour.',
+    }
+  }
+
   // Validation basique de l'email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(email)) {
@@ -135,12 +177,13 @@ export async function sendReservationRequest(prevState, formData) {
   const resend = new Resend(process.env.RESEND_API_KEY)
 
   // Formater la date pour l'affichage
-  const formattedDate = new Date(date).toLocaleDateString('fr-FR', {
+  const formattedDate = new Intl.DateTimeFormat('fr-FR', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  })
+    timeZone: 'Europe/Paris',
+  }).format(reservationDate)
 
   // Sujet de l'email
   const emailSubject = `Demande de réservation – ${formattedDate} à ${time}`
